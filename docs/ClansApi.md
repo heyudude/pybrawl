@@ -1,6 +1,6 @@
 # pybrawl.ClansApi
 
-All URIs are relative to *https://api.clashroyale.com/v1*
+All URIs are relative to *https://api.brawlstars.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,8 +33,8 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
-configuration.host = "https://api.clashroyale.com/v1"
+# Defining host is optional and default to https://api.brawlstars.com/v1
+configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
 api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan to retrieve.
@@ -101,8 +101,8 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
-configuration.host = "https://api.clashroyale.com/v1"
+# Defining host is optional and default to https://api.brawlstars.com/v1
+configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
 api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose members to retrieve.
@@ -175,8 +175,8 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
-configuration.host = "https://api.clashroyale.com/v1"
+# Defining host is optional and default to https://api.brawlstars.com/v1
+configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
 api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose war log to retrieve.
@@ -249,8 +249,8 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
-configuration.host = "https://api.clashroyale.com/v1"
+# Defining host is optional and default to https://api.brawlstars.com/v1
+configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
 api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose war log to retrieve.
@@ -317,8 +317,8 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
-configuration.host = "https://api.clashroyale.com/v1"
+# Defining host is optional and default to https://api.brawlstars.com/v1
+configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
 api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 name = 'name_example' # str | Search clans by name. If name is used as part of search query, it needs to be at least three characters long. Name search parameter is interpreted as wild card search, so it may appear anywhere in the clan name.  (optional)

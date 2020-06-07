@@ -11,7 +11,7 @@ contain the following:
   [API]
   api_key=<YOUR-API-KEY>
 
-The API key can be acquired at https://developer.clashroyale.com
+The API key can be acquired at https://developer.brawlstars.com
 
 Note that the key is limited to a specific list of public IP addresses. This
 is why integration tests aren't done on Travis -- we need a static IP.

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Clash Royale API
+    Brawl Stars API
 
-    Unofficial Swagger docs for the official Clash Royale API  # noqa: E501
+    Unofficial Swagger docs for the official Brawl Stars API  # noqa: E501
 
     OpenAPI spec version: 1.0
 
@@ -20,7 +20,7 @@ from pybrawl.api.cards_api import CardsApi  # noqa: E501
 from pybrawl.rest import ApiException
 from pybrawl.exceptions import ApiTypeError
 
-CARDS_API_URL = 'https://api.clashroyale.com/v1/cards'
+CARDS_API_URL = 'https://api.brawlstars.com/v1/cards'
 
 class TestCardsApi(unittest.TestCase):
     """CardsApi unit test stubs"""
@@ -40,7 +40,7 @@ class TestCardsApi(unittest.TestCase):
                   "id": 26000000,
                   "maxLevel": 13,
                   "iconUrls": {
-                    "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png"
+                    "medium": "https://api-assets.brawlstars.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png"
                   }
                 },
                 {
@@ -48,7 +48,7 @@ class TestCardsApi(unittest.TestCase):
                   "id": 26000001,
                   "maxLevel": 13,
                   "iconUrls": {
-                    "medium": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png"
+                    "medium": "https://api-assets.brawlstars.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png"
                   }
                 }
               ]

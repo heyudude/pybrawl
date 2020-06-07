@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Clash Royale API
+    Brawl Stars API
 
-    Unofficial Swagger docs for the official Clash Royale API  # noqa: E501
+    Unofficial Swagger docs for the official Brawl Stars API  # noqa: E501
 
     OpenAPI spec version: 1.0
 
@@ -92,7 +92,7 @@ class TestPlayersApi(unittest.TestCase):
                   "maxLevel": 13,
                   "count": 7000,
                   "iconUrls": {
-                    "medium": "https://api-assets.clashroyale.com/cards/300/yHGpoEnmUWPGV_hBbhn-Kk-Bs838OjGzWzJJlQpQKQA.png"
+                    "medium": "https://api-assets.brawlstars.com/cards/300/yHGpoEnmUWPGV_hBbhn-Kk-Bs838OjGzWzJJlQpQKQA.png"
                   }
                 }
               ],
@@ -101,7 +101,7 @@ class TestPlayersApi(unittest.TestCase):
                 "id": 26000043,
                 "maxLevel": 13,
                 "iconUrls": {
-                  "medium": "https://api-assets.clashroyale.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
+                  "medium": "https://api-assets.brawlstars.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
                 }
               },
               "starPoints": 1565
@@ -219,7 +219,7 @@ class TestPlayersApi(unittest.TestCase):
                         "level": 13,
                         "maxLevel": 13,
                         "iconUrls": {
-                          "medium": "https://api-assets.clashroyale.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
+                          "medium": "https://api-assets.brawlstars.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
                         }
                       }
                     ]
@@ -248,7 +248,7 @@ class TestPlayersApi(unittest.TestCase):
                         "level": 13,
                         "maxLevel": 13,
                         "iconUrls": {
-                          "medium": "https://api-assets.clashroyale.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
+                          "medium": "https://api-assets.brawlstars.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png"
                         }
                       }
                     ]

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Clash Royale API
+    Brawl Stars API
 
-    Unofficial Swagger definition for the official Clash Royale API  # noqa: E501
+    Unofficial Swagger definition for the official Brawl Stars API  # noqa: E501
 
     OpenAPI spec version: 1.0
 

@@ -23,7 +23,7 @@ setup(
     # Version single-sourced from pybrawl/_version.py
     version=__version__,
 
-    description='Clash Royale API wrapper for Python 3',
+    description='Brawl Stars API wrapper for Python 3',
     author='Aaron Traas',
     author_email='aaron@traas.org',
     license='LGPLv3+',
@@ -36,7 +36,7 @@ setup(
         'Programming Language :: Python :: 3',
     ],
 
-    keywords=["Clash Royale"],
+    keywords=["Brawl Stars"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
