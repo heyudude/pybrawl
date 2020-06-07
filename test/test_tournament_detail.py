@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.tournament_detail import TournamentDetail  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.tournament_detail import TournamentDetail  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestTournamentDetailDetail(unittest.TestCase):

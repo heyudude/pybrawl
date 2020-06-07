@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.player_league_statistics import PlayerLeagueStatistics  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.player_league_statistics import PlayerLeagueStatistics  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestPlayerLeagueStatistics(unittest.TestCase):

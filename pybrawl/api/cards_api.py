@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from pyroyale.api_client import ApiClient
-from pyroyale.exceptions import (
+from pybrawl.api_client import ApiClient
+from pybrawl.exceptions import (
     ApiTypeError,
     ApiValueError
 )

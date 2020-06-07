@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.clan_ranking_list import ClanRankingList  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.clan_ranking_list import ClanRankingList  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestClanRankingList(unittest.TestCase):

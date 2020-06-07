@@ -2,15 +2,15 @@ import unittest
 
 import config
 
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 
 
 class TestCardsApi(unittest.TestCase):
 
     def setUp(self):
         # create an instance of the API class
-        self.api = pyroyale.CardsApi(pyroyale.ApiClient(config.getConfiguration()))
+        self.api = pybrawl.CardsApi(pybrawl.ApiClient(config.getConfiguration()))
         pass
 
     def tearDown(self):

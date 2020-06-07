@@ -1,4 +1,4 @@
 {
-    "modelPackage" : "pyroyale.model",
-    "apiPackage" : "pyroyale.api"
+    "modelPackage" : "pybrawl.model",
+    "apiPackage" : "pybrawl.api"
 }

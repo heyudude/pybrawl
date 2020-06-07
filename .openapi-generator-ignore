@@ -2,4 +2,4 @@
 .travis.yml
 setup.py
 tox.ini
-pyroyale/configuration.py
+pybrawl/configuration.py

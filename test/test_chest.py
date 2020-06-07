@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.chest import Chest  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.chest import Chest  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestChest(unittest.TestCase):

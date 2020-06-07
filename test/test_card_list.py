@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.card_list import CardList  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.card_list import CardList  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestCardList(unittest.TestCase):

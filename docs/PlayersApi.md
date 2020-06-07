@@ -1,4 +1,4 @@
-# pyroyale.PlayersApi
+# pybrawl.PlayersApi
 
 All URIs are relative to *https://api.clashroyale.com/v1*
 
@@ -22,10 +22,10 @@ Get information about a single player by player tag. Player tags can befound eit
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -34,7 +34,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.PlayersApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.PlayersApi(pybrawl.ApiClient(configuration))
 player_tag = 'player_tag_example' # str | Tag of the player to retrieve. 
 
 try:
@@ -89,10 +89,10 @@ Get list of recent battle results for a player.
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -101,7 +101,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.PlayersApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.PlayersApi(pybrawl.ApiClient(configuration))
 player_tag = 'player_tag_example' # str | Tag of the player whose information to retrieve. 
 
 try:
@@ -156,10 +156,10 @@ Get list of reward chests that the player will receive next in the game.
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -168,7 +168,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.PlayersApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.PlayersApi(pybrawl.ApiClient(configuration))
 player_tag = 'player_tag_example' # str | Tag of the player whose information to retrieve. 
 
 try:

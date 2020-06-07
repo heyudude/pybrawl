@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.battle_log_team import BattleLogTeam  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.battle_log_team import BattleLogTeam  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestBattleLogTeam(unittest.TestCase):

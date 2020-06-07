@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.card import Card
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.card import Card
+from pybrawl.rest import ApiException
 
 
 class TestCard(unittest.TestCase):

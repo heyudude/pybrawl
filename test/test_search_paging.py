@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.search_paging import SearchPaging  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.search_paging import SearchPaging  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestSearchPaging(unittest.TestCase):

@@ -1,4 +1,4 @@
-# pyroyale.ClansApi
+# pybrawl.ClansApi
 
 All URIs are relative to *https://api.clashroyale.com/v1*
 
@@ -24,10 +24,10 @@ Get information about a single clan by clan tag. Clan tags can be found using cl
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -36,7 +36,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.ClansApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan to retrieve.
 
 try:
@@ -92,10 +92,10 @@ List clan members
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -104,7 +104,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.ClansApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose members to retrieve.
 limit = 56 # int | Limit the number of items returned in the response. (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
@@ -166,10 +166,10 @@ Retrieve clan's clan war log
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -178,7 +178,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.ClansApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose war log to retrieve.
 limit = 56 # int | Limit the number of items returned in the response. (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
@@ -240,10 +240,10 @@ Retrieve information about clan's current clan war
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -252,7 +252,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.ClansApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 clan_tag = 'clan_tag_example' # str | Tag of the clan whose war log to retrieve.
 
 try:
@@ -308,10 +308,10 @@ Search all clans by name and/or filtering the results using various criteria. At
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -320,7 +320,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.ClansApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.ClansApi(pybrawl.ApiClient(configuration))
 name = 'name_example' # str | Search clans by name. If name is used as part of search query, it needs to be at least three characters long. Name search parameter is interpreted as wild card search, so it may appear anywhere in the clan name.  (optional)
 location_id = 56 # int | Filter by clan location identifier. For list of available locations, refer to getLocations operation.  (optional)
 min_members = 56 # int | Filter by minimum amount of clan members.  (optional)

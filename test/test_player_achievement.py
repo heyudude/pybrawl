@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.player_achievement import PlayerAchievement  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.player_achievement import PlayerAchievement  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestPlayerAchievement(unittest.TestCase):

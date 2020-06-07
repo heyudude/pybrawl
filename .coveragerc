@@ -1,10 +1,10 @@
 [run]
-source = pyroyale/
+source = pybrawl/
 
 [report]
 show_missing = False
 omit =
-    pyroyale/api_client.py
-    pyroyale/configuration.py
-    pyroyale/exceptions.py
-    pyroyale/rest.py
+    pybrawl/api_client.py
+    pybrawl/configuration.py
+    pybrawl/exceptions.py
+    pybrawl/rest.py

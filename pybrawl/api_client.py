@@ -22,10 +22,10 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from pyroyale.configuration import Configuration
-import pyroyale.models
-from pyroyale import rest
-from pyroyale.exceptions import ApiValueError
+from pybrawl.configuration import Configuration
+import pybrawl.models
+from pybrawl import rest
+from pybrawl.exceptions import ApiValueError
 
 
 class ApiClient(object):
@@ -277,7 +277,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(pyroyale.models, klass)
+                klass = getattr(pybrawl.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

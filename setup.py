@@ -12,22 +12,22 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 # single-sourcing the version
-with open(path.join(here, 'pyroyale/_version.py')) as f:
+with open(path.join(here, 'pybrawl/_version.py')) as f:
     exec(f.read())
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
 setup(
-    name='pyroyale',
+    name='pybrawl',
 
-    # Version single-sourced from pyroyale/_version.py
+    # Version single-sourced from pybrawl/_version.py
     version=__version__,
 
     description='Clash Royale API wrapper for Python 3',
     author='Aaron Traas',
     author_email='aaron@traas.org',
     license='LGPLv3+',
-    url='https://github.com/AaronTraas/pyroyale',
+    url='https://github.com/AaronTraas/pybrawl',
     classifiers=[
         #'Development Status :: 5 - Production/Stable',
         'Development Status :: 3 - Alpha',
@@ -44,7 +44,7 @@ setup(
     long_description_content_type='text/markdown',
 
     project_urls={  # Optional
-        'Bug Reports': 'https://github.com/AaronTraas/pyroyale/issues',
-        'Source': 'https://github.com/AaronTraas/pyroyale',
+        'Bug Reports': 'https://github.com/AaronTraas/pybrawl/issues',
+        'Source': 'https://github.com/AaronTraas/pybrawl',
     },
 )

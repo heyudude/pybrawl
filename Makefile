@@ -1,7 +1,7 @@
 # Define required macros here
 SHELL = /bin/sh
 
-SRCDIR = ./pyroyale
+SRCDIR = ./pybrawl
 TESTDIR = ./tests
 
 clean:
@@ -10,7 +10,7 @@ clean:
 
 delete-models:
 	rm -rf docs
-	rm -rf pyroyale/models
+	rm -rf pybrawl/models
 
 install:
 	pip3 install -r requirements.txt
@@ -38,16 +38,16 @@ coverage-html: coverage
 	coverage html
 
 sonar: coverage
-	sonar-scanner -Dsonar.projectVersion=`python -c "import sys; from pyroyale._version import __version__; sys.stdout.write(__version__)"`
+	sonar-scanner -Dsonar.projectVersion=`python -c "import sys; from pybrawl._version import __version__; sys.stdout.write(__version__)"`
 
 upload:
 	python3 setup.py sdist bdist_wheel
 	twine upload dist/*
 
 swagger: delete-models
-	openapi-generator generate -i https://raw.githubusercontent.com/AaronTraas/clashroyale-swagger/master/swagger.yaml -g python -DpackageName=pyroyale -o .
+	openapi-generator generate -i https://raw.githubusercontent.com/AaronTraas/clashroyale-swagger/master/swagger.yaml -g python -DpackageName=pybrawl -o .
 	cat templates/README_suffix.md >> README.md
 
 swagger-local: delete-models
-	openapi-generator generate -i ../clashroyale-swagger/swagger.yaml -g python -DpackageName=pyroyale -o .
+	openapi-generator generate -i ../clashroyale-swagger/swagger.yaml -g python -DpackageName=pybrawl -o .
 	cat templates/README_suffix.md >> README.md

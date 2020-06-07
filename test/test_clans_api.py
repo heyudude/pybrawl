@@ -15,10 +15,10 @@ from __future__ import absolute_import
 import unittest
 from unittest.mock import patch
 
-import pyroyale
-from pyroyale.api.clans_api import ClansApi  # noqa: E501
-from pyroyale.rest import ApiException
-from pyroyale.exceptions import ApiTypeError, ApiValueError
+import pybrawl
+from pybrawl.api.clans_api import ClansApi  # noqa: E501
+from pybrawl.rest import ApiException
+from pybrawl.exceptions import ApiTypeError, ApiValueError
 
 class TestClansApi(unittest.TestCase):
 

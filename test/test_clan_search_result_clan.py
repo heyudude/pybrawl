@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.clan_search_result_clan import ClanSearchResultClan  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.clan_search_result_clan import ClanSearchResultClan  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestClanSearchResultClan(unittest.TestCase):

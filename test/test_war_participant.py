@@ -4,9 +4,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.war_participant import WarParticipant  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.war_participant import WarParticipant  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestWarParticipant(unittest.TestCase):

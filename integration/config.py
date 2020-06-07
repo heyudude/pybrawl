@@ -2,7 +2,7 @@ import time
 from configparser import ConfigParser
 import os
 
-import pyroyale
+import pybrawl
 
 def getConfiguration():
 	config_file_name = os.path.expanduser('~/.crtools')
@@ -31,7 +31,7 @@ def getConfiguration():
 		print('ERROR: ~/.crtools does not contain property "api_key" in section "[api]".')
 		exit(0)
 
-	configuration = pyroyale.Configuration()
+	configuration = pybrawl.Configuration()
 	configuration.api_key['authorization'] = config['api']['api_key']
 
 	return configuration

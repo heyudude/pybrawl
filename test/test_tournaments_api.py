@@ -15,10 +15,10 @@ from __future__ import absolute_import
 import unittest
 from unittest.mock import patch
 
-import pyroyale
-from pyroyale.api.tournaments_api import TournamentsApi  # noqa: E501
-from pyroyale.rest import ApiException
-from pyroyale.exceptions import ApiTypeError, ApiValueError
+import pybrawl
+from pybrawl.api.tournaments_api import TournamentsApi  # noqa: E501
+from pybrawl.rest import ApiException
+from pybrawl.exceptions import ApiTypeError, ApiValueError
 
 class TestTournamentsApi(unittest.TestCase):
     """TournamentsApi unit test stubs"""

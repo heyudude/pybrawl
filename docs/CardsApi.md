@@ -1,4 +1,4 @@
-# pyroyale.CardsApi
+# pybrawl.CardsApi
 
 All URIs are relative to *https://api.clashroyale.com/v1*
 
@@ -20,10 +20,10 @@ Get list of all available cards.
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,7 +32,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.CardsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.CardsApi(pybrawl.ApiClient(configuration))
 
 try:
     # Get list of available cards

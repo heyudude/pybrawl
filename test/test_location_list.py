@@ -16,9 +16,9 @@ import io
 import sys
 import unittest
 
-import pyroyale
-from pyroyale.models.location_list import LocationList  # noqa: E501
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.models.location_list import LocationList  # noqa: E501
+from pybrawl.rest import ApiException
 
 
 class TestLocationList(unittest.TestCase):

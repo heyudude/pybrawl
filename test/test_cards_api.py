@@ -15,10 +15,10 @@ from __future__ import absolute_import
 import unittest
 from unittest.mock import patch
 
-import pyroyale
-from pyroyale.api.cards_api import CardsApi  # noqa: E501
-from pyroyale.rest import ApiException
-from pyroyale.exceptions import ApiTypeError
+import pybrawl
+from pybrawl.api.cards_api import CardsApi  # noqa: E501
+from pybrawl.rest import ApiException
+from pybrawl.exceptions import ApiTypeError
 
 CARDS_API_URL = 'https://api.clashroyale.com/v1/cards'
 

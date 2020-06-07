@@ -1,4 +1,4 @@
-# pyroyale.TournamentsApi
+# pybrawl.TournamentsApi
 
 All URIs are relative to *https://api.clashroyale.com/v1*
 
@@ -22,10 +22,10 @@ List all available global tournaments.
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -34,7 +34,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.TournamentsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.TournamentsApi(pybrawl.ApiClient(configuration))
 
 try:
     # List global tournaments
@@ -86,10 +86,10 @@ Get information about a single tournament by a tournament tag.
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -98,7 +98,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.TournamentsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.TournamentsApi(pybrawl.ApiClient(configuration))
 tournament_tag = 'tournament_tag_example' # str | Tag of the tournament to retrieve. 
 
 try:
@@ -154,10 +154,10 @@ Search all tournaments by name. It is not possible to specify ordering for resul
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -166,7 +166,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.TournamentsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.TournamentsApi(pybrawl.ApiClient(configuration))
 name = 'name_example' # str | Search tournaments by name.  (optional)
 limit = 56 # int | Limit the number of items returned in the response.  (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)

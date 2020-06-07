@@ -19,5 +19,5 @@ is why integration tests aren't done on Travis -- we need a static IP.
 # Development links
 
 This project uses SonarQube for static analysis. The results of analysis
-are at `SonarCloud <https://sonarcloud.io/dashboard?id=AaronTraas_pyroyale>`_.
+are at `SonarCloud <https://sonarcloud.io/dashboard?id=AaronTraas_pybrawl>`_.
 The code quality and test coverage are a work in progress.

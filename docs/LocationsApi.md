@@ -1,4 +1,4 @@
-# pyroyale.LocationsApi
+# pybrawl.LocationsApi
 
 All URIs are relative to *https://api.clashroyale.com/v1*
 
@@ -24,10 +24,10 @@ Get clan rankings for a specific location
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -36,7 +36,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.LocationsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.LocationsApi(pybrawl.ApiClient(configuration))
 location_id = 'location_id_example' # str | Identifier of the location to retrieve.
 limit = 56 # int | Limit the number of items returned in the response.  (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
@@ -98,10 +98,10 @@ Get clan war rankings for a specific location
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -110,7 +110,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.LocationsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.LocationsApi(pybrawl.ApiClient(configuration))
 location_id = 'location_id_example' # str | Identifier of the location to retrieve.
 limit = 56 # int | Limit the number of items returned in the response.  (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
@@ -172,10 +172,10 @@ Get information about specific location
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -184,7 +184,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.LocationsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.LocationsApi(pybrawl.ApiClient(configuration))
 location_id = 'location_id_example' # str | Identifier of the location to retrieve.
 
 try:
@@ -240,10 +240,10 @@ List all available locations
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -252,7 +252,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.LocationsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.LocationsApi(pybrawl.ApiClient(configuration))
 limit = 56 # int | Limit the number of items returned in the response.  (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
 before = 56 # int | Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
@@ -312,10 +312,10 @@ Get player rankings for a specific location
 ```python
 from __future__ import print_function
 import time
-import pyroyale
-from pyroyale.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -324,7 +324,7 @@ configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://api.clashroyale.com/v1
 configuration.host = "https://api.clashroyale.com/v1"
 # Create an instance of the API class
-api_instance = pyroyale.LocationsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.LocationsApi(pybrawl.ApiClient(configuration))
 location_id = 'location_id_example' # str | Identifier of the location to retrieve.
 limit = 56 # int | Limit the number of items returned in the response.  (optional)
 after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
