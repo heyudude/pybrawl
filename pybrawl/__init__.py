@@ -17,11 +17,10 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from pybrawl.api.cards_api import CardsApi
-from pybrawl.api.clans_api import ClansApi
+from pybrawl.api.brawlers_api import BrawlersApi
+from pybrawl.api.clubs_api import ClubsApi
 from pybrawl.api.locations_api import LocationsApi
 from pybrawl.api.players_api import PlayersApi
-from pybrawl.api.tournaments_api import TournamentsApi
 
 # import ApiClient
 from pybrawl.api_client import ApiClient
@@ -32,31 +31,25 @@ from pybrawl.exceptions import ApiValueError
 from pybrawl.exceptions import ApiKeyError
 from pybrawl.exceptions import ApiException
 # import models into sdk package
-from pybrawl.models.arena import Arena
 from pybrawl.models.battle_log_entry import BattleLogEntry
 from pybrawl.models.battle_log_team import BattleLogTeam
-from pybrawl.models.card import Card
-from pybrawl.models.card_icon_urls import CardIconUrls
-from pybrawl.models.card_list import CardList
-from pybrawl.models.chest import Chest
-from pybrawl.models.chest_list import ChestList
-from pybrawl.models.clan import Clan
-from pybrawl.models.clan_base import ClanBase
-from pybrawl.models.clan_member import ClanMember
-from pybrawl.models.clan_member_list import ClanMemberList
-from pybrawl.models.clan_ranked import ClanRanked
-from pybrawl.models.clan_ranking_list import ClanRankingList
-from pybrawl.models.clan_search_result import ClanSearchResult
-from pybrawl.models.clan_search_result_clan import ClanSearchResultClan
-from pybrawl.models.clan_war_ranked import ClanWarRanked
-from pybrawl.models.clan_wars_ranking_list import ClanWarsRankingList
+from pybrawl.models.brawler import Brawler
+from pybrawl.models.brawler_icon_urls import BrawlerIconUrls
+from pybrawl.models.brawler_list import BrawlerList
+from pybrawl.models.club import Club
+from pybrawl.models.club_base import ClubBase
+from pybrawl.models.club_member import ClubMember
+from pybrawl.models.club_member_list import ClubMemberList
+from pybrawl.models.club_ranked import ClubRanked
+from pybrawl.models.club_ranking_list import ClubRankingList
+from pybrawl.models.club_search_result import ClubSearchResult
+from pybrawl.models.club_search_result_club import ClubSearchResultClub
 from pybrawl.models.error import Error
 from pybrawl.models.game_mode import GameMode
 from pybrawl.models.location import Location
 from pybrawl.models.location_list import LocationList
 from pybrawl.models.player_achievement import PlayerAchievement
 from pybrawl.models.player_badge import PlayerBadge
-from pybrawl.models.player_base import PlayerBase
 from pybrawl.models.player_detail import PlayerDetail
 from pybrawl.models.player_league_statistics import PlayerLeagueStatistics
 from pybrawl.models.player_ranked import PlayerRanked
@@ -64,15 +57,4 @@ from pybrawl.models.player_ranking_list import PlayerRankingList
 from pybrawl.models.search_paging import SearchPaging
 from pybrawl.models.search_paging_cursors import SearchPagingCursors
 from pybrawl.models.season_statistics import SeasonStatistics
-from pybrawl.models.tournament import Tournament
-from pybrawl.models.tournament_detail import TournamentDetail
-from pybrawl.models.tournament_player import TournamentPlayer
-from pybrawl.models.tournament_search_result import TournamentSearchResult
-from pybrawl.models.war import War
-from pybrawl.models.war_clan import WarClan
-from pybrawl.models.war_current import WarCurrent
-from pybrawl.models.war_log import WarLog
-from pybrawl.models.war_participant import WarParticipant
-from pybrawl.models.war_standing import WarStanding
-from pybrawl.models.war_standing_clan import WarStandingClan
 

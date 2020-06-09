@@ -14,7 +14,7 @@ Python 2.7 and 3.4+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on Github, you can install directly from Github
+If the python package is hosted on a repository, you can install directly using:
 
 ```sh
 pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
@@ -23,7 +23,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import pybrawl 
+import pybrawl
 ```
 
 ### Setuptools
@@ -46,29 +46,46 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 from __future__ import print_function
+
 import time
 import pybrawl
 from pybrawl.rest import ApiException
 from pprint import pprint
 
-configuration = pybrawl.Configuration()
+# Defining the host is optional and defaults to https://api.brawlstars.com/v1
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pybrawl.Configuration(
+    host = "https://api.brawlstars.com/v1"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: JWT
-configuration.api_key['authorization'] = 'YOUR_API_KEY'
+configuration = pybrawl.Configuration(
+    host = "https://api.brawlstars.com/v1",
+    api_key = {
+        'authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.brawlstars.com/v1
-configuration.host = "https://api.brawlstars.com/v1"
-# Create an instance of the API class
-api_instance = pybrawl.CardsApi(pybrawl.ApiClient(configuration))
 
-try:
-    # Get list of available cards
-    api_response = api_instance.get_cards()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CardsApi->get_cards: %s\n" % e)
-
+# Enter a context with an instance of the API client
+with pybrawl.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pybrawl.BrawlersApi(api_client)
+    
+    try:
+        # Get list of available brawlers
+        api_response = api_instance.getbrawlers()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BrawlersApi->getbrawlers: %s\n" % e)
+    
 ```
 
 ## Documentation for API Endpoints
@@ -77,52 +94,39 @@ All URIs are relative to *https://api.brawlstars.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CardsApi* | [**get_cards**](docs/CardsApi.md#get_cards) | **GET** /cards | Get list of available cards
-*ClansApi* | [**get_clan**](docs/ClansApi.md#get_clan) | **GET** /clans/{clanTag} | Get clan information
-*ClansApi* | [**get_clan_members**](docs/ClansApi.md#get_clan_members) | **GET** /clans/{clanTag}/members | List clan members
-*ClansApi* | [**get_clan_war_log**](docs/ClansApi.md#get_clan_war_log) | **GET** /clans/{clanTag}/warlog | Retrieve clan&#39;s clan war log
-*ClansApi* | [**get_current_war**](docs/ClansApi.md#get_current_war) | **GET** /clans/{clanTag}/currentwar | Information about clan&#39;s current clan war
-*ClansApi* | [**search_clans**](docs/ClansApi.md#search_clans) | **GET** /clans | Search clans
-*LocationsApi* | [**get_clan_ranking**](docs/LocationsApi.md#get_clan_ranking) | **GET** /locations/{locationId}/rankings/clans | Get clan rankings for a specific location
-*LocationsApi* | [**get_clan_wars_ranking**](docs/LocationsApi.md#get_clan_wars_ranking) | **GET** /locations/{locationId}/rankings/clanwars | Get clan war rankings for a specific location
+*BrawlersApi* | [**getbrawlers**](docs/BrawlersApi.md#getbrawlers) | **GET** /brawlers | Get list of available brawlers
+*ClubsApi* | [**get_club**](docs/ClubsApi.md#get_club) | **GET** /clubs/{clubTag} | Get club information
+*ClubsApi* | [**get_club_members**](docs/ClubsApi.md#get_club_members) | **GET** /clubs/{clubTag}/members | List club members
+*ClubsApi* | [**search_clubs**](docs/ClubsApi.md#search_clubs) | **GET** /clubs | Search clubs
+*LocationsApi* | [**get_club_ranking**](docs/LocationsApi.md#get_club_ranking) | **GET** /locations/{locationId}/rankings/clubs | Get club rankings for a specific location
 *LocationsApi* | [**get_location**](docs/LocationsApi.md#get_location) | **GET** /locations/{locationId} | Get location information
 *LocationsApi* | [**get_locations**](docs/LocationsApi.md#get_locations) | **GET** /locations | List locations
 *LocationsApi* | [**get_player_ranking**](docs/LocationsApi.md#get_player_ranking) | **GET** /locations/{locationId}/rankings/players | Get player rankings for a specific location
 *PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
 *PlayersApi* | [**get_player_battles**](docs/PlayersApi.md#get_player_battles) | **GET** /players/{playerTag}/battlelog | Get log of recent battles for a player
-*PlayersApi* | [**get_player_upcoming_chests**](docs/PlayersApi.md#get_player_upcoming_chests) | **GET** /players/{playerTag}/upcomingchests | Get information about player&#39;s upcoming chests
-*TournamentsApi* | [**get_global_tournaments**](docs/TournamentsApi.md#get_global_tournaments) | **GET** /globaltournaments | List global tournaments
-*TournamentsApi* | [**get_tournament**](docs/TournamentsApi.md#get_tournament) | **GET** /tournaments/{tournamentTag} | Get tournament information
-*TournamentsApi* | [**search_tournaments**](docs/TournamentsApi.md#search_tournaments) | **GET** /tournaments | Search tournaments
 
 
 ## Documentation For Models
 
- - [Arena](docs/Arena.md)
  - [BattleLogEntry](docs/BattleLogEntry.md)
  - [BattleLogTeam](docs/BattleLogTeam.md)
- - [Card](docs/Card.md)
- - [CardIconUrls](docs/CardIconUrls.md)
- - [CardList](docs/CardList.md)
- - [Chest](docs/Chest.md)
- - [ChestList](docs/ChestList.md)
- - [Clan](docs/Clan.md)
- - [ClanBase](docs/ClanBase.md)
- - [ClanMember](docs/ClanMember.md)
- - [ClanMemberList](docs/ClanMemberList.md)
- - [ClanRanked](docs/ClanRanked.md)
- - [ClanRankingList](docs/ClanRankingList.md)
- - [ClanSearchResult](docs/ClanSearchResult.md)
- - [ClanSearchResultClan](docs/ClanSearchResultClan.md)
- - [ClanWarRanked](docs/ClanWarRanked.md)
- - [ClanWarsRankingList](docs/ClanWarsRankingList.md)
+ - [Brawler](docs/Brawler.md)
+ - [BrawlerIconUrls](docs/BrawlerIconUrls.md)
+ - [BrawlerList](docs/BrawlerList.md)
+ - [Club](docs/Club.md)
+ - [ClubBase](docs/ClubBase.md)
+ - [ClubMember](docs/ClubMember.md)
+ - [ClubMemberList](docs/ClubMemberList.md)
+ - [ClubRanked](docs/ClubRanked.md)
+ - [ClubRankingList](docs/ClubRankingList.md)
+ - [ClubSearchResult](docs/ClubSearchResult.md)
+ - [ClubSearchResultClub](docs/ClubSearchResultClub.md)
  - [Error](docs/Error.md)
  - [GameMode](docs/GameMode.md)
  - [Location](docs/Location.md)
  - [LocationList](docs/LocationList.md)
  - [PlayerAchievement](docs/PlayerAchievement.md)
  - [PlayerBadge](docs/PlayerBadge.md)
- - [PlayerBase](docs/PlayerBase.md)
  - [PlayerDetail](docs/PlayerDetail.md)
  - [PlayerLeagueStatistics](docs/PlayerLeagueStatistics.md)
  - [PlayerRanked](docs/PlayerRanked.md)
@@ -130,17 +134,6 @@ Class | Method | HTTP request | Description
  - [SearchPaging](docs/SearchPaging.md)
  - [SearchPagingCursors](docs/SearchPagingCursors.md)
  - [SeasonStatistics](docs/SeasonStatistics.md)
- - [Tournament](docs/Tournament.md)
- - [TournamentDetail](docs/TournamentDetail.md)
- - [TournamentPlayer](docs/TournamentPlayer.md)
- - [TournamentSearchResult](docs/TournamentSearchResult.md)
- - [War](docs/War.md)
- - [WarClan](docs/WarClan.md)
- - [WarCurrent](docs/WarCurrent.md)
- - [WarLog](docs/WarLog.md)
- - [WarParticipant](docs/WarParticipant.md)
- - [WarStanding](docs/WarStanding.md)
- - [WarStandingClan](docs/WarStandingClan.md)
 
 
 ## Documentation For Authorization

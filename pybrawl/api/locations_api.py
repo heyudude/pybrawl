@@ -18,7 +18,7 @@ import re  # noqa: F401
 import six
 
 from pybrawl.api_client import ApiClient
-from pybrawl.exceptions import (
+from pybrawl.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
@@ -36,13 +36,13 @@ class LocationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_clan_ranking(self, location_id, **kwargs):  # noqa: E501
-        """Get clan rankings for a specific location  # noqa: E501
+    def get_club_ranking(self, location_id, **kwargs):  # noqa: E501
+        """Get club rankings for a specific location  # noqa: E501
 
-        Get clan rankings for a specific location  # noqa: E501
+        Get club rankings for a specific location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_clan_ranking(location_id, async_req=True)
+        >>> thread = api.get_club_ranking(location_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -57,20 +57,20 @@ class LocationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: ClanRankingList
+        :return: ClubRankingList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_clan_ranking_with_http_info(location_id, **kwargs)  # noqa: E501
+        return self.get_club_ranking_with_http_info(location_id, **kwargs)  # noqa: E501
 
-    def get_clan_ranking_with_http_info(self, location_id, **kwargs):  # noqa: E501
-        """Get clan rankings for a specific location  # noqa: E501
+    def get_club_ranking_with_http_info(self, location_id, **kwargs):  # noqa: E501
+        """Get club rankings for a specific location  # noqa: E501
 
-        Get clan rankings for a specific location  # noqa: E501
+        Get club rankings for a specific location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_clan_ranking_with_http_info(location_id, async_req=True)
+        >>> thread = api.get_club_ranking_with_http_info(location_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -87,31 +87,40 @@ class LocationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(ClanRankingList, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(ClubRankingList, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         local_var_params = locals()
 
-        all_params = ['location_id', 'limit', 'after', 'before']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'location_id',
+            'limit',
+            'after',
+            'before'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_clan_ranking" % key
+                    " to method get_club_ranking" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'location_id' is set
-        if ('location_id' not in local_var_params or
-                local_var_params['location_id'] is None):
-            raise ApiValueError("Missing the required parameter `location_id` when calling `get_clan_ranking`")  # noqa: E501
+        if self.api_client.client_side_validation and ('location_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['location_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `location_id` when calling `get_club_ranking`")  # noqa: E501
 
         collection_formats = {}
 
@@ -120,11 +129,11 @@ class LocationsApi(object):
             path_params['locationId'] = local_var_params['location_id']  # noqa: E501
 
         query_params = []
-        if 'limit' in local_var_params:
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
             query_params.append(('limit', local_var_params['limit']))  # noqa: E501
-        if 'after' in local_var_params:
+        if 'after' in local_var_params and local_var_params['after'] is not None:  # noqa: E501
             query_params.append(('after', local_var_params['after']))  # noqa: E501
-        if 'before' in local_var_params:
+        if 'before' in local_var_params and local_var_params['before'] is not None:  # noqa: E501
             query_params.append(('before', local_var_params['before']))  # noqa: E501
 
         header_params = {}
@@ -141,134 +150,14 @@ class LocationsApi(object):
         auth_settings = ['JWT']  # noqa: E501
 
         return self.api_client.call_api(
-            '/locations/{locationId}/rankings/clans', 'GET',
+            '/locations/{locationId}/rankings/clubs', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ClanRankingList',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_clan_wars_ranking(self, location_id, **kwargs):  # noqa: E501
-        """Get clan war rankings for a specific location  # noqa: E501
-
-        Get clan war rankings for a specific location  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_clan_wars_ranking(location_id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str location_id: Identifier of the location to retrieve. (required)
-        :param int limit: Limit the number of items returned in the response. 
-        :param int after: Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
-        :param int before: Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: ClanWarsRankingList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_clan_wars_ranking_with_http_info(location_id, **kwargs)  # noqa: E501
-
-    def get_clan_wars_ranking_with_http_info(self, location_id, **kwargs):  # noqa: E501
-        """Get clan war rankings for a specific location  # noqa: E501
-
-        Get clan war rankings for a specific location  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_clan_wars_ranking_with_http_info(location_id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str location_id: Identifier of the location to retrieve. (required)
-        :param int limit: Limit the number of items returned in the response. 
-        :param int after: Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
-        :param int before: Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(ClanWarsRankingList, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['location_id', 'limit', 'after', 'before']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_clan_wars_ranking" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'location_id' is set
-        if ('location_id' not in local_var_params or
-                local_var_params['location_id'] is None):
-            raise ApiValueError("Missing the required parameter `location_id` when calling `get_clan_wars_ranking`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'location_id' in local_var_params:
-            path_params['locationId'] = local_var_params['location_id']  # noqa: E501
-
-        query_params = []
-        if 'limit' in local_var_params:
-            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
-        if 'after' in local_var_params:
-            query_params.append(('after', local_var_params['after']))  # noqa: E501
-        if 'before' in local_var_params:
-            query_params.append(('before', local_var_params['before']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['JWT']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/locations/{locationId}/rankings/clanwars', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ClanWarsRankingList',  # noqa: E501
+            response_type='ClubRankingList',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -328,11 +217,17 @@ class LocationsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['location_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'location_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -343,8 +238,8 @@ class LocationsApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'location_id' is set
-        if ('location_id' not in local_var_params or
-                local_var_params['location_id'] is None):
+        if self.api_client.client_side_validation and ('location_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['location_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `location_id` when calling `get_location`")  # noqa: E501
 
         collection_formats = {}
@@ -440,11 +335,19 @@ class LocationsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['limit', 'after', 'before']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'limit',
+            'after',
+            'before'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -460,11 +363,11 @@ class LocationsApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in local_var_params:
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
             query_params.append(('limit', local_var_params['limit']))  # noqa: E501
-        if 'after' in local_var_params:
+        if 'after' in local_var_params and local_var_params['after'] is not None:  # noqa: E501
             query_params.append(('after', local_var_params['after']))  # noqa: E501
-        if 'before' in local_var_params:
+        if 'before' in local_var_params and local_var_params['before'] is not None:  # noqa: E501
             query_params.append(('before', local_var_params['before']))  # noqa: E501
 
         header_params = {}
@@ -554,11 +457,20 @@ class LocationsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['location_id', 'limit', 'after', 'before']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'location_id',
+            'limit',
+            'after',
+            'before'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -569,8 +481,8 @@ class LocationsApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'location_id' is set
-        if ('location_id' not in local_var_params or
-                local_var_params['location_id'] is None):
+        if self.api_client.client_side_validation and ('location_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['location_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `location_id` when calling `get_player_ranking`")  # noqa: E501
 
         collection_formats = {}
@@ -580,11 +492,11 @@ class LocationsApi(object):
             path_params['locationId'] = local_var_params['location_id']  # noqa: E501
 
         query_params = []
-        if 'limit' in local_var_params:
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
             query_params.append(('limit', local_var_params['limit']))  # noqa: E501
-        if 'after' in local_var_params:
+        if 'after' in local_var_params and local_var_params['after'] is not None:  # noqa: E501
             query_params.append(('after', local_var_params['after']))  # noqa: E501
-        if 'before' in local_var_params:
+        if 'before' in local_var_params and local_var_params['before'] is not None:  # noqa: E501
             query_params.append(('before', local_var_params['before']))  # noqa: E501
 
         header_params = {}
