@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.player_achievement import PlayerAchievement  # noqa: E501
+from pybrawl.models.arena import Arena  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestPlayerAchievement(unittest.TestCase):
-    """PlayerAchievement unit test stubs"""
+class TestArena(unittest.TestCase):
+    """Arena unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,25 +29,22 @@ class TestPlayerAchievement(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test PlayerAchievement
+        """Test Arena
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.player_achievement.PlayerAchievement()  # noqa: E501
+        # model = pybrawl.models.arena.Arena()  # noqa: E501
         if include_optional :
-            return PlayerAchievement(
-                name = '0', 
-                stars = 56, 
-                value = 56, 
-                target = 56, 
-                info = '0'
+            return Arena(
+                id = 56, 
+                name = '0'
             )
         else :
-            return PlayerAchievement(
+            return Arena(
         )
 
-    def testPlayerAchievement(self):
-        """Test PlayerAchievement"""
+    def testArena(self):
+        """Test Arena"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

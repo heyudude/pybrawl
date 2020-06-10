@@ -28,24 +28,17 @@ class TestClubsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_club(self):
-        """Test case for get_club
+    def test_getclub(self):
+        """Test case for getclub
 
         Get club information  # noqa: E501
         """
         pass
 
-    def test_get_club_members(self):
-        """Test case for get_club_members
+    def test_getclub_members(self):
+        """Test case for getclub_members
 
         List club members  # noqa: E501
-        """
-        pass
-
-    def test_search_clubs(self):
-        """Test case for search_clubs
-
-        Search clubs  # noqa: E501
         """
         pass
 

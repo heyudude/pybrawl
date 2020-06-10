@@ -37,15 +37,18 @@ class TestClubMemberList(unittest.TestCase):
         if include_optional :
             return ClubMemberList(
                 items = [
-                    pybrawl.models.club_member.ClubMember(
+                    pybrawl.models.club_member.clubMember(
                         tag = '0', 
                         name = '0', 
                         exp_level = 56, 
                         trophies = 56, 
+                        arena = pybrawl.models.arena.Arena(
+                            id = 56, 
+                            name = '0', ), 
                         role = '0', 
                         last_seen = '0', 
                         club_rank = 56, 
-                        previous_club_rank = 56, 
+                        previousclub_rank = 56, 
                         donations = 56, 
                         donations_received = 56, 
                         club_chest_points = 56, )

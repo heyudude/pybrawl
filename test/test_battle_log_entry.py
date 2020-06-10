@@ -38,10 +38,10 @@ class TestBattleLogEntry(unittest.TestCase):
             return BattleLogEntry(
                 type = '0', 
                 battle_time = '0', 
-                is_ladder_tournament = True, 
-                game_mode = pybrawl.models.game_mode.GameMode(
+                arena = pybrawl.models.arena.Arena(
                     id = 56, 
                     name = '0', ), 
+                game_mode = None, 
                 deck_selection = '0', 
                 team = [
                     pybrawl.models.battle_log_team.BattleLogTeam(
@@ -54,18 +54,18 @@ class TestBattleLogEntry(unittest.TestCase):
                         princess_towers_hit_points = [
                             56
                             ], 
-                        club = pybrawl.models.club_base.ClubBase(
+                        club = pybrawl.models.club_base.clubBase(
                             tag = '0', 
                             name = '0', 
                             badge_id = 56, ), 
                         brawlers = [
-                            pybrawl.models.brawler.brawler(
+                            pybrawl.models.brawler.Brawler(
                                 name = '0', 
                                 id = 56, 
                                 level = 56, 
                                 count = 56, 
                                 max_level = 56, 
-                                icon_urls = pybrawl.models.brawler_icon_urls.brawler_iconUrls(
+                                icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
                                     medium = '0', ), )
                             ], )
                     ], 
@@ -80,18 +80,18 @@ class TestBattleLogEntry(unittest.TestCase):
                         princess_towers_hit_points = [
                             56
                             ], 
-                        club = pybrawl.models.club_base.ClubBase(
+                        club = pybrawl.models.club_base.clubBase(
                             tag = '0', 
                             name = '0', 
                             badge_id = 56, ), 
                         brawlers = [
-                            pybrawl.models.brawler.brawler(
+                            pybrawl.models.brawler.Brawler(
                                 name = '0', 
                                 id = 56, 
                                 level = 56, 
                                 count = 56, 
                                 max_level = 56, 
-                                icon_urls = pybrawl.models.brawler_icon_urls.brawler_iconUrls(
+                                icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
                                     medium = '0', ), )
                             ], )
                     ]

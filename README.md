@@ -95,19 +95,14 @@ All URIs are relative to *https://api.brawlstars.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BrawlersApi* | [**getbrawlers**](docs/BrawlersApi.md#getbrawlers) | **GET** /brawlers | Get list of available brawlers
-*ClubsApi* | [**get_club**](docs/ClubsApi.md#get_club) | **GET** /clubs/{clubTag} | Get club information
-*ClubsApi* | [**get_club_members**](docs/ClubsApi.md#get_club_members) | **GET** /clubs/{clubTag}/members | List club members
-*ClubsApi* | [**search_clubs**](docs/ClubsApi.md#search_clubs) | **GET** /clubs | Search clubs
-*LocationsApi* | [**get_club_ranking**](docs/LocationsApi.md#get_club_ranking) | **GET** /locations/{locationId}/rankings/clubs | Get club rankings for a specific location
-*LocationsApi* | [**get_location**](docs/LocationsApi.md#get_location) | **GET** /locations/{locationId} | Get location information
-*LocationsApi* | [**get_locations**](docs/LocationsApi.md#get_locations) | **GET** /locations | List locations
-*LocationsApi* | [**get_player_ranking**](docs/LocationsApi.md#get_player_ranking) | **GET** /locations/{locationId}/rankings/players | Get player rankings for a specific location
-*PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
+*ClubsApi* | [**getclub**](docs/ClubsApi.md#getclub) | **GET** /clubs/{clubTag} | Get club information
+*ClubsApi* | [**getclub_members**](docs/ClubsApi.md#getclub_members) | **GET** /clubs/{clubTag}/members | List club members
 *PlayersApi* | [**get_player_battles**](docs/PlayersApi.md#get_player_battles) | **GET** /players/{playerTag}/battlelog | Get log of recent battles for a player
 
 
 ## Documentation For Models
 
+ - [Arena](docs/Arena.md)
  - [BattleLogEntry](docs/BattleLogEntry.md)
  - [BattleLogTeam](docs/BattleLogTeam.md)
  - [Brawler](docs/Brawler.md)
@@ -117,23 +112,9 @@ Class | Method | HTTP request | Description
  - [ClubBase](docs/ClubBase.md)
  - [ClubMember](docs/ClubMember.md)
  - [ClubMemberList](docs/ClubMemberList.md)
- - [ClubRanked](docs/ClubRanked.md)
- - [ClubRankingList](docs/ClubRankingList.md)
- - [ClubSearchResult](docs/ClubSearchResult.md)
- - [ClubSearchResultClub](docs/ClubSearchResultClub.md)
  - [Error](docs/Error.md)
- - [GameMode](docs/GameMode.md)
- - [Location](docs/Location.md)
- - [LocationList](docs/LocationList.md)
- - [PlayerAchievement](docs/PlayerAchievement.md)
- - [PlayerBadge](docs/PlayerBadge.md)
- - [PlayerDetail](docs/PlayerDetail.md)
- - [PlayerLeagueStatistics](docs/PlayerLeagueStatistics.md)
- - [PlayerRanked](docs/PlayerRanked.md)
- - [PlayerRankingList](docs/PlayerRankingList.md)
  - [SearchPaging](docs/SearchPaging.md)
  - [SearchPagingCursors](docs/SearchPagingCursors.md)
- - [SeasonStatistics](docs/SeasonStatistics.md)
 
 
 ## Documentation For Authorization

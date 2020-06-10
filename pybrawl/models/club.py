@@ -39,6 +39,10 @@ class Club(object):
         'type': 'str',
         'club_score': 'int',
         'required_trophies': 'int',
+        'donations_per_week': 'int',
+        'club_war_trophies': 'int',
+        'club_chest_level': 'int',
+        'club_chest_max_level': 'int',
         'members': 'int',
         'location': 'Location',
         'description': 'str',
@@ -54,6 +58,10 @@ class Club(object):
         'type': 'type',
         'club_score': 'clubScore',
         'required_trophies': 'requiredTrophies',
+        'donations_per_week': 'donationsPerWeek',
+        'club_war_trophies': 'clubWarTrophies',
+        'club_chest_level': 'clubChestLevel',
+        'club_chest_max_level': 'clubChestMaxLevel',
         'members': 'members',
         'location': 'location',
         'description': 'description',
@@ -62,7 +70,7 @@ class Club(object):
         'member_list': 'memberList'
     }
 
-    def __init__(self, tag=None, name=None, badge_id=None, type=None, club_score=None, required_trophies=None, members=None, location=None, description=None, club_chest_status=None, club_chest_points=None, member_list=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, badge_id=None, type=None, club_score=None, required_trophies=None, donations_per_week=None, club_war_trophies=None, club_chest_level=None, club_chest_max_level=None, members=None, location=None, description=None, club_chest_status=None, club_chest_points=None, member_list=None, local_vars_configuration=None):  # noqa: E501
         """Club - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -74,6 +82,10 @@ class Club(object):
         self._type = None
         self._club_score = None
         self._required_trophies = None
+        self._donations_per_week = None
+        self._club_war_trophies = None
+        self._club_chest_level = None
+        self._club_chest_max_level = None
         self._members = None
         self._location = None
         self._description = None
@@ -94,6 +106,14 @@ class Club(object):
             self.club_score = club_score
         if required_trophies is not None:
             self.required_trophies = required_trophies
+        if donations_per_week is not None:
+            self.donations_per_week = donations_per_week
+        if club_war_trophies is not None:
+            self.club_war_trophies = club_war_trophies
+        if club_chest_level is not None:
+            self.club_chest_level = club_chest_level
+        if club_chest_max_level is not None:
+            self.club_chest_max_level = club_chest_max_level
         if members is not None:
             self.members = members
         if location is not None:
@@ -232,6 +252,90 @@ class Club(object):
         """
 
         self._required_trophies = required_trophies
+
+    @property
+    def donations_per_week(self):
+        """Gets the donations_per_week of this Club.  # noqa: E501
+
+
+        :return: The donations_per_week of this Club.  # noqa: E501
+        :rtype: int
+        """
+        return self._donations_per_week
+
+    @donations_per_week.setter
+    def donations_per_week(self, donations_per_week):
+        """Sets the donations_per_week of this Club.
+
+
+        :param donations_per_week: The donations_per_week of this Club.  # noqa: E501
+        :type: int
+        """
+
+        self._donations_per_week = donations_per_week
+
+    @property
+    def club_war_trophies(self):
+        """Gets the club_war_trophies of this Club.  # noqa: E501
+
+
+        :return: The club_war_trophies of this Club.  # noqa: E501
+        :rtype: int
+        """
+        return self._club_war_trophies
+
+    @club_war_trophies.setter
+    def club_war_trophies(self, club_war_trophies):
+        """Sets the club_war_trophies of this Club.
+
+
+        :param club_war_trophies: The club_war_trophies of this Club.  # noqa: E501
+        :type: int
+        """
+
+        self._club_war_trophies = club_war_trophies
+
+    @property
+    def club_chest_level(self):
+        """Gets the club_chest_level of this Club.  # noqa: E501
+
+
+        :return: The club_chest_level of this Club.  # noqa: E501
+        :rtype: int
+        """
+        return self._club_chest_level
+
+    @club_chest_level.setter
+    def club_chest_level(self, club_chest_level):
+        """Sets the club_chest_level of this Club.
+
+
+        :param club_chest_level: The club_chest_level of this Club.  # noqa: E501
+        :type: int
+        """
+
+        self._club_chest_level = club_chest_level
+
+    @property
+    def club_chest_max_level(self):
+        """Gets the club_chest_max_level of this Club.  # noqa: E501
+
+
+        :return: The club_chest_max_level of this Club.  # noqa: E501
+        :rtype: int
+        """
+        return self._club_chest_max_level
+
+    @club_chest_max_level.setter
+    def club_chest_max_level(self, club_chest_max_level):
+        """Sets the club_chest_max_level of this Club.
+
+
+        :param club_chest_max_level: The club_chest_max_level of this Club.  # noqa: E501
+        :type: int
+        """
+
+        self._club_chest_max_level = club_chest_max_level
 
     @property
     def members(self):

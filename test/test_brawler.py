@@ -41,7 +41,7 @@ class TestBrawler(unittest.TestCase):
                 level = 56, 
                 count = 56, 
                 max_level = 56, 
-                icon_urls = pybrawl.models.brawler_icon_urls.brawler_iconUrls(
+                icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
                     medium = '0', )
             )
         else :

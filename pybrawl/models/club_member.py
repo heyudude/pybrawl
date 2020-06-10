@@ -37,10 +37,11 @@ class ClubMember(object):
         'name': 'str',
         'exp_level': 'int',
         'trophies': 'int',
+        'arena': 'Arena',
         'role': 'str',
         'last_seen': 'str',
         'club_rank': 'int',
-        'previous_club_rank': 'int',
+        'previousclub_rank': 'int',
         'donations': 'int',
         'donations_received': 'int',
         'club_chest_points': 'int'
@@ -51,16 +52,17 @@ class ClubMember(object):
         'name': 'name',
         'exp_level': 'expLevel',
         'trophies': 'trophies',
+        'arena': 'arena',
         'role': 'role',
         'last_seen': 'lastSeen',
         'club_rank': 'clubRank',
-        'previous_club_rank': 'previousClubRank',
+        'previousclub_rank': 'previousclubRank',
         'donations': 'donations',
         'donations_received': 'donationsReceived',
         'club_chest_points': 'clubChestPoints'
     }
 
-    def __init__(self, tag=None, name=None, exp_level=None, trophies=None, role=None, last_seen=None, club_rank=None, previous_club_rank=None, donations=None, donations_received=None, club_chest_points=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, exp_level=None, trophies=None, arena=None, role=None, last_seen=None, club_rank=None, previousclub_rank=None, donations=None, donations_received=None, club_chest_points=None, local_vars_configuration=None):  # noqa: E501
         """ClubMember - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,10 +72,11 @@ class ClubMember(object):
         self._name = None
         self._exp_level = None
         self._trophies = None
+        self._arena = None
         self._role = None
         self._last_seen = None
         self._club_rank = None
-        self._previous_club_rank = None
+        self._previousclub_rank = None
         self._donations = None
         self._donations_received = None
         self._club_chest_points = None
@@ -87,14 +90,16 @@ class ClubMember(object):
             self.exp_level = exp_level
         if trophies is not None:
             self.trophies = trophies
+        if arena is not None:
+            self.arena = arena
         if role is not None:
             self.role = role
         if last_seen is not None:
             self.last_seen = last_seen
         if club_rank is not None:
             self.club_rank = club_rank
-        if previous_club_rank is not None:
-            self.previous_club_rank = previous_club_rank
+        if previousclub_rank is not None:
+            self.previousclub_rank = previousclub_rank
         if donations is not None:
             self.donations = donations
         if donations_received is not None:
@@ -187,6 +192,27 @@ class ClubMember(object):
         self._trophies = trophies
 
     @property
+    def arena(self):
+        """Gets the arena of this ClubMember.  # noqa: E501
+
+
+        :return: The arena of this ClubMember.  # noqa: E501
+        :rtype: Arena
+        """
+        return self._arena
+
+    @arena.setter
+    def arena(self, arena):
+        """Sets the arena of this ClubMember.
+
+
+        :param arena: The arena of this ClubMember.  # noqa: E501
+        :type: Arena
+        """
+
+        self._arena = arena
+
+    @property
     def role(self):
         """Gets the role of this ClubMember.  # noqa: E501
 
@@ -250,25 +276,25 @@ class ClubMember(object):
         self._club_rank = club_rank
 
     @property
-    def previous_club_rank(self):
-        """Gets the previous_club_rank of this ClubMember.  # noqa: E501
+    def previousclub_rank(self):
+        """Gets the previousclub_rank of this ClubMember.  # noqa: E501
 
 
-        :return: The previous_club_rank of this ClubMember.  # noqa: E501
+        :return: The previousclub_rank of this ClubMember.  # noqa: E501
         :rtype: int
         """
-        return self._previous_club_rank
+        return self._previousclub_rank
 
-    @previous_club_rank.setter
-    def previous_club_rank(self, previous_club_rank):
-        """Sets the previous_club_rank of this ClubMember.
+    @previousclub_rank.setter
+    def previousclub_rank(self, previousclub_rank):
+        """Sets the previousclub_rank of this ClubMember.
 
 
-        :param previous_club_rank: The previous_club_rank of this ClubMember.  # noqa: E501
+        :param previousclub_rank: The previousclub_rank of this ClubMember.  # noqa: E501
         :type: int
         """
 
-        self._previous_club_rank = previous_club_rank
+        self._previousclub_rank = previousclub_rank
 
     @property
     def donations(self):

@@ -19,7 +19,6 @@ __version__ = "1.0.0"
 # import apis into sdk package
 from pybrawl.api.brawlers_api import BrawlersApi
 from pybrawl.api.clubs_api import ClubsApi
-from pybrawl.api.locations_api import LocationsApi
 from pybrawl.api.players_api import PlayersApi
 
 # import ApiClient
@@ -31,6 +30,7 @@ from pybrawl.exceptions import ApiValueError
 from pybrawl.exceptions import ApiKeyError
 from pybrawl.exceptions import ApiException
 # import models into sdk package
+from pybrawl.models.arena import Arena
 from pybrawl.models.battle_log_entry import BattleLogEntry
 from pybrawl.models.battle_log_team import BattleLogTeam
 from pybrawl.models.brawler import Brawler
@@ -40,21 +40,7 @@ from pybrawl.models.club import Club
 from pybrawl.models.club_base import ClubBase
 from pybrawl.models.club_member import ClubMember
 from pybrawl.models.club_member_list import ClubMemberList
-from pybrawl.models.club_ranked import ClubRanked
-from pybrawl.models.club_ranking_list import ClubRankingList
-from pybrawl.models.club_search_result import ClubSearchResult
-from pybrawl.models.club_search_result_club import ClubSearchResultClub
 from pybrawl.models.error import Error
-from pybrawl.models.game_mode import GameMode
-from pybrawl.models.location import Location
-from pybrawl.models.location_list import LocationList
-from pybrawl.models.player_achievement import PlayerAchievement
-from pybrawl.models.player_badge import PlayerBadge
-from pybrawl.models.player_detail import PlayerDetail
-from pybrawl.models.player_league_statistics import PlayerLeagueStatistics
-from pybrawl.models.player_ranked import PlayerRanked
-from pybrawl.models.player_ranking_list import PlayerRankingList
 from pybrawl.models.search_paging import SearchPaging
 from pybrawl.models.search_paging_cursors import SearchPagingCursors
-from pybrawl.models.season_statistics import SeasonStatistics
 

@@ -35,7 +35,7 @@ class BattleLogEntry(object):
     openapi_types = {
         'type': 'str',
         'battle_time': 'str',
-        'is_ladder_tournament': 'bool',
+        'arena': 'Arena',
         'game_mode': 'GameMode',
         'deck_selection': 'str',
         'team': 'list[BattleLogTeam]',
@@ -45,14 +45,14 @@ class BattleLogEntry(object):
     attribute_map = {
         'type': 'type',
         'battle_time': 'battleTime',
-        'is_ladder_tournament': 'isLadderTournament',
+        'arena': 'arena',
         'game_mode': 'gameMode',
         'deck_selection': 'deckSelection',
         'team': 'team',
         'opponent': 'opponent'
     }
 
-    def __init__(self, type=None, battle_time=None, is_ladder_tournament=None, game_mode=None, deck_selection=None, team=None, opponent=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type=None, battle_time=None, arena=None, game_mode=None, deck_selection=None, team=None, opponent=None, local_vars_configuration=None):  # noqa: E501
         """BattleLogEntry - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,7 +60,7 @@ class BattleLogEntry(object):
 
         self._type = None
         self._battle_time = None
-        self._is_ladder_tournament = None
+        self._arena = None
         self._game_mode = None
         self._deck_selection = None
         self._team = None
@@ -71,8 +71,8 @@ class BattleLogEntry(object):
             self.type = type
         if battle_time is not None:
             self.battle_time = battle_time
-        if is_ladder_tournament is not None:
-            self.is_ladder_tournament = is_ladder_tournament
+        if arena is not None:
+            self.arena = arena
         if game_mode is not None:
             self.game_mode = game_mode
         if deck_selection is not None:
@@ -125,25 +125,25 @@ class BattleLogEntry(object):
         self._battle_time = battle_time
 
     @property
-    def is_ladder_tournament(self):
-        """Gets the is_ladder_tournament of this BattleLogEntry.  # noqa: E501
+    def arena(self):
+        """Gets the arena of this BattleLogEntry.  # noqa: E501
 
 
-        :return: The is_ladder_tournament of this BattleLogEntry.  # noqa: E501
-        :rtype: bool
+        :return: The arena of this BattleLogEntry.  # noqa: E501
+        :rtype: Arena
         """
-        return self._is_ladder_tournament
+        return self._arena
 
-    @is_ladder_tournament.setter
-    def is_ladder_tournament(self, is_ladder_tournament):
-        """Sets the is_ladder_tournament of this BattleLogEntry.
+    @arena.setter
+    def arena(self, arena):
+        """Sets the arena of this BattleLogEntry.
 
 
-        :param is_ladder_tournament: The is_ladder_tournament of this BattleLogEntry.  # noqa: E501
-        :type: bool
+        :param arena: The arena of this BattleLogEntry.  # noqa: E501
+        :type: Arena
         """
 
-        self._is_ladder_tournament = is_ladder_tournament
+        self._arena = arena
 
     @property
     def game_mode(self):

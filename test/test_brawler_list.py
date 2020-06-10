@@ -37,13 +37,13 @@ class TestBrawlerList(unittest.TestCase):
         if include_optional :
             return BrawlerList(
                 items = [
-                    pybrawl.models.brawler.brawler(
+                    pybrawl.models.brawler.Brawler(
                         name = '0', 
                         id = 56, 
                         level = 56, 
                         count = 56, 
                         max_level = 56, 
-                        icon_urls = pybrawl.models.brawler_icon_urls.brawler_iconUrls(
+                        icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
                             medium = '0', ), )
                     ]
             )
