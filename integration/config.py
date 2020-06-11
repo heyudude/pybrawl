@@ -5,12 +5,12 @@ import os
 import pybrawl
 
 def getConfiguration():
-	config_file_name = os.path.expanduser('~/.crtools')
+	config_file_name = os.path.expanduser('~/.bstools')
 
 	config = {}
 
 	if not os.path.isfile(config_file_name):
-		print('ERROR: ~/.crtools not found.')
+		print('ERROR: ~/.bstools not found.')
 		exit(0)
 
 	parser = ConfigParser()
@@ -24,11 +24,11 @@ def getConfiguration():
 	        config[section_key][key] = value
 
 	if 'api' not in config:
-		print('ERROR: ~/.crtools does not contain section "[api]".')
+		print('ERROR: ~/.bstools does not contain section "[api]".')
 		exit(0)
 
 	if 'api_key' not in config['api']:
-		print('ERROR: ~/.crtools does not contain property "api_key" in section "[api]".')
+		print('ERROR: ~/.bstools does not contain property "api_key" in section "[api]".')
 		exit(0)
 
 	configuration = pybrawl.Configuration()

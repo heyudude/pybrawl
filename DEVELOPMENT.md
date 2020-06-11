@@ -3,7 +3,7 @@
 
 If you wish to work on this project, and run integration tests whenever you
 run `make test` or `python3 setup.py test`, you need to create a file called
-`.crtools` in your home folder (must resolve as `~/.crtools`), and it must
+`.bstools` in your home folder (must resolve as `~/.bstools`), and it must
 contain the following:
 
 .. code:: ini

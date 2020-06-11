@@ -30,7 +30,6 @@ from pybrawl.exceptions import ApiValueError
 from pybrawl.exceptions import ApiKeyError
 from pybrawl.exceptions import ApiException
 # import models into sdk package
-from pybrawl.models.arena import Arena
 from pybrawl.models.battle_log_entry import BattleLogEntry
 from pybrawl.models.battle_log_team import BattleLogTeam
 from pybrawl.models.brawler import Brawler
@@ -41,6 +40,7 @@ from pybrawl.models.club_base import ClubBase
 from pybrawl.models.club_member import ClubMember
 from pybrawl.models.club_member_list import ClubMemberList
 from pybrawl.models.error import Error
+from pybrawl.models.player_detail import PlayerDetail
 from pybrawl.models.search_paging import SearchPaging
 from pybrawl.models.search_paging_cursors import SearchPagingCursors
 

@@ -5,9 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** |  | [optional] 
 **battle_time** | **str** |  | [optional] 
-**arena** | [**Arena**](Arena.md) |  | [optional] 
-**game_mode** | [**GameMode**](GameMode.md) |  | [optional] 
-**deck_selection** | **str** |  | [optional] 
 **team** | [**list[BattleLogTeam]**](BattleLogTeam.md) |  | [optional] 
 **opponent** | [**list[BattleLogTeam]**](BattleLogTeam.md) |  | [optional] 
 

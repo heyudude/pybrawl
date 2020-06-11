@@ -37,14 +37,10 @@ class ClubMember(object):
         'name': 'str',
         'exp_level': 'int',
         'trophies': 'int',
-        'arena': 'Arena',
         'role': 'str',
         'last_seen': 'str',
         'club_rank': 'int',
-        'previousclub_rank': 'int',
-        'donations': 'int',
-        'donations_received': 'int',
-        'club_chest_points': 'int'
+        'previousclub_rank': 'int'
     }
 
     attribute_map = {
@@ -52,17 +48,13 @@ class ClubMember(object):
         'name': 'name',
         'exp_level': 'expLevel',
         'trophies': 'trophies',
-        'arena': 'arena',
         'role': 'role',
         'last_seen': 'lastSeen',
         'club_rank': 'clubRank',
-        'previousclub_rank': 'previousclubRank',
-        'donations': 'donations',
-        'donations_received': 'donationsReceived',
-        'club_chest_points': 'clubChestPoints'
+        'previousclub_rank': 'previousclubRank'
     }
 
-    def __init__(self, tag=None, name=None, exp_level=None, trophies=None, arena=None, role=None, last_seen=None, club_rank=None, previousclub_rank=None, donations=None, donations_received=None, club_chest_points=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, exp_level=None, trophies=None, role=None, last_seen=None, club_rank=None, previousclub_rank=None, local_vars_configuration=None):  # noqa: E501
         """ClubMember - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,14 +64,10 @@ class ClubMember(object):
         self._name = None
         self._exp_level = None
         self._trophies = None
-        self._arena = None
         self._role = None
         self._last_seen = None
         self._club_rank = None
         self._previousclub_rank = None
-        self._donations = None
-        self._donations_received = None
-        self._club_chest_points = None
         self.discriminator = None
 
         if tag is not None:
@@ -90,8 +78,6 @@ class ClubMember(object):
             self.exp_level = exp_level
         if trophies is not None:
             self.trophies = trophies
-        if arena is not None:
-            self.arena = arena
         if role is not None:
             self.role = role
         if last_seen is not None:
@@ -100,12 +86,6 @@ class ClubMember(object):
             self.club_rank = club_rank
         if previousclub_rank is not None:
             self.previousclub_rank = previousclub_rank
-        if donations is not None:
-            self.donations = donations
-        if donations_received is not None:
-            self.donations_received = donations_received
-        if club_chest_points is not None:
-            self.club_chest_points = club_chest_points
 
     @property
     def tag(self):
@@ -192,27 +172,6 @@ class ClubMember(object):
         self._trophies = trophies
 
     @property
-    def arena(self):
-        """Gets the arena of this ClubMember.  # noqa: E501
-
-
-        :return: The arena of this ClubMember.  # noqa: E501
-        :rtype: Arena
-        """
-        return self._arena
-
-    @arena.setter
-    def arena(self, arena):
-        """Sets the arena of this ClubMember.
-
-
-        :param arena: The arena of this ClubMember.  # noqa: E501
-        :type: Arena
-        """
-
-        self._arena = arena
-
-    @property
     def role(self):
         """Gets the role of this ClubMember.  # noqa: E501
 
@@ -295,69 +254,6 @@ class ClubMember(object):
         """
 
         self._previousclub_rank = previousclub_rank
-
-    @property
-    def donations(self):
-        """Gets the donations of this ClubMember.  # noqa: E501
-
-
-        :return: The donations of this ClubMember.  # noqa: E501
-        :rtype: int
-        """
-        return self._donations
-
-    @donations.setter
-    def donations(self, donations):
-        """Sets the donations of this ClubMember.
-
-
-        :param donations: The donations of this ClubMember.  # noqa: E501
-        :type: int
-        """
-
-        self._donations = donations
-
-    @property
-    def donations_received(self):
-        """Gets the donations_received of this ClubMember.  # noqa: E501
-
-
-        :return: The donations_received of this ClubMember.  # noqa: E501
-        :rtype: int
-        """
-        return self._donations_received
-
-    @donations_received.setter
-    def donations_received(self, donations_received):
-        """Sets the donations_received of this ClubMember.
-
-
-        :param donations_received: The donations_received of this ClubMember.  # noqa: E501
-        :type: int
-        """
-
-        self._donations_received = donations_received
-
-    @property
-    def club_chest_points(self):
-        """Gets the club_chest_points of this ClubMember.  # noqa: E501
-
-
-        :return: The club_chest_points of this ClubMember.  # noqa: E501
-        :rtype: int
-        """
-        return self._club_chest_points
-
-    @club_chest_points.setter
-    def club_chest_points(self, club_chest_points):
-        """Sets the club_chest_points of this ClubMember.
-
-
-        :param club_chest_points: The club_chest_points of this ClubMember.  # noqa: E501
-        :type: int
-        """
-
-        self._club_chest_points = club_chest_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

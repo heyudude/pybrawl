@@ -38,11 +38,6 @@ class TestBattleLogEntry(unittest.TestCase):
             return BattleLogEntry(
                 type = '0', 
                 battle_time = '0', 
-                arena = pybrawl.models.arena.Arena(
-                    id = 56, 
-                    name = '0', ), 
-                game_mode = None, 
-                deck_selection = '0', 
                 team = [
                     pybrawl.models.battle_log_team.BattleLogTeam(
                         tag = '0', 
@@ -54,10 +49,7 @@ class TestBattleLogEntry(unittest.TestCase):
                         princess_towers_hit_points = [
                             56
                             ], 
-                        club = pybrawl.models.club_base.clubBase(
-                            tag = '0', 
-                            name = '0', 
-                            badge_id = 56, ), 
+                        club = None, 
                         brawlers = [
                             pybrawl.models.brawler.Brawler(
                                 name = '0', 
@@ -80,10 +72,7 @@ class TestBattleLogEntry(unittest.TestCase):
                         princess_towers_hit_points = [
                             56
                             ], 
-                        club = pybrawl.models.club_base.clubBase(
-                            tag = '0', 
-                            name = '0', 
-                            badge_id = 56, ), 
+                        club = None, 
                         brawlers = [
                             pybrawl.models.brawler.Brawler(
                                 name = '0', 

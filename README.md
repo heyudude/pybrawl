@@ -97,12 +97,12 @@ Class | Method | HTTP request | Description
 *BrawlersApi* | [**getbrawlers**](docs/BrawlersApi.md#getbrawlers) | **GET** /brawlers | Get list of available brawlers
 *ClubsApi* | [**getclub**](docs/ClubsApi.md#getclub) | **GET** /clubs/{clubTag} | Get club information
 *ClubsApi* | [**getclub_members**](docs/ClubsApi.md#getclub_members) | **GET** /clubs/{clubTag}/members | List club members
+*PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
 *PlayersApi* | [**get_player_battles**](docs/PlayersApi.md#get_player_battles) | **GET** /players/{playerTag}/battlelog | Get log of recent battles for a player
 
 
 ## Documentation For Models
 
- - [Arena](docs/Arena.md)
  - [BattleLogEntry](docs/BattleLogEntry.md)
  - [BattleLogTeam](docs/BattleLogTeam.md)
  - [Brawler](docs/Brawler.md)
@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
  - [ClubMember](docs/ClubMember.md)
  - [ClubMemberList](docs/ClubMemberList.md)
  - [Error](docs/Error.md)
+ - [PlayerDetail](docs/PlayerDetail.md)
  - [SearchPaging](docs/SearchPaging.md)
  - [SearchPagingCursors](docs/SearchPagingCursors.md)
 

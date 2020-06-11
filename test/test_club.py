@@ -42,17 +42,11 @@ class TestClub(unittest.TestCase):
                 type = '0', 
                 club_score = 56, 
                 required_trophies = 56, 
-                donations_per_week = 56, 
-                club_war_trophies = 56, 
-                club_chest_level = 56, 
-                club_chest_max_level = 56, 
                 members = 56, 
                 location = None, 
                 description = '0', 
-                club_chest_status = '0', 
-                club_chest_points = 56, 
                 member_list = [
-                    pybrawl.models.club_member.ClubMember(
+                    pybrawl.models.club_member.clubMember(
                         tag = '0', 
                         name = '0', 
                         exp_level = 56, 
@@ -60,10 +54,7 @@ class TestClub(unittest.TestCase):
                         role = '0', 
                         last_seen = '0', 
                         club_rank = 56, 
-                        previousclub_rank = 56, 
-                        donations = 56, 
-                        donations_received = 56, 
-                        club_chest_points = 56, )
+                        previousclub_rank = 56, )
                     ]
             )
         else :

@@ -35,9 +35,6 @@ class BattleLogEntry(object):
     openapi_types = {
         'type': 'str',
         'battle_time': 'str',
-        'arena': 'Arena',
-        'game_mode': 'GameMode',
-        'deck_selection': 'str',
         'team': 'list[BattleLogTeam]',
         'opponent': 'list[BattleLogTeam]'
     }
@@ -45,14 +42,11 @@ class BattleLogEntry(object):
     attribute_map = {
         'type': 'type',
         'battle_time': 'battleTime',
-        'arena': 'arena',
-        'game_mode': 'gameMode',
-        'deck_selection': 'deckSelection',
         'team': 'team',
         'opponent': 'opponent'
     }
 
-    def __init__(self, type=None, battle_time=None, arena=None, game_mode=None, deck_selection=None, team=None, opponent=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, type=None, battle_time=None, team=None, opponent=None, local_vars_configuration=None):  # noqa: E501
         """BattleLogEntry - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,9 +54,6 @@ class BattleLogEntry(object):
 
         self._type = None
         self._battle_time = None
-        self._arena = None
-        self._game_mode = None
-        self._deck_selection = None
         self._team = None
         self._opponent = None
         self.discriminator = None
@@ -71,12 +62,6 @@ class BattleLogEntry(object):
             self.type = type
         if battle_time is not None:
             self.battle_time = battle_time
-        if arena is not None:
-            self.arena = arena
-        if game_mode is not None:
-            self.game_mode = game_mode
-        if deck_selection is not None:
-            self.deck_selection = deck_selection
         if team is not None:
             self.team = team
         if opponent is not None:
@@ -123,69 +108,6 @@ class BattleLogEntry(object):
         """
 
         self._battle_time = battle_time
-
-    @property
-    def arena(self):
-        """Gets the arena of this BattleLogEntry.  # noqa: E501
-
-
-        :return: The arena of this BattleLogEntry.  # noqa: E501
-        :rtype: Arena
-        """
-        return self._arena
-
-    @arena.setter
-    def arena(self, arena):
-        """Sets the arena of this BattleLogEntry.
-
-
-        :param arena: The arena of this BattleLogEntry.  # noqa: E501
-        :type: Arena
-        """
-
-        self._arena = arena
-
-    @property
-    def game_mode(self):
-        """Gets the game_mode of this BattleLogEntry.  # noqa: E501
-
-
-        :return: The game_mode of this BattleLogEntry.  # noqa: E501
-        :rtype: GameMode
-        """
-        return self._game_mode
-
-    @game_mode.setter
-    def game_mode(self, game_mode):
-        """Sets the game_mode of this BattleLogEntry.
-
-
-        :param game_mode: The game_mode of this BattleLogEntry.  # noqa: E501
-        :type: GameMode
-        """
-
-        self._game_mode = game_mode
-
-    @property
-    def deck_selection(self):
-        """Gets the deck_selection of this BattleLogEntry.  # noqa: E501
-
-
-        :return: The deck_selection of this BattleLogEntry.  # noqa: E501
-        :rtype: str
-        """
-        return self._deck_selection
-
-    @deck_selection.setter
-    def deck_selection(self, deck_selection):
-        """Sets the deck_selection of this BattleLogEntry.
-
-
-        :param deck_selection: The deck_selection of this BattleLogEntry.  # noqa: E501
-        :type: str
-        """
-
-        self._deck_selection = deck_selection
 
     @property
     def team(self):

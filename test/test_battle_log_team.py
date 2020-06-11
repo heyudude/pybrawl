@@ -45,10 +45,7 @@ class TestBattleLogTeam(unittest.TestCase):
                 princess_towers_hit_points = [
                     56
                     ], 
-                club = pybrawl.models.club_base.clubBase(
-                    tag = '0', 
-                    name = '0', 
-                    badge_id = 56, ), 
+                club = None, 
                 brawlers = [
                     pybrawl.models.brawler.Brawler(
                         name = '0', 

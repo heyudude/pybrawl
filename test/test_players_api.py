@@ -28,6 +28,13 @@ class TestPlayersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_get_player(self):
+        """Test case for get_player
+
+        Get player information  # noqa: E501
+        """
+        pass
+
     def test_get_player_battles(self):
         """Test case for get_player_battles
 

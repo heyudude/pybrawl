@@ -102,6 +102,41 @@ paths:
           $ref: '#/components/responses/UnknownException'
         '503':
           $ref: '#/components/responses/InMaintenance'
+  '/players/{playerTag}':
+    get:
+      summary: Get player information
+      description: >
+        Get information about a single player by player tag. Player tags can befound either in game or by from club member lists.
+
+        Note that player tags start with hash character '#' and that needs to be URL-encoded properly to work in URL, so for example player tag '#2ABC' would become '%232ABC' in the URL.
+      tags:
+        - players
+      operationId: getPlayer
+      parameters:
+        - name: playerTag
+          in: path
+          description: |
+            Tag of the player to retrieve.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerDetail'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RequestThrottled'
+        '500':
+          $ref: '#/components/responses/UnknownException'
+        '503':
+          $ref: '#/components/responses/InMaintenance'
   '/players/{playerTag}/battlelog':
     get:
       summary: Get log of recent battles for a player
@@ -228,32 +263,56 @@ components:
         message:
           type: string
 
-    Arena:
+    PlayerDetail:
       type: object
       properties:
-        id:
-          type: integer
+        tag:
+          type: string
         name:
           type: string
+        expLevel:
+          type: integer
+        expPoints:
+          type: integer
+        trophies:
+          type: integer
+        highestTrophies:
+          type: integer
+        powerPlayPoints:
+          type: integer
+        highestpowerPlayPoints:
+          type: integer
+        soloVictories:
+          type: integer
+        duoVictories:
+          type: integer
+        BestRoboRumbleTime:
+          type: integer
+        BestTimeAsBigBrawler:
+          type: integer
+        club:
+          $ref: '#/components/schemas/ClubBase'
+        Brawlers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Brawler'
+        currentFavouritebrawler:
+          $ref: '#/components/schemas/Brawler'
+        starPoints:
+          type: integer
 
     BattleLogEntry:
       type: object
       properties:
-        type:
+        battle:
           type: string
         battleTime:
           type: string
-        arena:
-          $ref: '#/components/schemas/Arena'
-        gameMode:
-          $ref: '#/components/schemas/GameMode'
-        deckSelection:
-          type: string
-        team:
+        event:
           type: array
-          items:
+          mode:
             $ref: '#/components/schemas/BattleLogTeam'
-        opponent:
+        id:
           type: array
           items:
             $ref: '#/components/schemas/BattleLogTeam'
@@ -311,7 +370,7 @@ components:
           items:
             $ref: '#/components/schemas/Brawler'
 
-    clubBase:
+    ClubBase:
       type: object
       properties:
         tag:
@@ -336,24 +395,12 @@ components:
           type: integer
         requiredTrophies:
           type: integer
-        donationsPerWeek:
-          type: integer
-        clubWarTrophies:
-          type: integer
-        clubChestLevel:
-          type: integer
-        clubChestMaxLevel:
-          type: integer
         members:
           type: integer
         location:
           $ref: '#/components/schemas/Location'
         description:
           type: string
-        clubChestStatus:
-          type: string
-        clubChestPoints:
-          type: integer
         memberList:
           type: array
           items:
@@ -380,8 +427,6 @@ components:
           type: integer
         trophies:
           type: integer
-        arena:
-          $ref: '#/components/schemas/Arena'
         role:
           type: string
         lastSeen:
@@ -389,12 +434,6 @@ components:
         clubRank:
           type: integer
         previousclubRank:
-          type: integer
-        donations:
-          type: integer
-        donationsReceived:
-          type: integer
-        clubChestPoints:
           type: integer
    
     SearchPaging:
