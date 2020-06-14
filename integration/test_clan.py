@@ -7,11 +7,11 @@ from pybrawl.rest import ApiException
 
 configuration = config.getConfiguration()
 
-class TestClansApi(unittest.TestCase):
+class TestClubsApi(unittest.TestCase):
 
     def setUp(self):
         # create an instance of the API class
-        self.api = pybrawl.ClansApi(pybrawl.ApiClient(config.getConfiguration()))
+        self.api = pybrawl.ClubsApi(pybrawl.ApiClient(config.getConfiguration()))
         pass
 
     def tearDown(self):
@@ -19,9 +19,9 @@ class TestClansApi(unittest.TestCase):
 
     def test_clan_agrassar(self):
         try:
-            clan = self.api.get_clan('#JY8YVV')
-            assert clan.clan_war_trophies > 0
-            for member in clan.member_list:
+            Club = self.api.get_clan('#JY8YVV')
+            assert Club.clan_war_trophies > 0
+            for member in Club.member_list:
                 if member.tag == '#9ULGLRCL':
                     assert member.name == 'AaronTraas'
                     assert member.exp_level >= 13
@@ -35,7 +35,7 @@ class TestClansApi(unittest.TestCase):
                     assert member.clan_chest_points >= 0
 
         except ApiException as e:
-            print("Exception when calling CardsClan->get_clan: %s\n" % e)
+            print("Exception when calling CardsClub->get_clan: %s\n" % e)
             assert False
 
 
@@ -56,7 +56,7 @@ class TestClansApi(unittest.TestCase):
                     assert member.clan_chest_points >= 0
 
         except ApiException as e:
-            print("Exception when calling CardsClan->get_clan_members: %s\n" % e)
+            print("Exception when calling CardsClub->get_clan_members: %s\n" % e)
             assert False
 
     def test_clan_agrassar_warlog(self):
@@ -68,17 +68,17 @@ class TestClansApi(unittest.TestCase):
                 assert len(war.participants) in range(1,50)
                 assert len(war.standings) in range(1,50)
                 for standing in war.standings:
-                    if standing.clan.tag == '#JY8YVV':
-                        assert standing.clan.name.lower() == 'agrassar'
-                    assert standing.clan.badge_id > 0
-                    assert standing.clan.clan_score >= 0
-                    assert standing.clan.participants in range(1,50)
-                    assert standing.clan.battles_played in range(0,50)
-                    assert standing.clan.wins >= 0
-                    assert standing.clan.crowns >= 0
+                    if standing.Club.tag == '#JY8YVV':
+                        assert standing.Club.name.lower() == 'agrassar'
+                    assert standing.Club.badge_id > 0
+                    assert standing.Club.clan_score >= 0
+                    assert standing.Club.participants in range(1,50)
+                    assert standing.Club.battles_played in range(0,50)
+                    assert standing.Club.wins >= 0
+                    assert standing.Club.crowns >= 0
 
         except ApiException as e:
-            print("Exception when calling CardsClan->get_clan_members: %s\n" % e)
+            print("Exception when calling CardsClub->get_clan_members: %s\n" % e)
             assert False
 
     def test_clan_agrassar_current_war(self):
@@ -87,7 +87,7 @@ class TestClansApi(unittest.TestCase):
             assert war.state in ['notInWar','collectionDay','warDay']
 
         except ApiException as e:
-            print("Exception when calling CardsClan->get_clan_members: %s\n" % e)
+            print("Exception when calling CardsClub->get_clan_members: %s\n" % e)
             assert False
 
     def test_clan_search_agrassar(self):
@@ -95,13 +95,13 @@ class TestClansApi(unittest.TestCase):
             clans = self.api.search_clans(name='agrassar')
             assert len(clans.items) >= 1
             found = False
-            for clan in clans.items:
-                if clan.tag == '#JY8YVV':
-                    assert clan.name == 'Agrassar'
+            for Club in clans.items:
+                if Club.tag == '#JY8YVV':
+                    assert Club.name == 'Agrassar'
                     found = True
             assert found
 
         except ApiException as e:
-            print("Exception when calling CardsClan->get_clan_members: %s\n" % e)
+            print("Exception when calling CardsClub->get_clan_members: %s\n" % e)
             assert False
 

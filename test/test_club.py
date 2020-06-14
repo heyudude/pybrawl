@@ -46,7 +46,7 @@ class TestClub(unittest.TestCase):
                 location = None, 
                 description = '0', 
                 member_list = [
-                    pybrawl.models.club_member.clubMember(
+                    pybrawl.models.club_member.ClubMember(
                         tag = '0', 
                         name = '0', 
                         exp_level = 56, 

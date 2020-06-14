@@ -39,9 +39,9 @@ class TestPlayersApi(unittest.TestCase):
             assert player.total_donations >= 100000
             assert player.war_day_wins >= 100
             assert player.clan_cards_collected >= 100000
-            assert player.clan.tag == '#JY8YVV'
-            assert player.clan.name == 'Agrassar'
-            assert player.clan.badge_id >= 16000000
+            assert player.Club.tag == '#JY8YVV'
+            assert player.Club.name == 'Agrassar'
+            assert player.Club.badge_id >= 16000000
             assert player.arena.id >= 54000000
             assert player.league_statistics.current_season.trophies > 4000
             assert player.league_statistics.current_season.best_trophies > 4000
