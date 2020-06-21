@@ -38,7 +38,7 @@ class TestPlayersApi(unittest.TestCase):
             assert player.donations_received >= 0
             assert player.total_donations >= 100000
             assert player.war_day_wins >= 100
-            assert player.clan_cards_collected >= 100000
+            assert player.club_cards_collected >= 100000
             assert player.Club.tag == '#JY8YVV'
             assert player.Club.name == 'Agrassar'
             assert player.Club.badge_id >= 16000000
@@ -82,7 +82,7 @@ class TestPlayersApi(unittest.TestCase):
 
             battle = battles[0]
 
-            assert battle.type in ['PvP', 'clanWarWarDay', 'clanWarCollectionDay', 'challenge']
+            assert battle.type in ['PvP', 'clubWarWarDay', 'clubWarCollectionDay', 'challenge']
             assert len(battle.team) >= 1
             assert len(battle.opponent) >= 1
             assert battle.game_mode.id >= 72000000

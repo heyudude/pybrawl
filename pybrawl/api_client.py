@@ -79,7 +79,7 @@ class ApiClient(object):
         self.cookie = cookie
         # Set default User-Agent.
         self.user_agent = 'OpenAPI-Generator/1.0.0/python'
-        self.client_side_validation = configuration.client_side_validation
+        #self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
         return self
