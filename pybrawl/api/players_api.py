@@ -109,9 +109,9 @@ class PlayersApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'player_tag' is set
-        if self.api_client.client_side_validation and ('player_tag' not in local_var_params or  # noqa: E501
-                                                        local_var_params['player_tag'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `player_tag` when calling `get_player`")  # noqa: E501
+        #if self.api_client.client_side_validation and ('player_tag' not in local_var_params or  # noqa: E501
+        #                                                local_var_params['player_tag'] is None):  # noqa: E501
+        #    raise ApiValueError("Missing the required parameter `player_tag` when calling `get_player`")  # noqa: E501
 
         collection_formats = {}
 
