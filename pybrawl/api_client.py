@@ -68,7 +68,7 @@ class ApiClient(object):
     def __init__(self, configuration=None, header_name=None, header_value=None,
                  cookie=None, pool_threads=1):
         if configuration is None:
-            configuration = configuration.get_default_copy()
+            configuration = Configuration.get_default_copy()
         self.configuration = configuration
         self.pool_threads = pool_threads
 
@@ -79,7 +79,7 @@ class ApiClient(object):
         self.cookie = cookie
         # Set default User-Agent.
         self.user_agent = 'OpenAPI-Generator/1.0.0/python'
-        #self.client_side_validation = configuration.client_side_validation
+        self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
         return self

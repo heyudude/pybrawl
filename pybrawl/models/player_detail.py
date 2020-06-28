@@ -36,24 +36,16 @@ class PlayerDetail(object):
         'tag': 'str',
         'name': 'str',
         'exp_level': 'int',
+        'exp_points': 'int',
         'trophies': 'int',
-        'best_trophies': 'int',
-        'wins': 'int',
-        'losses': 'int',
-        'battle_count': 'int',
-        'three_crown_wins': 'int',
-        'challengebrawlers_won': 'int',
-        'challenge_max_wins': 'int',
-        'role': 'str',
-        'donations': 'int',
-        'donations_received': 'int',
-        'total_donations': 'int',
-        'war_day_wins': 'int',
-        'clubbrawlers_collected': 'int',
+        'highest_trophies': 'int',
+        'power_play_points': 'int',
+        'highestpower_play_points': 'int',
+        'solo_victories': 'int',
+        'duo_victories': 'int',
+        'best_robo_rumble_time': 'int',
+        'best_time_as_big_brawler': 'int',
         'club': 'ClubBase',
-        'league_statistics': 'PlayerLeagueStatistics',
-        'achievements': 'list[PlayerAchievement]',
-        'badges': 'list[PlayerBadge]',
         'brawlers': 'list[Brawler]',
         'current_favouritebrawler': 'Brawler',
         'star_points': 'int'
@@ -63,30 +55,22 @@ class PlayerDetail(object):
         'tag': 'tag',
         'name': 'name',
         'exp_level': 'expLevel',
+        'exp_points': 'expPoints',
         'trophies': 'trophies',
-        'best_trophies': 'bestTrophies',
-        'wins': 'wins',
-        'losses': 'losses',
-        'battle_count': 'battleCount',
-        'three_crown_wins': 'threeCrownWins',
-        'challengebrawlers_won': 'challengebrawlersWon',
-        'challenge_max_wins': 'challengeMaxWins',
-        'role': 'role',
-        'donations': 'donations',
-        'donations_received': 'donationsReceived',
-        'total_donations': 'totalDonations',
-        'war_day_wins': 'warDayWins',
-        'clubbrawlers_collected': 'clubbrawlersCollected',
+        'highest_trophies': 'highestTrophies',
+        'power_play_points': 'powerPlayPoints',
+        'highestpower_play_points': 'highestpowerPlayPoints',
+        'solo_victories': 'soloVictories',
+        'duo_victories': 'duoVictories',
+        'best_robo_rumble_time': 'BestRoboRumbleTime',
+        'best_time_as_big_brawler': 'BestTimeAsBigBrawler',
         'club': 'club',
-        'league_statistics': 'leagueStatistics',
-        'achievements': 'achievements',
-        'badges': 'badges',
-        'brawlers': 'brawlers',
+        'brawlers': 'Brawlers',
         'current_favouritebrawler': 'currentFavouritebrawler',
         'star_points': 'starPoints'
     }
 
-    def __init__(self, tag=None, name=None, exp_level=None, trophies=None, best_trophies=None, wins=None, losses=None, battle_count=None, three_crown_wins=None, challengebrawlers_won=None, challenge_max_wins=None, role=None, donations=None, donations_received=None, total_donations=None, war_day_wins=None, clubbrawlers_collected=None, club=None, league_statistics=None, achievements=None, badges=None, brawlers=None, current_favouritebrawler=None, star_points=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, exp_level=None, exp_points=None, trophies=None, highest_trophies=None, power_play_points=None, highestpower_play_points=None, solo_victories=None, duo_victories=None, best_robo_rumble_time=None, best_time_as_big_brawler=None, club=None, brawlers=None, current_favouritebrawler=None, star_points=None, local_vars_configuration=None):  # noqa: E501
         """PlayerDetail - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -95,24 +79,16 @@ class PlayerDetail(object):
         self._tag = None
         self._name = None
         self._exp_level = None
+        self._exp_points = None
         self._trophies = None
-        self._best_trophies = None
-        self._wins = None
-        self._losses = None
-        self._battle_count = None
-        self._three_crown_wins = None
-        self._challengebrawlers_won = None
-        self._challenge_max_wins = None
-        self._role = None
-        self._donations = None
-        self._donations_received = None
-        self._total_donations = None
-        self._war_day_wins = None
-        self._clubbrawlers_collected = None
+        self._highest_trophies = None
+        self._power_play_points = None
+        self._highestpower_play_points = None
+        self._solo_victories = None
+        self._duo_victories = None
+        self._best_robo_rumble_time = None
+        self._best_time_as_big_brawler = None
         self._club = None
-        self._league_statistics = None
-        self._achievements = None
-        self._badges = None
         self._brawlers = None
         self._current_favouritebrawler = None
         self._star_points = None
@@ -124,42 +100,26 @@ class PlayerDetail(object):
             self.name = name
         if exp_level is not None:
             self.exp_level = exp_level
+        if exp_points is not None:
+            self.exp_points = exp_points
         if trophies is not None:
             self.trophies = trophies
-        if best_trophies is not None:
-            self.best_trophies = best_trophies
-        if wins is not None:
-            self.wins = wins
-        if losses is not None:
-            self.losses = losses
-        if battle_count is not None:
-            self.battle_count = battle_count
-        if three_crown_wins is not None:
-            self.three_crown_wins = three_crown_wins
-        if challengebrawlers_won is not None:
-            self.challengebrawlers_won = challengebrawlers_won
-        if challenge_max_wins is not None:
-            self.challenge_max_wins = challenge_max_wins
-        if role is not None:
-            self.role = role
-        if donations is not None:
-            self.donations = donations
-        if donations_received is not None:
-            self.donations_received = donations_received
-        if total_donations is not None:
-            self.total_donations = total_donations
-        if war_day_wins is not None:
-            self.war_day_wins = war_day_wins
-        if clubbrawlers_collected is not None:
-            self.clubbrawlers_collected = clubbrawlers_collected
+        if highest_trophies is not None:
+            self.highest_trophies = highest_trophies
+        if power_play_points is not None:
+            self.power_play_points = power_play_points
+        if highestpower_play_points is not None:
+            self.highestpower_play_points = highestpower_play_points
+        if solo_victories is not None:
+            self.solo_victories = solo_victories
+        if duo_victories is not None:
+            self.duo_victories = duo_victories
+        if best_robo_rumble_time is not None:
+            self.best_robo_rumble_time = best_robo_rumble_time
+        if best_time_as_big_brawler is not None:
+            self.best_time_as_big_brawler = best_time_as_big_brawler
         if club is not None:
             self.club = club
-        if league_statistics is not None:
-            self.league_statistics = league_statistics
-        if achievements is not None:
-            self.achievements = achievements
-        if badges is not None:
-            self.badges = badges
         if brawlers is not None:
             self.brawlers = brawlers
         if current_favouritebrawler is not None:
@@ -231,6 +191,27 @@ class PlayerDetail(object):
         self._exp_level = exp_level
 
     @property
+    def exp_points(self):
+        """Gets the exp_points of this PlayerDetail.  # noqa: E501
+
+
+        :return: The exp_points of this PlayerDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._exp_points
+
+    @exp_points.setter
+    def exp_points(self, exp_points):
+        """Sets the exp_points of this PlayerDetail.
+
+
+        :param exp_points: The exp_points of this PlayerDetail.  # noqa: E501
+        :type: int
+        """
+
+        self._exp_points = exp_points
+
+    @property
     def trophies(self):
         """Gets the trophies of this PlayerDetail.  # noqa: E501
 
@@ -252,277 +233,151 @@ class PlayerDetail(object):
         self._trophies = trophies
 
     @property
-    def best_trophies(self):
-        """Gets the best_trophies of this PlayerDetail.  # noqa: E501
+    def highest_trophies(self):
+        """Gets the highest_trophies of this PlayerDetail.  # noqa: E501
 
 
-        :return: The best_trophies of this PlayerDetail.  # noqa: E501
+        :return: The highest_trophies of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._best_trophies
+        return self._highest_trophies
 
-    @best_trophies.setter
-    def best_trophies(self, best_trophies):
-        """Sets the best_trophies of this PlayerDetail.
+    @highest_trophies.setter
+    def highest_trophies(self, highest_trophies):
+        """Sets the highest_trophies of this PlayerDetail.
 
 
-        :param best_trophies: The best_trophies of this PlayerDetail.  # noqa: E501
+        :param highest_trophies: The highest_trophies of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._best_trophies = best_trophies
+        self._highest_trophies = highest_trophies
 
     @property
-    def wins(self):
-        """Gets the wins of this PlayerDetail.  # noqa: E501
+    def power_play_points(self):
+        """Gets the power_play_points of this PlayerDetail.  # noqa: E501
 
 
-        :return: The wins of this PlayerDetail.  # noqa: E501
+        :return: The power_play_points of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._wins
+        return self._power_play_points
 
-    @wins.setter
-    def wins(self, wins):
-        """Sets the wins of this PlayerDetail.
+    @power_play_points.setter
+    def power_play_points(self, power_play_points):
+        """Sets the power_play_points of this PlayerDetail.
 
 
-        :param wins: The wins of this PlayerDetail.  # noqa: E501
+        :param power_play_points: The power_play_points of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._wins = wins
+        self._power_play_points = power_play_points
 
     @property
-    def losses(self):
-        """Gets the losses of this PlayerDetail.  # noqa: E501
+    def highestpower_play_points(self):
+        """Gets the highestpower_play_points of this PlayerDetail.  # noqa: E501
 
 
-        :return: The losses of this PlayerDetail.  # noqa: E501
+        :return: The highestpower_play_points of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._losses
+        return self._highestpower_play_points
 
-    @losses.setter
-    def losses(self, losses):
-        """Sets the losses of this PlayerDetail.
+    @highestpower_play_points.setter
+    def highestpower_play_points(self, highestpower_play_points):
+        """Sets the highestpower_play_points of this PlayerDetail.
 
 
-        :param losses: The losses of this PlayerDetail.  # noqa: E501
+        :param highestpower_play_points: The highestpower_play_points of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._losses = losses
+        self._highestpower_play_points = highestpower_play_points
 
     @property
-    def battle_count(self):
-        """Gets the battle_count of this PlayerDetail.  # noqa: E501
+    def solo_victories(self):
+        """Gets the solo_victories of this PlayerDetail.  # noqa: E501
 
 
-        :return: The battle_count of this PlayerDetail.  # noqa: E501
+        :return: The solo_victories of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._battle_count
+        return self._solo_victories
 
-    @battle_count.setter
-    def battle_count(self, battle_count):
-        """Sets the battle_count of this PlayerDetail.
+    @solo_victories.setter
+    def solo_victories(self, solo_victories):
+        """Sets the solo_victories of this PlayerDetail.
 
 
-        :param battle_count: The battle_count of this PlayerDetail.  # noqa: E501
+        :param solo_victories: The solo_victories of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._battle_count = battle_count
+        self._solo_victories = solo_victories
 
     @property
-    def three_crown_wins(self):
-        """Gets the three_crown_wins of this PlayerDetail.  # noqa: E501
+    def duo_victories(self):
+        """Gets the duo_victories of this PlayerDetail.  # noqa: E501
 
 
-        :return: The three_crown_wins of this PlayerDetail.  # noqa: E501
+        :return: The duo_victories of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._three_crown_wins
+        return self._duo_victories
 
-    @three_crown_wins.setter
-    def three_crown_wins(self, three_crown_wins):
-        """Sets the three_crown_wins of this PlayerDetail.
+    @duo_victories.setter
+    def duo_victories(self, duo_victories):
+        """Sets the duo_victories of this PlayerDetail.
 
 
-        :param three_crown_wins: The three_crown_wins of this PlayerDetail.  # noqa: E501
+        :param duo_victories: The duo_victories of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._three_crown_wins = three_crown_wins
+        self._duo_victories = duo_victories
 
     @property
-    def challengebrawlers_won(self):
-        """Gets the challengebrawlers_won of this PlayerDetail.  # noqa: E501
+    def best_robo_rumble_time(self):
+        """Gets the best_robo_rumble_time of this PlayerDetail.  # noqa: E501
 
 
-        :return: The challengebrawlers_won of this PlayerDetail.  # noqa: E501
+        :return: The best_robo_rumble_time of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._challengebrawlers_won
+        return self._best_robo_rumble_time
 
-    @challengebrawlers_won.setter
-    def challengebrawlers_won(self, challengebrawlers_won):
-        """Sets the challengebrawlers_won of this PlayerDetail.
+    @best_robo_rumble_time.setter
+    def best_robo_rumble_time(self, best_robo_rumble_time):
+        """Sets the best_robo_rumble_time of this PlayerDetail.
 
 
-        :param challengebrawlers_won: The challengebrawlers_won of this PlayerDetail.  # noqa: E501
+        :param best_robo_rumble_time: The best_robo_rumble_time of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._challengebrawlers_won = challengebrawlers_won
+        self._best_robo_rumble_time = best_robo_rumble_time
 
     @property
-    def challenge_max_wins(self):
-        """Gets the challenge_max_wins of this PlayerDetail.  # noqa: E501
+    def best_time_as_big_brawler(self):
+        """Gets the best_time_as_big_brawler of this PlayerDetail.  # noqa: E501
 
 
-        :return: The challenge_max_wins of this PlayerDetail.  # noqa: E501
+        :return: The best_time_as_big_brawler of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._challenge_max_wins
+        return self._best_time_as_big_brawler
 
-    @challenge_max_wins.setter
-    def challenge_max_wins(self, challenge_max_wins):
-        """Sets the challenge_max_wins of this PlayerDetail.
+    @best_time_as_big_brawler.setter
+    def best_time_as_big_brawler(self, best_time_as_big_brawler):
+        """Sets the best_time_as_big_brawler of this PlayerDetail.
 
 
-        :param challenge_max_wins: The challenge_max_wins of this PlayerDetail.  # noqa: E501
+        :param best_time_as_big_brawler: The best_time_as_big_brawler of this PlayerDetail.  # noqa: E501
         :type: int
         """
 
-        self._challenge_max_wins = challenge_max_wins
-
-    @property
-    def role(self):
-        """Gets the role of this PlayerDetail.  # noqa: E501
-
-
-        :return: The role of this PlayerDetail.  # noqa: E501
-        :rtype: str
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this PlayerDetail.
-
-
-        :param role: The role of this PlayerDetail.  # noqa: E501
-        :type: str
-        """
-
-        self._role = role
-
-    @property
-    def donations(self):
-        """Gets the donations of this PlayerDetail.  # noqa: E501
-
-
-        :return: The donations of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._donations
-
-    @donations.setter
-    def donations(self, donations):
-        """Sets the donations of this PlayerDetail.
-
-
-        :param donations: The donations of this PlayerDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._donations = donations
-
-    @property
-    def donations_received(self):
-        """Gets the donations_received of this PlayerDetail.  # noqa: E501
-
-
-        :return: The donations_received of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._donations_received
-
-    @donations_received.setter
-    def donations_received(self, donations_received):
-        """Sets the donations_received of this PlayerDetail.
-
-
-        :param donations_received: The donations_received of this PlayerDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._donations_received = donations_received
-
-    @property
-    def total_donations(self):
-        """Gets the total_donations of this PlayerDetail.  # noqa: E501
-
-
-        :return: The total_donations of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._total_donations
-
-    @total_donations.setter
-    def total_donations(self, total_donations):
-        """Sets the total_donations of this PlayerDetail.
-
-
-        :param total_donations: The total_donations of this PlayerDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._total_donations = total_donations
-
-    @property
-    def war_day_wins(self):
-        """Gets the war_day_wins of this PlayerDetail.  # noqa: E501
-
-
-        :return: The war_day_wins of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._war_day_wins
-
-    @war_day_wins.setter
-    def war_day_wins(self, war_day_wins):
-        """Sets the war_day_wins of this PlayerDetail.
-
-
-        :param war_day_wins: The war_day_wins of this PlayerDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._war_day_wins = war_day_wins
-
-    @property
-    def clubbrawlers_collected(self):
-        """Gets the clubbrawlers_collected of this PlayerDetail.  # noqa: E501
-
-
-        :return: The clubbrawlers_collected of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._clubbrawlers_collected
-
-    @clubbrawlers_collected.setter
-    def clubbrawlers_collected(self, clubbrawlers_collected):
-        """Sets the clubbrawlers_collected of this PlayerDetail.
-
-
-        :param clubbrawlers_collected: The clubbrawlers_collected of this PlayerDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._clubbrawlers_collected = clubbrawlers_collected
+        self._best_time_as_big_brawler = best_time_as_big_brawler
 
     @property
     def club(self):
@@ -544,69 +399,6 @@ class PlayerDetail(object):
         """
 
         self._club = club
-
-    @property
-    def league_statistics(self):
-        """Gets the league_statistics of this PlayerDetail.  # noqa: E501
-
-
-        :return: The league_statistics of this PlayerDetail.  # noqa: E501
-        :rtype: PlayerLeagueStatistics
-        """
-        return self._league_statistics
-
-    @league_statistics.setter
-    def league_statistics(self, league_statistics):
-        """Sets the league_statistics of this PlayerDetail.
-
-
-        :param league_statistics: The league_statistics of this PlayerDetail.  # noqa: E501
-        :type: PlayerLeagueStatistics
-        """
-
-        self._league_statistics = league_statistics
-
-    @property
-    def achievements(self):
-        """Gets the achievements of this PlayerDetail.  # noqa: E501
-
-
-        :return: The achievements of this PlayerDetail.  # noqa: E501
-        :rtype: list[PlayerAchievement]
-        """
-        return self._achievements
-
-    @achievements.setter
-    def achievements(self, achievements):
-        """Sets the achievements of this PlayerDetail.
-
-
-        :param achievements: The achievements of this PlayerDetail.  # noqa: E501
-        :type: list[PlayerAchievement]
-        """
-
-        self._achievements = achievements
-
-    @property
-    def badges(self):
-        """Gets the badges of this PlayerDetail.  # noqa: E501
-
-
-        :return: The badges of this PlayerDetail.  # noqa: E501
-        :rtype: list[PlayerBadge]
-        """
-        return self._badges
-
-    @badges.setter
-    def badges(self, badges):
-        """Sets the badges of this PlayerDetail.
-
-
-        :param badges: The badges of this PlayerDetail.  # noqa: E501
-        :type: list[PlayerBadge]
-        """
-
-        self._badges = badges
 
     @property
     def brawlers(self):

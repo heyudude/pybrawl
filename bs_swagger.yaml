@@ -137,41 +137,6 @@ paths:
           $ref: '#/components/responses/UnknownException'
         '503':
           $ref: '#/components/responses/InMaintenance'
-  '/players/{playerTag}/battlelog':
-    get:
-      summary: Get log of recent battles for a player
-      description: |
-        Get list of recent battle results for a player.
-      tags:
-        - players
-      operationId: getPlayerBattles
-      parameters:
-        - name: playerTag
-          in: path
-          description: |
-            Tag of the player whose information to retrieve.
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/BattleLogEntry'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '429':
-          $ref: '#/components/responses/RequestThrottled'
-        '500':
-          $ref: '#/components/responses/UnknownException'
-        '503':
-          $ref: '#/components/responses/InMaintenance'
 
   /brawlers:
     get:
@@ -300,48 +265,6 @@ components:
           $ref: '#/components/schemas/Brawler'
         starPoints:
           type: integer
-
-    BattleLogEntry:
-      type: object
-      properties:
-        battle:
-          type: string
-        battleTime:
-          type: string
-        event:
-          type: array
-          mode:
-            $ref: '#/components/schemas/BattleLogTeam'
-        id:
-          type: array
-          items:
-            $ref: '#/components/schemas/BattleLogTeam'
-
-    BattleLogTeam:
-      type: object
-      properties:
-        tag:
-          type: string
-        name:
-          type: string
-        startingTrophies:
-          type: integer
-        trophyChange:
-          type: integer
-        crowns:
-          type: integer
-        kingTowerHitPoints:
-          type: integer
-        princessTowersHitPoints:
-          type: array
-          items:
-            type: integer
-        club:
-          $ref: '#/components/schemas/clubBase'
-        brawlers:
-          type: array
-          items:
-            $ref: '#/components/schemas/Brawler'
 
     Brawler:
       type: object

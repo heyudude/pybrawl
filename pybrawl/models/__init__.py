@@ -14,8 +14,6 @@
 from __future__ import absolute_import
 
 # import models into model package
-from pybrawl.models.battle_log_entry import BattleLogEntry
-from pybrawl.models.battle_log_team import BattleLogTeam
 from pybrawl.models.brawler import Brawler
 from pybrawl.models.brawler_icon_urls import BrawlerIconUrls
 from pybrawl.models.brawler_list import BrawlerList

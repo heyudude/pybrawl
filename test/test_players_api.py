@@ -35,13 +35,6 @@ class TestPlayersApi(unittest.TestCase):
         """
         pass
 
-    def test_get_player_battles(self):
-        """Test case for get_player_battles
-
-        Get log of recent battles for a player  # noqa: E501
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

@@ -39,35 +39,37 @@ class TestPlayerDetail(unittest.TestCase):
                 tag = '0', 
                 name = '0', 
                 exp_level = 56, 
+                exp_points = 56, 
                 trophies = 56, 
-                best_trophies = 56, 
-                wins = 56, 
-                losses = 56, 
-                battle_count = 56, 
-                three_crown_wins = 56, 
-                challengebrawlers_won = 56, 
-                challenge_max_wins = 56, 
-                role = '0', 
-                donations = 56, 
-                donations_received = 56, 
-                total_donations = 56, 
-                war_day_wins = 56, 
-                clubbrawlers_collected = 56, 
+                highest_trophies = 56, 
+                power_play_points = 56, 
+                highestpower_play_points = 56, 
+                solo_victories = 56, 
+                duo_victories = 56, 
+                best_robo_rumble_time = 56, 
+                best_time_as_big_brawler = 56, 
                 club = pybrawl.models.club_base.ClubBase(
                     tag = '0', 
                     name = '0', 
                     badge_id = 56, ), 
-                league_statistics = None, 
-                achievements = [
-                    None
-                    ], 
-                badges = [
-                    None
-                    ], 
                 brawlers = [
-                    None
+                    pybrawl.models.brawler.Brawler(
+                        name = '0', 
+                        id = 56, 
+                        level = 56, 
+                        count = 56, 
+                        max_level = 56, 
+                        icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
+                            medium = '0', ), )
                     ], 
-                current_favouritebrawler = None, 
+                current_favouritebrawler = pybrawl.models.brawler.Brawler(
+                    name = '0', 
+                    id = 56, 
+                    level = 56, 
+                    count = 56, 
+                    max_level = 56, 
+                    icon_urls = pybrawl.models.brawler_icon_urls.Brawler_iconUrls(
+                        medium = '0', ), ), 
                 star_points = 56
             )
         else :

@@ -98,13 +98,10 @@ Class | Method | HTTP request | Description
 *ClubsApi* | [**getclub**](docs/ClubsApi.md#getclub) | **GET** /clubs/{clubTag} | Get club information
 *ClubsApi* | [**getclub_members**](docs/ClubsApi.md#getclub_members) | **GET** /clubs/{clubTag}/members | List club members
 *PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
-*PlayersApi* | [**get_player_battles**](docs/PlayersApi.md#get_player_battles) | **GET** /players/{playerTag}/battlelog | Get log of recent battles for a player
 
 
 ## Documentation For Models
 
- - [BattleLogEntry](docs/BattleLogEntry.md)
- - [BattleLogTeam](docs/BattleLogTeam.md)
  - [Brawler](docs/Brawler.md)
  - [BrawlerIconUrls](docs/BrawlerIconUrls.md)
  - [BrawlerList](docs/BrawlerList.md)
