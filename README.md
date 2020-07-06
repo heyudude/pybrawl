@@ -23,7 +23,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import pyroyale 
+import pybrawl 
 ```
 
 ### Setuptools
@@ -51,16 +51,16 @@ import pybrawl
 from pybrawl.rest import ApiException
 from pprint import pprint
 
-configuration = pyroyale.Configuration()
+configuration = pybrawl.Configuration()
 # Configure API key authorization: JWT
 configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.clashroyale.com/v1
+# Defining host is optional and default to https://api.brawlstars.com/v1
 configuration.host = "https://api.brawlstars.com/v1"
 # Create an instance of the API class
-api_instance = pybrawl.CardsApi(pyroyale.ApiClient(configuration))
+api_instance = pybrawl.CardsApi(pybrawl.ApiClient(configuration))
 
 try:
     # Get list of available cards
@@ -74,6 +74,8 @@ except ApiException as e:
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.brawlstars.com/v1*
+
+Outdated: update follows
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
