@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Get player information
 
-Get information about a single player by player tag. Player tags can befound either in game or by from club member lists. Note that player tags start with hash character '#' and that needs to be URL-encoded properly to work in URL, so for example player tag '#2ABC' would become '%232ABC' in the URL. 
+Get information about a single player by player tag. Player tags can be found either in game or by from club member lists. Note that player tags start with hash character '#' and that needs to be URL-encoded properly to work in URL, so for example player tag '#2ABC' would become '%232ABC' in the URL. 
 
 ### Example
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 **404** | Resource was not found. |  -  |
 **429** | Request was throttled, because amount of requests was above the threshold defined for the used API token.  |  -  |
 **500** | Unknown error happened when handling the request.  |  -  |
-**503** | Service is temprorarily unavailable because of maintenance.  |  -  |
+**503** | Service is temporarily unavailable because of maintenance.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

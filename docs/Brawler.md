@@ -3,12 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
 **id** | **int** |  | [optional] 
-**level** | **int** |  | [optional] 
-**count** | **int** |  | [optional] 
-**max_level** | **int** |  | [optional] 
-**icon_urls** | [**BrawlerIconUrls**](BrawlerIconUrls.md) |  | [optional] 
+**name** | **str** |  | [optional] 
+**power** | **int** |  | [optional] 
+**rank** | **int** |  | [optional] 
+**trophies** | **int** |  | [optional] 
+**highest_trophies** | **int** |  | [optional] 
+**star_powers** | [**list[StarPowers]**](StarPowers.md) |  | [optional] 
+**gadgets** | [**list[Gadgets]**](Gadgets.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

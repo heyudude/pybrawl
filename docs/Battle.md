@@ -1,10 +1,13 @@
-# ClubBase
+# Battle
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**name** | **str** |  | [optional] 
+**mode** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
+**rank** | **int** |  | [optional] 
+**trophy_change** | **int** |  | [optional] 
+**players** | [**list[Players]**](Players.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

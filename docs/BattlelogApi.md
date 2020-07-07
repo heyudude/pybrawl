@@ -1,18 +1,18 @@
-# pybrawl.BrawlersApi
+# pybrawl.BattlelogApi
 
 All URIs are relative to *https://api.brawlstars.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getbrawlers**](BrawlersApi.md#getbrawlers) | **GET** /brawlers | Get list of available brawlers
+[**get_battlelog**](BattlelogApi.md#get_battlelog) | **GET** /players/{playerTag}/battlelog | Get player&#39;s battlelog
 
 
-# **getbrawlers**
-> BrawlerList getbrawlers()
+# **get_battlelog**
+> PlayerBattleLog get_battlelog(player_tag)
 
-Get list of available brawlers
+Get player's battlelog
 
-Get list of all available brawlers. 
+Get information about a single player's battlelog
 
 ### Example
 
@@ -47,22 +47,26 @@ configuration = pybrawl.Configuration(
 # Enter a context with an instance of the API client
 with pybrawl.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = pybrawl.BrawlersApi(api_client)
-    
+    api_instance = pybrawl.BattlelogApi(api_client)
+    player_tag = 'player_tag_example' # str | Tag of the player's battle log to retrieve. 
+
     try:
-        # Get list of available brawlers
-        api_response = api_instance.getbrawlers()
+        # Get player's battlelog
+        api_response = api_instance.get_battlelog(player_tag)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BrawlersApi->getbrawlers: %s\n" % e)
+        print("Exception when calling BattlelogApi->get_battlelog: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **player_tag** | **str**| Tag of the player&#39;s battle log to retrieve.  | 
 
 ### Return type
 
-[**BrawlerList**](BrawlerList.md)
+[**PlayerBattleLog**](PlayerBattleLog.md)
 
 ### Authorization
 
@@ -78,11 +82,10 @@ This endpoint does not need any parameter.
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **400** | Client provided incorrect parameters for the request. |  -  |
-**403** | Access denied, either because of missing/incorrect credentials or used API token does not grant access to the requested resource.  |  -  |
 **404** | Resource was not found. |  -  |
 **429** | Request was throttled, because amount of requests was above the threshold defined for the used API token.  |  -  |
 **500** | Unknown error happened when handling the request.  |  -  |
-**503** | Service is temprorarily unavailable because of maintenance.  |  -  |
+**503** | Service is temporarily unavailable because of maintenance.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
