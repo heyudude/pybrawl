@@ -2,21 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module with command",
+            "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "command": "bstools --config /home/hans/repo/bstools_test/bstools.ini"
+            "program": "${file}",
+            "console": "integratedTerminal"
         },
-        {
-            "name": "Python: Module Debug with params",
-            "type": "python",
-            "request": "launch",
-            "args": [
-                "--config /home/hans/repo/bstools_test/bstools.ini"
-            ],
-            "module": "bstools"
-        }
     ]
-}
-]
 }
