@@ -33,45 +33,45 @@ class PlayerBattleLog(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'battle': 'list[Battles]'
+        'items': 'list[Battles]'
     }
 
     attribute_map = {
-        'battle': 'battle'
+        'items': 'items'
     }
 
-    def __init__(self, battle=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, items=None, local_vars_configuration=None):  # noqa: E501
         """PlayerBattleLog - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._battle = None
+        self._items = None
         self.discriminator = None
 
-        if battle is not None:
-            self.battle = battle
+        if items is not None:
+            self.items = items
 
     @property
-    def battle(self):
-        """Gets the battle of this PlayerBattleLog.  # noqa: E501
+    def items(self):
+        """Gets the items of this PlayerBattleLog.  # noqa: E501
 
 
-        :return: The battle of this PlayerBattleLog.  # noqa: E501
+        :return: The items of this PlayerBattleLog.  # noqa: E501
         :rtype: list[Battles]
         """
-        return self._battle
+        return self._items
 
-    @battle.setter
-    def battle(self, battle):
-        """Sets the battle of this PlayerBattleLog.
+    @items.setter
+    def items(self, items):
+        """Sets the items of this PlayerBattleLog.
 
 
-        :param battle: The battle of this PlayerBattleLog.  # noqa: E501
+        :param items: The items of this PlayerBattleLog.  # noqa: E501
         :type: list[Battles]
         """
 
-        self._battle = battle
+        self._items = items
 
     def to_dict(self):
         """Returns the model properties as a dict"""

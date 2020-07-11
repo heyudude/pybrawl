@@ -45,7 +45,9 @@ coverage.xml
 *,cover
 .hypothesis/
 venv/
+.venv/
 .python-version
+.pytest_cache
 
 # Translations
 *.mo
@@ -62,8 +64,3 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-
-.coverage
-.scannerwork
-.swagger-codegen
-.openapi-generator

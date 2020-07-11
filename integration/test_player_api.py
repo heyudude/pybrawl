@@ -8,6 +8,8 @@ from pybrawl.rest import ApiException
 configuration = config.getConfiguration()
 
 class TestPlayersApi(unittest.TestCase):
+    def foo(self):
+        print('foo')
 
     def setUp(self):
         # create an instance of the API class
@@ -17,37 +19,23 @@ class TestPlayersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_player_AaronTraas(self):
+    def test_player_Dude(self):
         try:
-            player = self.api.get_player('#9ULGLRCL')
-            assert player.tag == '#9ULGLRCL'
-            assert player.name == 'AaronTraas'
+            player = self.api.get_player('#200JUQP')
+            assert player.tag == '#200JUQP'
+            assert player.name == 'Dude'
             assert player.exp_level >= 13
             assert player.trophies >= 4000
             assert player.best_trophies >= 4000
             assert player.wins >= 7000
             assert player.losses >= 7000
             assert player.battle_count >= 20000
-            assert player.three_crown_wins >= 2000
-            assert player.challenge_cards_won >= 2000
-            assert player.challenge_max_wins >= 10
-            assert player.tournament_cards_won >= 0
-            assert player.tournament_battle_count >= 100
             assert player.role.lower() in ['leader', 'coleader', 'elder', 'member']
             assert player.donations >= 0
             assert player.donations_received >= 0
-            assert player.total_donations >= 100000
-            assert player.war_day_wins >= 100
-            assert player.club_cards_collected >= 100000
-            assert player.Club.tag == '#JY8YVV'
-            assert player.Club.name == 'Agrassar'
+            assert player.Club.tag == '#RLUP2C'
+            assert player.Club.name == '18Plussers'
             assert player.Club.badge_id >= 16000000
-            assert player.arena.id >= 54000000
-            assert player.league_statistics.current_season.trophies > 4000
-            assert player.league_statistics.current_season.best_trophies > 4000
-            assert player.league_statistics.previous_season.trophies > 4000
-            assert player.league_statistics.previous_season.best_trophies > 4000
-            assert player.league_statistics.best_season.trophies > 4000
             assert len(player.badges) > 5
             assert len(player.achievements) > 5
             assert len(player.cards) > 50
@@ -61,22 +49,9 @@ class TestPlayersApi(unittest.TestCase):
             print("Exception when calling PlayersApi.get_player(): %s\n" % e)
             assert False
 
-    def test_player_AaronTraas_upcoming_chests(self):
+    def test_player_Dude_battle_log(self):
         try:
-            chests = self.api.get_player_upcoming_chests('#9ULGLRCL').items
-
-            assert len(chests) > 10
-            assert chests[0].index >= 0
-            assert len(chests[0].name) >= 2
-            assert chests[0].name.lower().endswith('chest')
-
-        except ApiException as e:
-            print("Exception when calling PlayersApi.get_player_upcoming_chests(): %s\n" % e)
-            assert False
-
-    def test_player_AaronTraas_battle_log(self):
-        try:
-            battles = self.api.get_player_battles('#9ULGLRCL')
+            battles = self.api.get_player_battles('#200JUQP')
 
             assert len(battles) >= 1
 
@@ -92,3 +67,7 @@ class TestPlayersApi(unittest.TestCase):
             print("Exception when calling PlayersApi.get_player_battles(): %s\n" % e)
             assert False
 
+a = TestPlayersApi()
+a.setUp()
+a.test_player_Dude()
+a.foo()

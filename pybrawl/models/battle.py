@@ -35,20 +35,24 @@ class Battle(object):
     openapi_types = {
         'mode': 'str',
         'type': 'str',
-        'rank': 'int',
+        'result': 'str',
+        'duration': 'int',
         'trophy_change': 'int',
-        'players': 'list[Players]'
+        'star_player': 'list[StarPlayer]',
+        'teams': 'list[Teams]'
     }
 
     attribute_map = {
         'mode': 'mode',
         'type': 'type',
-        'rank': 'rank',
+        'result': 'result',
+        'duration': 'duration',
         'trophy_change': 'trophyChange',
-        'players': 'players'
+        'star_player': 'starPlayer',
+        'teams': 'teams'
     }
 
-    def __init__(self, mode=None, type=None, rank=None, trophy_change=None, players=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, mode=None, type=None, result=None, duration=None, trophy_change=None, star_player=None, teams=None, local_vars_configuration=None):  # noqa: E501
         """Battle - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,21 +60,27 @@ class Battle(object):
 
         self._mode = None
         self._type = None
-        self._rank = None
+        self._result = None
+        self._duration = None
         self._trophy_change = None
-        self._players = None
+        self._star_player = None
+        self._teams = None
         self.discriminator = None
 
         if mode is not None:
             self.mode = mode
         if type is not None:
             self.type = type
-        if rank is not None:
-            self.rank = rank
+        if result is not None:
+            self.result = result
+        if duration is not None:
+            self.duration = duration
         if trophy_change is not None:
             self.trophy_change = trophy_change
-        if players is not None:
-            self.players = players
+        if star_player is not None:
+            self.star_player = star_player
+        if teams is not None:
+            self.teams = teams
 
     @property
     def mode(self):
@@ -115,25 +125,46 @@ class Battle(object):
         self._type = type
 
     @property
-    def rank(self):
-        """Gets the rank of this Battle.  # noqa: E501
+    def result(self):
+        """Gets the result of this Battle.  # noqa: E501
 
 
-        :return: The rank of this Battle.  # noqa: E501
+        :return: The result of this Battle.  # noqa: E501
+        :rtype: str
+        """
+        return self._result
+
+    @result.setter
+    def result(self, result):
+        """Sets the result of this Battle.
+
+
+        :param result: The result of this Battle.  # noqa: E501
+        :type: str
+        """
+
+        self._result = result
+
+    @property
+    def duration(self):
+        """Gets the duration of this Battle.  # noqa: E501
+
+
+        :return: The duration of this Battle.  # noqa: E501
         :rtype: int
         """
-        return self._rank
+        return self._duration
 
-    @rank.setter
-    def rank(self, rank):
-        """Sets the rank of this Battle.
+    @duration.setter
+    def duration(self, duration):
+        """Sets the duration of this Battle.
 
 
-        :param rank: The rank of this Battle.  # noqa: E501
+        :param duration: The duration of this Battle.  # noqa: E501
         :type: int
         """
 
-        self._rank = rank
+        self._duration = duration
 
     @property
     def trophy_change(self):
@@ -157,25 +188,46 @@ class Battle(object):
         self._trophy_change = trophy_change
 
     @property
-    def players(self):
-        """Gets the players of this Battle.  # noqa: E501
+    def star_player(self):
+        """Gets the star_player of this Battle.  # noqa: E501
 
 
-        :return: The players of this Battle.  # noqa: E501
-        :rtype: list[Players]
+        :return: The star_player of this Battle.  # noqa: E501
+        :rtype: list[StarPlayer]
         """
-        return self._players
+        return self._star_player
 
-    @players.setter
-    def players(self, players):
-        """Sets the players of this Battle.
+    @star_player.setter
+    def star_player(self, star_player):
+        """Sets the star_player of this Battle.
 
 
-        :param players: The players of this Battle.  # noqa: E501
-        :type: list[Players]
+        :param star_player: The star_player of this Battle.  # noqa: E501
+        :type: list[StarPlayer]
         """
 
-        self._players = players
+        self._star_player = star_player
+
+    @property
+    def teams(self):
+        """Gets the teams of this Battle.  # noqa: E501
+
+
+        :return: The teams of this Battle.  # noqa: E501
+        :rtype: list[Teams]
+        """
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        """Sets the teams of this Battle.
+
+
+        :param teams: The teams of this Battle.  # noqa: E501
+        :type: list[Teams]
+        """
+
+        self._teams = teams
 
     def to_dict(self):
         """Returns the model properties as a dict"""

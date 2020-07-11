@@ -5,7 +5,7 @@ import os
 import pybrawl
 
 def getConfiguration():
-	config_file_name = os.path.expanduser('~/.bstools1')
+	config_file_name = os.path.expanduser('~/.bstools')
 
 	config = {}
 
