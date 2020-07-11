@@ -1,28 +1,17 @@
-dist: trusty
+# ref: https://docs.travis-ci.com/user/languages/python
 language: python
-
 python:
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
   - "3.6"
-
-git:
-  depth: false
-
-addons:
-  sonarcloud:
-    organization: "aarontraas-github"
-    token:
-      secure: "INq6COelHO8q9s0CC2VsOouMRcjsrRXCNVF0odRm8Xzlb/sgx0JzvvE6tf+Yxx0ahfNPJtkTZgxLaUmIvT3oNj0Y4KQGR/00POxzg3Rg3kLknbm5d7p/bk3qaEezb8ECNPXZwjxH/nubijTNKPe1ZcUMPiVtz1rNM3dy1KemOKzYWugt17hyMM2zOPSOASkRF8R7amTKCkWr2yTiwpfHbxj5vO2CmiIOJAXSfm+bwYx38vu7qO4FVIf9BPHhdQD3PulXD4v9mPi0q4uwd2y3qzGWrQd9QSmL3w/5V+I2Q2RL0eOZbcBvO74iTw5yRnJyZFGB5tu7oZwlFFZ4UARLemr4g/uGD+IJKOXE4alukK1U5WscXh6vnAD991zhdkY2juS9QwM6agJ5+cgocFoWuAJRNUiu86BZ8mnLdnD7DYkWbbAHXkkpD3Ox+kD7DkLyx2s/4HIfLg5yNRUz86PjZICl47soJi09qW4XgfBtnKbMDVZtSw9XJEosJAr/ilXH7u3bdubpeEjxNWpB5+iTOpHDvVzH0KtexXfTd0wScNMlh9iWmQ8XnuqFvnsdXoVBUixZiY7l521UP8ck42+mh+NNLUeEN3SdwQ650LbFg/DUWaVK7sQFsFxXsE3onlsck69QFyqC1wN3uwtbziv3ToLeGUqrd25gCqUvzHTS6qY="
-
+  - "3.7"
+  - "3.8"
+# command to install dependencies
 install:
-  - make install
-
-script:
-  - make sonar
-
-after_success:
-  - chmod +x discord_webhook.sh
-  - ./discord_webhook.sh success $DISCORD_WEBHOOK_URL
-
-after_failure:
-  - chmod +x discord_webhook.sh
-  - ./discord_webhook.sh failure $DISCORD_WEBHOOK_URL
+  - "pip install -r requirements.txt"
+  - "pip install -r test-requirements.txt"
+# command to run tests
+script: pytest --cov=pybrawl

@@ -25,5 +25,7 @@ from pybrawl.models.event import Event
 from pybrawl.models.gadgets import Gadgets
 from pybrawl.models.player_battle_log import PlayerBattleLog
 from pybrawl.models.player_detail import PlayerDetail
-from pybrawl.models.players import Players
+from pybrawl.models.star_brawler import StarBrawler
+from pybrawl.models.star_player import StarPlayer
 from pybrawl.models.star_powers import StarPowers
+from pybrawl.models.teams import Teams
