@@ -45,9 +45,9 @@ upload:
 	twine upload dist/*
 
 swagger: delete-models
-	openapi-generator generate -i https://raw.githubusercontent.com/AaronTraas/brawlstars-swagger/master/swagger.yaml -g python -DpackageName=pybrawl -o .
+	openapi-generator generate -i https://raw.githubusercontent.com/heyudude/brawlstars-swagger/master/bs_swagger.yaml -g python -DpackageName=pybrawl -o .
 	cat templates/README_suffix.md >> README.md
 
 swagger-local: delete-models
-	openapi-generator generate -i ../brawlstars-swagger/swagger.yaml -g python -DpackageName=pybrawl -o .
+	openapi-generator generate -i ../brawlstars-swagger/bs_swagger.yaml -g python -DpackageName=pybrawl -o .
 	cat templates/README_suffix.md >> README.md

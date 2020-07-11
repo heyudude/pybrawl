@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from pybrawl.configuration import Configuration
+from openapi_client.configuration import Configuration
 
 
 class PlayerDetail(object):
