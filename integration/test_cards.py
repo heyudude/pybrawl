@@ -30,4 +30,5 @@ class TestCardsApi(unittest.TestCase):
             print("Exception when calling CardsApi->get_cards: %s\n" % e)
             assert False
 
-
+if __name__ == '__main__':
+    unittest.main()

@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from openapi_client.configuration import Configuration
+from pybrawl.configuration import Configuration
 
 
 class Battle(object):
@@ -98,7 +98,7 @@ class Battle(object):
 
 
         :param mode: The mode of this Battle.  # noqa: E501
-        :type: str
+        :type mode: str
         """
 
         self._mode = mode
@@ -119,7 +119,7 @@ class Battle(object):
 
 
         :param type: The type of this Battle.  # noqa: E501
-        :type: str
+        :type type: str
         """
 
         self._type = type
@@ -140,7 +140,7 @@ class Battle(object):
 
 
         :param result: The result of this Battle.  # noqa: E501
-        :type: str
+        :type result: str
         """
 
         self._result = result
@@ -161,7 +161,7 @@ class Battle(object):
 
 
         :param duration: The duration of this Battle.  # noqa: E501
-        :type: int
+        :type duration: int
         """
 
         self._duration = duration
@@ -182,7 +182,7 @@ class Battle(object):
 
 
         :param trophy_change: The trophy_change of this Battle.  # noqa: E501
-        :type: int
+        :type trophy_change: int
         """
 
         self._trophy_change = trophy_change
@@ -203,7 +203,7 @@ class Battle(object):
 
 
         :param star_player: The star_player of this Battle.  # noqa: E501
-        :type: list[StarPlayer]
+        :type star_player: list[StarPlayer]
         """
 
         self._star_player = star_player
@@ -224,7 +224,7 @@ class Battle(object):
 
 
         :param teams: The teams of this Battle.  # noqa: E501
-        :type: list[Teams]
+        :type teams: list[Teams]
         """
 
         self._teams = teams

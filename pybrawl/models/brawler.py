@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from openapi_client.configuration import Configuration
+from pybrawl.configuration import Configuration
 
 
 class Brawler(object):
@@ -103,7 +103,7 @@ class Brawler(object):
 
 
         :param id: The id of this Brawler.  # noqa: E501
-        :type: int
+        :type id: int
         """
 
         self._id = id
@@ -124,7 +124,7 @@ class Brawler(object):
 
 
         :param name: The name of this Brawler.  # noqa: E501
-        :type: str
+        :type name: str
         """
 
         self._name = name
@@ -145,7 +145,7 @@ class Brawler(object):
 
 
         :param power: The power of this Brawler.  # noqa: E501
-        :type: int
+        :type power: int
         """
 
         self._power = power
@@ -166,7 +166,7 @@ class Brawler(object):
 
 
         :param rank: The rank of this Brawler.  # noqa: E501
-        :type: int
+        :type rank: int
         """
 
         self._rank = rank
@@ -187,7 +187,7 @@ class Brawler(object):
 
 
         :param trophies: The trophies of this Brawler.  # noqa: E501
-        :type: int
+        :type trophies: int
         """
 
         self._trophies = trophies
@@ -208,7 +208,7 @@ class Brawler(object):
 
 
         :param highest_trophies: The highest_trophies of this Brawler.  # noqa: E501
-        :type: int
+        :type highest_trophies: int
         """
 
         self._highest_trophies = highest_trophies
@@ -229,7 +229,7 @@ class Brawler(object):
 
 
         :param star_powers: The star_powers of this Brawler.  # noqa: E501
-        :type: list[StarPowers]
+        :type star_powers: list[StarPowers]
         """
 
         self._star_powers = star_powers
@@ -250,7 +250,7 @@ class Brawler(object):
 
 
         :param gadgets: The gadgets of this Brawler.  # noqa: E501
-        :type: list[Gadgets]
+        :type gadgets: list[Gadgets]
         """
 
         self._gadgets = gadgets

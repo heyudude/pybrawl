@@ -5,6 +5,8 @@ import os
 import pybrawl
 
 def getConfiguration():
+	""" Get configuration in order to test the API"""
+
 	config_file_name = os.path.expanduser('~/.bstools')
 
 	config = {}

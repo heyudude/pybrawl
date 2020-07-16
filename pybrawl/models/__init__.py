@@ -1,7 +1,6 @@
 # coding: utf-8
 
 # flake8: noqa
-
 """
     Brawl Stars API
 
@@ -14,22 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.0"
-
-# import apis into sdk package
-from pybrawl.api.battlelog_api import BattlelogApi
-from pybrawl.api.players_api import PlayersApi
-
-# import ApiClient
-from pybrawl.api_client import ApiClient
-from pybrawl.configuration import Configuration
-from pybrawl.exceptions import OpenApiException
-from pybrawl.exceptions import ApiTypeError
-from pybrawl.exceptions import ApiValueError
-from pybrawl.exceptions import ApiKeyError
-from pybrawl.exceptions import ApiAttributeError
-from pybrawl.exceptions import ApiException
-# import models into sdk package
+# import models into model package
 from pybrawl.models.battle import Battle
 from pybrawl.models.battle_brawler import BattleBrawler
 from pybrawl.models.battles import Battles
@@ -45,4 +29,3 @@ from pybrawl.models.star_brawler import StarBrawler
 from pybrawl.models.star_player import StarPlayer
 from pybrawl.models.star_powers import StarPowers
 from pybrawl.models.teams import Teams
-

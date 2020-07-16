@@ -10,7 +10,8 @@ clean:
 
 delete-models:
 	rm -rf docs
-	rm -rf pybrawl/models
+	rm -rf test
+	rm -rf pybrawl
 
 install:
 	pip3 install -r requirements.txt
@@ -49,5 +50,9 @@ swagger: delete-models
 	cat templates/README_suffix.md >> README.md
 
 swagger-local: delete-models
-	openapi-generator generate -i ../brawlstars-swagger/bs_swagger.yaml -g python -DpackageName=pybrawl -o .
+	openapi-generator generate -i ../brawlstars-swagger/bs_swagger.yaml --additional-properties=packageName=pybrawl,projectName=pybrawl,packageVersion=0.0.1 -g python -o .
+	cat templates/README_suffix.md >> README.md
+
+swagger-latest: delete-models
+	java -jar ../openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g python -i ../brawlstars-swagger/bs_swagger.yaml --config ../brawlstars-swagger/bs_config.yaml 
 	cat templates/README_suffix.md >> README.md

@@ -105,3 +105,5 @@ class TestClubsApi(unittest.TestCase):
             print("Exception when calling CardsClub->get_club_members: %s\n" % e)
             assert False
 
+if __name__ == '__main__':
+    unittest.main()

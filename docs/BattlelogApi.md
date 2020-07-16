@@ -1,4 +1,4 @@
-# openapi_client.BattlelogApi
+# pybrawl.BattlelogApi
 
 All URIs are relative to *https://api.brawlstars.com/v1*
 
@@ -20,12 +20,12 @@ Get information about a single player's battlelog
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import pybrawl
+from pybrawl.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.brawlstars.com/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = pybrawl.Configuration(
     host = "https://api.brawlstars.com/v1"
 )
 
@@ -35,19 +35,19 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: JWT
-configuration = openapi_client.Configuration(
+configuration = pybrawl.Configuration(
     host = "https://api.brawlstars.com/v1",
     api_key = {
-        'authorization': 'YOUR_API_KEY'
+        'JWT': 'YOUR_API_KEY'
     }
 )
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['authorization'] = 'Bearer'
+# configuration.api_key_prefix['JWT'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with pybrawl.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BattlelogApi(api_client)
+    api_instance = pybrawl.BattlelogApi(api_client)
     player_tag = 'player_tag_example' # str | Tag of the player's battle log to retrieve. 
 
     try:
