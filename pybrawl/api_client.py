@@ -69,6 +69,7 @@ class ApiClient(object):
                  cookie=None, pool_threads=1):
         if configuration is None:
             configuration = Configuration.get_default_copy()
+            
         self.configuration = configuration
         self.pool_threads = pool_threads
 
