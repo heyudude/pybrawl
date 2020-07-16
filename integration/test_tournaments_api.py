@@ -43,3 +43,6 @@ class TestTournamentsApi(unittest.TestCase):
             assert False
 
         assert isinstance(tournament.game_mode.id, int)
+        
+if __name__ == '__main__':
+    unittest.main()

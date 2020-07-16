@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from openapi_client.configuration import Configuration
+from pybrawl.configuration import Configuration
 
 
 class PlayerDetail(object):
@@ -133,7 +133,7 @@ class PlayerDetail(object):
 
 
         :param tag: The tag of this PlayerDetail.  # noqa: E501
-        :type: str
+        :type tag: str
         """
 
         self._tag = tag
@@ -154,7 +154,7 @@ class PlayerDetail(object):
 
 
         :param name: The name of this PlayerDetail.  # noqa: E501
-        :type: str
+        :type name: str
         """
 
         self._name = name
@@ -175,7 +175,7 @@ class PlayerDetail(object):
 
 
         :param trophies: The trophies of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type trophies: int
         """
 
         self._trophies = trophies
@@ -196,7 +196,7 @@ class PlayerDetail(object):
 
 
         :param exp_level: The exp_level of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type exp_level: int
         """
 
         self._exp_level = exp_level
@@ -217,7 +217,7 @@ class PlayerDetail(object):
 
 
         :param exp_points: The exp_points of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type exp_points: int
         """
 
         self._exp_points = exp_points
@@ -238,7 +238,7 @@ class PlayerDetail(object):
 
 
         :param highest_trophies: The highest_trophies of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type highest_trophies: int
         """
 
         self._highest_trophies = highest_trophies
@@ -259,7 +259,7 @@ class PlayerDetail(object):
 
 
         :param power_play_points: The power_play_points of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type power_play_points: int
         """
 
         self._power_play_points = power_play_points
@@ -280,7 +280,7 @@ class PlayerDetail(object):
 
 
         :param highest_power_play_points: The highest_power_play_points of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type highest_power_play_points: int
         """
 
         self._highest_power_play_points = highest_power_play_points
@@ -301,7 +301,7 @@ class PlayerDetail(object):
 
 
         :param solo_victories: The solo_victories of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type solo_victories: int
         """
 
         self._solo_victories = solo_victories
@@ -322,7 +322,7 @@ class PlayerDetail(object):
 
 
         :param duo_victories: The duo_victories of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type duo_victories: int
         """
 
         self._duo_victories = duo_victories
@@ -343,7 +343,7 @@ class PlayerDetail(object):
 
 
         :param best_robo_rumble_time: The best_robo_rumble_time of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type best_robo_rumble_time: int
         """
 
         self._best_robo_rumble_time = best_robo_rumble_time
@@ -364,7 +364,7 @@ class PlayerDetail(object):
 
 
         :param best_time_as_big_brawler: The best_time_as_big_brawler of this PlayerDetail.  # noqa: E501
-        :type: int
+        :type best_time_as_big_brawler: int
         """
 
         self._best_time_as_big_brawler = best_time_as_big_brawler
@@ -385,7 +385,7 @@ class PlayerDetail(object):
 
 
         :param club: The club of this PlayerDetail.  # noqa: E501
-        :type: ClubBase
+        :type club: ClubBase
         """
 
         self._club = club
@@ -406,7 +406,7 @@ class PlayerDetail(object):
 
 
         :param brawlers: The brawlers of this PlayerDetail.  # noqa: E501
-        :type: list[Brawler]
+        :type brawlers: list[Brawler]
         """
 
         self._brawlers = brawlers

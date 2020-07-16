@@ -1,21 +1,22 @@
+from __future__ import absolute_import
+
 import unittest
 
 import config
 
 import pybrawl
+from pybrawl.api.players_api import PlayersApi  # noqa: E501
 from pybrawl.rest import ApiException
 
 configuration = config.getConfiguration()
 
 class TestPlayersApi(unittest.TestCase):
-    def foo(self):
-        print('foo')
 
     def setUp(self):
         # create an instance of the API class
-        self.api = pybrawl.PlayersApi(pybrawl.ApiClient(config.getConfiguration()))
+        self.api = pybrawl.api.players_api.PlayersApi()  # noqa: E501
         pass
-
+        
     def tearDown(self):
         pass
 
@@ -58,6 +59,7 @@ class TestPlayersApi(unittest.TestCase):
             battle = battles[0]
 
             assert battle.type in ['PvP', 'clubWarWarDay', 'clubWarCollectionDay', 'challenge']
+
             assert len(battle.team) >= 1
             assert len(battle.opponent) >= 1
             assert battle.game_mode.id >= 72000000
@@ -67,7 +69,5 @@ class TestPlayersApi(unittest.TestCase):
             print("Exception when calling PlayersApi.get_player_battles(): %s\n" % e)
             assert False
 
-a = TestPlayersApi()
-a.setUp()
-a.test_player_Dude()
-a.foo()
+if __name__ == '__main__':
+    unittest.main()
