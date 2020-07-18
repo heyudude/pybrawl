@@ -33,7 +33,7 @@ class PlayerBattleLog(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[Battles]'
+        'items': 'list[Battle]'
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class PlayerBattleLog(object):
 
 
         :return: The items of this PlayerBattleLog.  # noqa: E501
-        :rtype: list[Battles]
+        :rtype: list[Battle]
         """
         return self._items
 
@@ -68,7 +68,7 @@ class PlayerBattleLog(object):
 
 
         :param items: The items of this PlayerBattleLog.  # noqa: E501
-        :type items: list[Battles]
+        :type items: list[Battle]
         """
 
         self._items = items

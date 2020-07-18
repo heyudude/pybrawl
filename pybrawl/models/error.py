@@ -34,15 +34,17 @@ class Error(object):
     """
     openapi_types = {
         'reason': 'str',
-        'message': 'str'
+        'message': 'str',
+        'detail': 'str'
     }
 
     attribute_map = {
         'reason': 'reason',
-        'message': 'message'
+        'message': 'message',
+        'detail': 'detail'
     }
 
-    def __init__(self, reason=None, message=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, reason=None, message=None, detail=None, local_vars_configuration=None):  # noqa: E501
         """Error - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -50,12 +52,15 @@ class Error(object):
 
         self._reason = None
         self._message = None
+        self._detail = None
         self.discriminator = None
 
         if reason is not None:
             self.reason = reason
         if message is not None:
             self.message = message
+        if detail is not None:
+            self.detail = detail
 
     @property
     def reason(self):
@@ -98,6 +103,27 @@ class Error(object):
         """
 
         self._message = message
+
+    @property
+    def detail(self):
+        """Gets the detail of this Error.  # noqa: E501
+
+
+        :return: The detail of this Error.  # noqa: E501
+        :rtype: str
+        """
+        return self._detail
+
+    @detail.setter
+    def detail(self, detail):
+        """Sets the detail of this Error.
+
+
+        :param detail: The detail of this Error.  # noqa: E501
+        :type detail: str
+        """
+
+        self._detail = detail
 
     def to_dict(self):
         """Returns the model properties as a dict"""

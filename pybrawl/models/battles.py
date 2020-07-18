@@ -33,71 +33,149 @@ class Battles(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'battle_time': 'str',
-        'event': 'list[Event]'
+        'mode': 'str',
+        'type': 'str',
+        'rank': 'int',
+        'trophy_change': 'int',
+        'players': 'list[BattlePlayers]'
     }
 
     attribute_map = {
-        'battle_time': 'battleTime',
-        'event': 'event'
+        'mode': 'mode',
+        'type': 'type',
+        'rank': 'rank',
+        'trophy_change': 'trophyChange',
+        'players': 'players'
     }
 
-    def __init__(self, battle_time=None, event=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, mode=None, type=None, rank=None, trophy_change=None, players=None, local_vars_configuration=None):  # noqa: E501
         """Battles - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._battle_time = None
-        self._event = None
+        self._mode = None
+        self._type = None
+        self._rank = None
+        self._trophy_change = None
+        self._players = None
         self.discriminator = None
 
-        if battle_time is not None:
-            self.battle_time = battle_time
-        if event is not None:
-            self.event = event
+        if mode is not None:
+            self.mode = mode
+        if type is not None:
+            self.type = type
+        if rank is not None:
+            self.rank = rank
+        if trophy_change is not None:
+            self.trophy_change = trophy_change
+        if players is not None:
+            self.players = players
 
     @property
-    def battle_time(self):
-        """Gets the battle_time of this Battles.  # noqa: E501
+    def mode(self):
+        """Gets the mode of this Battles.  # noqa: E501
 
 
-        :return: The battle_time of this Battles.  # noqa: E501
+        :return: The mode of this Battles.  # noqa: E501
         :rtype: str
         """
-        return self._battle_time
+        return self._mode
 
-    @battle_time.setter
-    def battle_time(self, battle_time):
-        """Sets the battle_time of this Battles.
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this Battles.
 
 
-        :param battle_time: The battle_time of this Battles.  # noqa: E501
-        :type battle_time: str
+        :param mode: The mode of this Battles.  # noqa: E501
+        :type mode: str
         """
 
-        self._battle_time = battle_time
+        self._mode = mode
 
     @property
-    def event(self):
-        """Gets the event of this Battles.  # noqa: E501
+    def type(self):
+        """Gets the type of this Battles.  # noqa: E501
 
 
-        :return: The event of this Battles.  # noqa: E501
-        :rtype: list[Event]
+        :return: The type of this Battles.  # noqa: E501
+        :rtype: str
         """
-        return self._event
+        return self._type
 
-    @event.setter
-    def event(self, event):
-        """Sets the event of this Battles.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Battles.
 
 
-        :param event: The event of this Battles.  # noqa: E501
-        :type event: list[Event]
+        :param type: The type of this Battles.  # noqa: E501
+        :type type: str
         """
 
-        self._event = event
+        self._type = type
+
+    @property
+    def rank(self):
+        """Gets the rank of this Battles.  # noqa: E501
+
+
+        :return: The rank of this Battles.  # noqa: E501
+        :rtype: int
+        """
+        return self._rank
+
+    @rank.setter
+    def rank(self, rank):
+        """Sets the rank of this Battles.
+
+
+        :param rank: The rank of this Battles.  # noqa: E501
+        :type rank: int
+        """
+
+        self._rank = rank
+
+    @property
+    def trophy_change(self):
+        """Gets the trophy_change of this Battles.  # noqa: E501
+
+
+        :return: The trophy_change of this Battles.  # noqa: E501
+        :rtype: int
+        """
+        return self._trophy_change
+
+    @trophy_change.setter
+    def trophy_change(self, trophy_change):
+        """Sets the trophy_change of this Battles.
+
+
+        :param trophy_change: The trophy_change of this Battles.  # noqa: E501
+        :type trophy_change: int
+        """
+
+        self._trophy_change = trophy_change
+
+    @property
+    def players(self):
+        """Gets the players of this Battles.  # noqa: E501
+
+
+        :return: The players of this Battles.  # noqa: E501
+        :rtype: list[BattlePlayers]
+        """
+        return self._players
+
+    @players.setter
+    def players(self, players):
+        """Sets the players of this Battles.
+
+
+        :param players: The players of this Battles.  # noqa: E501
+        :type players: list[BattlePlayers]
+        """
+
+        self._players = players
 
     def to_dict(self):
         """Returns the model properties as a dict"""

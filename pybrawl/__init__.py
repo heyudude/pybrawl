@@ -31,18 +31,16 @@ from pybrawl.exceptions import ApiAttributeError
 from pybrawl.exceptions import ApiException
 # import models into sdk package
 from pybrawl.models.battle import Battle
-from pybrawl.models.battle_brawler import BattleBrawler
+from pybrawl.models.battle_brawlers import BattleBrawlers
+from pybrawl.models.battle_players import BattlePlayers
 from pybrawl.models.battles import Battles
 from pybrawl.models.brawler import Brawler
 from pybrawl.models.brawler_list import BrawlerList
 from pybrawl.models.club_base import ClubBase
 from pybrawl.models.error import Error
-from pybrawl.models.event import Event
+from pybrawl.models.events import Events
 from pybrawl.models.gadgets import Gadgets
 from pybrawl.models.player_battle_log import PlayerBattleLog
 from pybrawl.models.player_detail import PlayerDetail
-from pybrawl.models.star_brawler import StarBrawler
-from pybrawl.models.star_player import StarPlayer
 from pybrawl.models.star_powers import StarPowers
-from pybrawl.models.teams import Teams
 

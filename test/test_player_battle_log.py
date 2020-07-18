@@ -37,34 +37,30 @@ class TestPlayerBattleLog(unittest.TestCase):
         if include_optional :
             return PlayerBattleLog(
                 items = [
-                    pybrawl.models.battles.Battles(
+                    pybrawl.models.battle.Battle(
                         battle_time = '0', 
                         event = [
-                            pybrawl.models.event.Event(
+                            pybrawl.models.events.Events(
                                 id = 56, 
                                 mode = '0', 
-                                map = '0', 
-                                battle = [
-                                    pybrawl.models.battle.Battle(
-                                        mode = '0', 
-                                        type = '0', 
-                                        result = '0', 
-                                        duration = 56, 
-                                        trophy_change = 56, 
-                                        star_player = [
-                                            pybrawl.models.star_player.starPlayer(
-                                                tag = '0', 
+                                map = '0', )
+                            ], 
+                        battle = [
+                            pybrawl.models.battles.Battles(
+                                mode = '0', 
+                                type = '0', 
+                                rank = 56, 
+                                trophy_change = 56, 
+                                players = [
+                                    pybrawl.models.battle_players.battlePlayers(
+                                        tag = '0', 
+                                        name = '0', 
+                                        brawler = [
+                                            pybrawl.models.battle_brawlers.battleBrawlers(
+                                                id = 56, 
                                                 name = '0', 
-                                                brawler = pybrawl.models.star_brawler.starBrawler(
-                                                    id = 56, 
-                                                    name = '0', 
-                                                    power = 56, 
-                                                    trophies = 56, ), )
-                                            ], 
-                                        teams = [
-                                            pybrawl.models.teams.teams(
-                                                tag = '0', 
-                                                name = '0', )
+                                                power = 56, 
+                                                trophies = 56, )
                                             ], )
                                     ], )
                             ], )

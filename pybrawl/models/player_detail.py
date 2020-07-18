@@ -35,12 +35,15 @@ class PlayerDetail(object):
     openapi_types = {
         'tag': 'str',
         'name': 'str',
+        'name_color': 'str',
+        'icon': 'str',
         'trophies': 'int',
+        'highest_trophies': 'int',
+        'highest_power_play_points': 'int',
         'exp_level': 'int',
         'exp_points': 'int',
-        'highest_trophies': 'int',
-        'power_play_points': 'int',
-        'highest_power_play_points': 'int',
+        'is_qualified_from_championship_challenge': 'bool',
+        '_3vs3_victories': 'int',
         'solo_victories': 'int',
         'duo_victories': 'int',
         'best_robo_rumble_time': 'int',
@@ -52,12 +55,15 @@ class PlayerDetail(object):
     attribute_map = {
         'tag': 'tag',
         'name': 'name',
+        'name_color': 'nameColor',
+        'icon': 'icon',
         'trophies': 'trophies',
+        'highest_trophies': 'highestTrophies',
+        'highest_power_play_points': 'highestPowerPlayPoints',
         'exp_level': 'expLevel',
         'exp_points': 'expPoints',
-        'highest_trophies': 'highestTrophies',
-        'power_play_points': 'powerPlayPoints',
-        'highest_power_play_points': 'highestPowerPlayPoints',
+        'is_qualified_from_championship_challenge': 'isQualifiedFromChampionshipChallenge',
+        '_3vs3_victories': '3vs3Victories',
         'solo_victories': 'soloVictories',
         'duo_victories': 'duoVictories',
         'best_robo_rumble_time': 'bestRoboRumbleTime',
@@ -66,7 +72,7 @@ class PlayerDetail(object):
         'brawlers': 'brawlers'
     }
 
-    def __init__(self, tag=None, name=None, trophies=None, exp_level=None, exp_points=None, highest_trophies=None, power_play_points=None, highest_power_play_points=None, solo_victories=None, duo_victories=None, best_robo_rumble_time=None, best_time_as_big_brawler=None, club=None, brawlers=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, name_color=None, icon=None, trophies=None, highest_trophies=None, highest_power_play_points=None, exp_level=None, exp_points=None, is_qualified_from_championship_challenge=None, _3vs3_victories=None, solo_victories=None, duo_victories=None, best_robo_rumble_time=None, best_time_as_big_brawler=None, club=None, brawlers=None, local_vars_configuration=None):  # noqa: E501
         """PlayerDetail - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -74,12 +80,15 @@ class PlayerDetail(object):
 
         self._tag = None
         self._name = None
+        self._name_color = None
+        self._icon = None
         self._trophies = None
+        self._highest_trophies = None
+        self._highest_power_play_points = None
         self._exp_level = None
         self._exp_points = None
-        self._highest_trophies = None
-        self._power_play_points = None
-        self._highest_power_play_points = None
+        self._is_qualified_from_championship_challenge = None
+        self.__3vs3_victories = None
         self._solo_victories = None
         self._duo_victories = None
         self._best_robo_rumble_time = None
@@ -92,18 +101,24 @@ class PlayerDetail(object):
             self.tag = tag
         if name is not None:
             self.name = name
+        if name_color is not None:
+            self.name_color = name_color
+        if icon is not None:
+            self.icon = icon
         if trophies is not None:
             self.trophies = trophies
+        if highest_trophies is not None:
+            self.highest_trophies = highest_trophies
+        if highest_power_play_points is not None:
+            self.highest_power_play_points = highest_power_play_points
         if exp_level is not None:
             self.exp_level = exp_level
         if exp_points is not None:
             self.exp_points = exp_points
-        if highest_trophies is not None:
-            self.highest_trophies = highest_trophies
-        if power_play_points is not None:
-            self.power_play_points = power_play_points
-        if highest_power_play_points is not None:
-            self.highest_power_play_points = highest_power_play_points
+        if is_qualified_from_championship_challenge is not None:
+            self.is_qualified_from_championship_challenge = is_qualified_from_championship_challenge
+        if _3vs3_victories is not None:
+            self._3vs3_victories = _3vs3_victories
         if solo_victories is not None:
             self.solo_victories = solo_victories
         if duo_victories is not None:
@@ -160,6 +175,48 @@ class PlayerDetail(object):
         self._name = name
 
     @property
+    def name_color(self):
+        """Gets the name_color of this PlayerDetail.  # noqa: E501
+
+
+        :return: The name_color of this PlayerDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_color
+
+    @name_color.setter
+    def name_color(self, name_color):
+        """Sets the name_color of this PlayerDetail.
+
+
+        :param name_color: The name_color of this PlayerDetail.  # noqa: E501
+        :type name_color: str
+        """
+
+        self._name_color = name_color
+
+    @property
+    def icon(self):
+        """Gets the icon of this PlayerDetail.  # noqa: E501
+
+
+        :return: The icon of this PlayerDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._icon
+
+    @icon.setter
+    def icon(self, icon):
+        """Sets the icon of this PlayerDetail.
+
+
+        :param icon: The icon of this PlayerDetail.  # noqa: E501
+        :type icon: str
+        """
+
+        self._icon = icon
+
+    @property
     def trophies(self):
         """Gets the trophies of this PlayerDetail.  # noqa: E501
 
@@ -179,6 +236,48 @@ class PlayerDetail(object):
         """
 
         self._trophies = trophies
+
+    @property
+    def highest_trophies(self):
+        """Gets the highest_trophies of this PlayerDetail.  # noqa: E501
+
+
+        :return: The highest_trophies of this PlayerDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._highest_trophies
+
+    @highest_trophies.setter
+    def highest_trophies(self, highest_trophies):
+        """Sets the highest_trophies of this PlayerDetail.
+
+
+        :param highest_trophies: The highest_trophies of this PlayerDetail.  # noqa: E501
+        :type highest_trophies: int
+        """
+
+        self._highest_trophies = highest_trophies
+
+    @property
+    def highest_power_play_points(self):
+        """Gets the highest_power_play_points of this PlayerDetail.  # noqa: E501
+
+
+        :return: The highest_power_play_points of this PlayerDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._highest_power_play_points
+
+    @highest_power_play_points.setter
+    def highest_power_play_points(self, highest_power_play_points):
+        """Sets the highest_power_play_points of this PlayerDetail.
+
+
+        :param highest_power_play_points: The highest_power_play_points of this PlayerDetail.  # noqa: E501
+        :type highest_power_play_points: int
+        """
+
+        self._highest_power_play_points = highest_power_play_points
 
     @property
     def exp_level(self):
@@ -223,67 +322,46 @@ class PlayerDetail(object):
         self._exp_points = exp_points
 
     @property
-    def highest_trophies(self):
-        """Gets the highest_trophies of this PlayerDetail.  # noqa: E501
+    def is_qualified_from_championship_challenge(self):
+        """Gets the is_qualified_from_championship_challenge of this PlayerDetail.  # noqa: E501
 
 
-        :return: The highest_trophies of this PlayerDetail.  # noqa: E501
-        :rtype: int
+        :return: The is_qualified_from_championship_challenge of this PlayerDetail.  # noqa: E501
+        :rtype: bool
         """
-        return self._highest_trophies
+        return self._is_qualified_from_championship_challenge
 
-    @highest_trophies.setter
-    def highest_trophies(self, highest_trophies):
-        """Sets the highest_trophies of this PlayerDetail.
+    @is_qualified_from_championship_challenge.setter
+    def is_qualified_from_championship_challenge(self, is_qualified_from_championship_challenge):
+        """Sets the is_qualified_from_championship_challenge of this PlayerDetail.
 
 
-        :param highest_trophies: The highest_trophies of this PlayerDetail.  # noqa: E501
-        :type highest_trophies: int
+        :param is_qualified_from_championship_challenge: The is_qualified_from_championship_challenge of this PlayerDetail.  # noqa: E501
+        :type is_qualified_from_championship_challenge: bool
         """
 
-        self._highest_trophies = highest_trophies
+        self._is_qualified_from_championship_challenge = is_qualified_from_championship_challenge
 
     @property
-    def power_play_points(self):
-        """Gets the power_play_points of this PlayerDetail.  # noqa: E501
+    def _3vs3_victories(self):
+        """Gets the _3vs3_victories of this PlayerDetail.  # noqa: E501
 
 
-        :return: The power_play_points of this PlayerDetail.  # noqa: E501
+        :return: The _3vs3_victories of this PlayerDetail.  # noqa: E501
         :rtype: int
         """
-        return self._power_play_points
+        return self.__3vs3_victories
 
-    @power_play_points.setter
-    def power_play_points(self, power_play_points):
-        """Sets the power_play_points of this PlayerDetail.
+    @_3vs3_victories.setter
+    def _3vs3_victories(self, _3vs3_victories):
+        """Sets the _3vs3_victories of this PlayerDetail.
 
 
-        :param power_play_points: The power_play_points of this PlayerDetail.  # noqa: E501
-        :type power_play_points: int
+        :param _3vs3_victories: The _3vs3_victories of this PlayerDetail.  # noqa: E501
+        :type _3vs3_victories: int
         """
 
-        self._power_play_points = power_play_points
-
-    @property
-    def highest_power_play_points(self):
-        """Gets the highest_power_play_points of this PlayerDetail.  # noqa: E501
-
-
-        :return: The highest_power_play_points of this PlayerDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._highest_power_play_points
-
-    @highest_power_play_points.setter
-    def highest_power_play_points(self, highest_power_play_points):
-        """Sets the highest_power_play_points of this PlayerDetail.
-
-
-        :param highest_power_play_points: The highest_power_play_points of this PlayerDetail.  # noqa: E501
-        :type highest_power_play_points: int
-        """
-
-        self._highest_power_play_points = highest_power_play_points
+        self.__3vs3_victories = _3vs3_victories
 
     @property
     def solo_victories(self):

@@ -38,18 +38,21 @@ class TestPlayerDetail(unittest.TestCase):
             return PlayerDetail(
                 tag = '0', 
                 name = '0', 
+                name_color = '0', 
+                icon = '0', 
                 trophies = 56, 
+                highest_trophies = 56, 
+                highest_power_play_points = 56, 
                 exp_level = 56, 
                 exp_points = 56, 
-                highest_trophies = 56, 
-                power_play_points = 56, 
-                highest_power_play_points = 56, 
+                is_qualified_from_championship_challenge = True, 
+                _3vs3_victories = 56, 
                 solo_victories = 56, 
                 duo_victories = 56, 
                 best_robo_rumble_time = 56, 
                 best_time_as_big_brawler = 56, 
                 club = pybrawl.models.club_base.ClubBase(
-                    id = 56, 
+                    tag = '0', 
                     name = '0', ), 
                 brawlers = [
                     pybrawl.models.brawler.Brawler(
