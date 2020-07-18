@@ -33,50 +33,50 @@ class ClubBase(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'int',
+        'tag': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
+        'tag': 'tag',
         'name': 'name'
     }
 
-    def __init__(self, id=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, local_vars_configuration=None):  # noqa: E501
         """ClubBase - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
+        self._tag = None
         self._name = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
+        if tag is not None:
+            self.tag = tag
         if name is not None:
             self.name = name
 
     @property
-    def id(self):
-        """Gets the id of this ClubBase.  # noqa: E501
+    def tag(self):
+        """Gets the tag of this ClubBase.  # noqa: E501
 
 
-        :return: The id of this ClubBase.  # noqa: E501
-        :rtype: int
+        :return: The tag of this ClubBase.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._tag
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this ClubBase.
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this ClubBase.
 
 
-        :param id: The id of this ClubBase.  # noqa: E501
-        :type id: int
+        :param tag: The tag of this ClubBase.  # noqa: E501
+        :type tag: str
         """
 
-        self._id = id
+        self._tag = tag
 
     @property
     def name(self):

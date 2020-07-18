@@ -3,8 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**battle_time** | **str** |  | [optional] 
-**event** | [**list[Event]**](Event.md) |  | [optional] 
+**mode** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
+**rank** | **int** |  | [optional] 
+**trophy_change** | **int** |  | [optional] 
+**players** | [**list[BattlePlayers]**](BattlePlayers.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

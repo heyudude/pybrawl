@@ -37,7 +37,8 @@ class TestError(unittest.TestCase):
         if include_optional :
             return Error(
                 reason = '0', 
-                message = '0'
+                message = '0', 
+                detail = '0'
             )
         else :
             return Error(

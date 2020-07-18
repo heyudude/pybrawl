@@ -102,20 +102,18 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Battle](docs/Battle.md)
- - [BattleBrawler](docs/BattleBrawler.md)
+ - [BattleBrawlers](docs/BattleBrawlers.md)
+ - [BattlePlayers](docs/BattlePlayers.md)
  - [Battles](docs/Battles.md)
  - [Brawler](docs/Brawler.md)
  - [BrawlerList](docs/BrawlerList.md)
  - [ClubBase](docs/ClubBase.md)
  - [Error](docs/Error.md)
- - [Event](docs/Event.md)
+ - [Events](docs/Events.md)
  - [Gadgets](docs/Gadgets.md)
  - [PlayerBattleLog](docs/PlayerBattleLog.md)
  - [PlayerDetail](docs/PlayerDetail.md)
- - [StarBrawler](docs/StarBrawler.md)
- - [StarPlayer](docs/StarPlayer.md)
  - [StarPowers](docs/StarPowers.md)
- - [Teams](docs/Teams.md)
 
 
 ## Documentation For Authorization

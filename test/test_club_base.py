@@ -36,7 +36,7 @@ class TestClubBase(unittest.TestCase):
         # model = pybrawl.models.club_base.ClubBase()  # noqa: E501
         if include_optional :
             return ClubBase(
-                id = 56, 
+                tag = '0', 
                 name = '0'
             )
         else :
