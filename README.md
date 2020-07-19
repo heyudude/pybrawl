@@ -107,12 +107,14 @@ Class | Method | HTTP request | Description
  - [Battles](docs/Battles.md)
  - [Brawler](docs/Brawler.md)
  - [BrawlerList](docs/BrawlerList.md)
- - [ClubBase](docs/ClubBase.md)
+ - [Club](docs/Club.md)
+ - [ClubMember](docs/ClubMember.md)
  - [Error](docs/Error.md)
  - [Events](docs/Events.md)
  - [Gadgets](docs/Gadgets.md)
+ - [MemberOfClub](docs/MemberOfClub.md)
+ - [Player](docs/Player.md)
  - [PlayerBattleLog](docs/PlayerBattleLog.md)
- - [PlayerDetail](docs/PlayerDetail.md)
  - [StarPowers](docs/StarPowers.md)
 
 
