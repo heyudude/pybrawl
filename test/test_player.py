@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.player_detail import PlayerDetail  # noqa: E501
+from pybrawl.models.player import Player  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestPlayerDetail(unittest.TestCase):
-    """PlayerDetail unit test stubs"""
+class TestPlayer(unittest.TestCase):
+    """Player unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,13 +29,13 @@ class TestPlayerDetail(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test PlayerDetail
+        """Test Player
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.player_detail.PlayerDetail()  # noqa: E501
+        # model = pybrawl.models.player.Player()  # noqa: E501
         if include_optional :
-            return PlayerDetail(
+            return Player(
                 tag = '0', 
                 name = '0', 
                 name_color = [
@@ -53,9 +53,7 @@ class TestPlayerDetail(unittest.TestCase):
                 duo_victories = 56, 
                 best_robo_rumble_time = 56, 
                 best_time_as_big_brawler = 56, 
-                club = pybrawl.models.club_base.ClubBase(
-                    tag = '0', 
-                    name = '0', ), 
+                club = None, 
                 brawlers = [
                     pybrawl.models.brawler.Brawler(
                         id = 56, 
@@ -77,11 +75,11 @@ class TestPlayerDetail(unittest.TestCase):
                     ]
             )
         else :
-            return PlayerDetail(
+            return Player(
         )
 
-    def testPlayerDetail(self):
-        """Test PlayerDetail"""
+    def testPlayer(self):
+        """Test Player"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

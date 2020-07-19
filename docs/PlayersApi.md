@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_player**
-> PlayerDetail get_player(player_tag)
+> Player get_player(player_tag)
 
 Get player information
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PlayerDetail**](PlayerDetail.md)
+[**Player**](Player.md)
 
 ### Authorization
 

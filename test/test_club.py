@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.club_base import ClubBase  # noqa: E501
+from pybrawl.models.club import Club  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestClubBase(unittest.TestCase):
-    """ClubBase unit test stubs"""
+class TestClub(unittest.TestCase):
+    """Club unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,22 +29,33 @@ class TestClubBase(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ClubBase
+        """Test Club
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.club_base.ClubBase()  # noqa: E501
+        # model = pybrawl.models.club.Club()  # noqa: E501
         if include_optional :
-            return ClubBase(
+            return Club(
                 tag = '0', 
-                name = '0'
+                name = '0', 
+                description = '0', 
+                trophies = 56, 
+                required_trophies = 56, 
+                members = [
+                    pybrawl.models.club_member.ClubMember(
+                        tag = '0', 
+                        name = '0', 
+                        trophies = 56, 
+                        role = '0', 
+                        name_color = '0', )
+                    ]
             )
         else :
-            return ClubBase(
+            return Club(
         )
 
-    def testClubBase(self):
-        """Test ClubBase"""
+    def testClub(self):
+        """Test Club"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 
