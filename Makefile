@@ -50,7 +50,7 @@ swagger: delete-models
 	cat templates/README_suffix.md >> README.md
 
 swagger-local: delete-models
-	openapi-generator generate -i ../brawlstars-swagger/bs_swagger.yaml --additional-properties=packageName=pybrawl,projectName=pybrawl,packageVersion=0.0.1 -g python -o .
+	openapi-generator generate -i ../brawlstars-swagger/bs_swagger.yaml -g python --config ../brawlstars-swagger/bs_config.yaml
 	cat templates/README_suffix.md >> README.md
 
 swagger-latest: delete-models

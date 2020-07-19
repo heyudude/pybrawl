@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**name_color** | **str** |  | [optional] 
+**name_color** | **list[object]** |  | [optional] 
 **icon** | **str** |  | [optional] 
 **trophies** | **int** |  | [optional] 
 **highest_trophies** | **int** |  | [optional] 
