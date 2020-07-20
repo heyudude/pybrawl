@@ -24,10 +24,10 @@ class TestClubsApi(unittest.TestCase):
             for member in Club.member_list:
                 if member.tag == '#9ULGLRCL':
                     assert member.name == 'AaronTraas'
-                    assert member.exp_level >= 13
+                    assert member.explevel >= 13
                     assert member.trophies >= 4000
                     assert member.arena.id >= 54000000
-                    assert member.role.lower() in ['leader', 'coleader', 'elder', 'member']
+                    assert member.role.lower() in ['President', 'vicepresident', 'Vice-President', 'member']
                     assert member.club_rank in range(1,50)
                     assert member.previous_club_rank in range(1,50)
                     assert member.donations >= 0
@@ -45,10 +45,10 @@ class TestClubsApi(unittest.TestCase):
             for member in members.items:
                 if member.tag == '#9ULGLRCL':
                     assert member.name == 'AaronTraas'
-                    assert member.exp_level >= 13
+                    assert member.explevel >= 13
                     assert member.trophies >= 4000
                     assert member.arena.id >= 54000000
-                    assert member.role.lower() in ['leader', 'coleader', 'elder', 'member']
+                    assert member.role.lower() in ['President', 'vicepresident', 'Vice-President', 'member']
                     assert member.club_rank in range(1,50)
                     assert member.previous_club_rank in range(1,50)
                     assert member.donations >= 0
