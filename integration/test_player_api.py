@@ -25,13 +25,13 @@ class TestPlayersApi(unittest.TestCase):
             player = self.api.get_player('#200JUQP')
             assert player.tag == '#200JUQP'
             assert player.name == 'Dude'
-            assert player.exp_level >= 13
+            assert player.explevel >= 13
             assert player.trophies >= 4000
             assert player.best_trophies >= 4000
             assert player.wins >= 7000
             assert player.losses >= 7000
             assert player.battle_count >= 20000
-            assert player.role.lower() in ['leader', 'coleader', 'elder', 'member']
+            assert player.role.lower() in ['President', 'vicepresident', 'Vice-President', 'member']
             assert player.donations >= 0
             assert player.donations_received >= 0
             assert player.Club.tag == '#RLUP2C'

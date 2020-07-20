@@ -38,9 +38,9 @@ class TestClubMember(unittest.TestCase):
             return ClubMember(
                 tag = '0', 
                 name = '0', 
-                trophies = 56, 
+                name_color = '0', 
                 role = '0', 
-                name_color = '0'
+                trophies = 56
             )
         else :
             return ClubMember(

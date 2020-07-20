@@ -35,20 +35,20 @@ class ClubMember(object):
     openapi_types = {
         'tag': 'str',
         'name': 'str',
-        'trophies': 'int',
+        'name_color': 'str',
         'role': 'str',
-        'name_color': 'str'
+        'trophies': 'int'
     }
 
     attribute_map = {
         'tag': 'tag',
         'name': 'name',
-        'trophies': 'trophies',
+        'name_color': 'nameColor',
         'role': 'role',
-        'name_color': 'nameColor'
+        'trophies': 'trophies'
     }
 
-    def __init__(self, tag=None, name=None, trophies=None, role=None, name_color=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, name_color=None, role=None, trophies=None, local_vars_configuration=None):  # noqa: E501
         """ClubMember - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,21 +56,21 @@ class ClubMember(object):
 
         self._tag = None
         self._name = None
-        self._trophies = None
-        self._role = None
         self._name_color = None
+        self._role = None
+        self._trophies = None
         self.discriminator = None
 
         if tag is not None:
             self.tag = tag
         if name is not None:
             self.name = name
-        if trophies is not None:
-            self.trophies = trophies
-        if role is not None:
-            self.role = role
         if name_color is not None:
             self.name_color = name_color
+        if role is not None:
+            self.role = role
+        if trophies is not None:
+            self.trophies = trophies
 
     @property
     def tag(self):
@@ -115,25 +115,25 @@ class ClubMember(object):
         self._name = name
 
     @property
-    def trophies(self):
-        """Gets the trophies of this ClubMember.  # noqa: E501
+    def name_color(self):
+        """Gets the name_color of this ClubMember.  # noqa: E501
 
 
-        :return: The trophies of this ClubMember.  # noqa: E501
-        :rtype: int
+        :return: The name_color of this ClubMember.  # noqa: E501
+        :rtype: str
         """
-        return self._trophies
+        return self._name_color
 
-    @trophies.setter
-    def trophies(self, trophies):
-        """Sets the trophies of this ClubMember.
+    @name_color.setter
+    def name_color(self, name_color):
+        """Sets the name_color of this ClubMember.
 
 
-        :param trophies: The trophies of this ClubMember.  # noqa: E501
-        :type trophies: int
+        :param name_color: The name_color of this ClubMember.  # noqa: E501
+        :type name_color: str
         """
 
-        self._trophies = trophies
+        self._name_color = name_color
 
     @property
     def role(self):
@@ -157,25 +157,25 @@ class ClubMember(object):
         self._role = role
 
     @property
-    def name_color(self):
-        """Gets the name_color of this ClubMember.  # noqa: E501
+    def trophies(self):
+        """Gets the trophies of this ClubMember.  # noqa: E501
 
 
-        :return: The name_color of this ClubMember.  # noqa: E501
-        :rtype: str
+        :return: The trophies of this ClubMember.  # noqa: E501
+        :rtype: int
         """
-        return self._name_color
+        return self._trophies
 
-    @name_color.setter
-    def name_color(self, name_color):
-        """Sets the name_color of this ClubMember.
+    @trophies.setter
+    def trophies(self, trophies):
+        """Sets the trophies of this ClubMember.
 
 
-        :param name_color: The name_color of this ClubMember.  # noqa: E501
-        :type name_color: str
+        :param trophies: The trophies of this ClubMember.  # noqa: E501
+        :type trophies: int
         """
 
-        self._name_color = name_color
+        self._trophies = trophies
 
     def to_dict(self):
         """Returns the model properties as a dict"""

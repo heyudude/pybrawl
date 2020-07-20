@@ -4,4 +4,6 @@ from __future__ import absolute_import
 
 # import apis into api package
 from pybrawl.api.battlelog_api import BattlelogApi
+from pybrawl.api.clubs_api import ClubsApi
+from pybrawl.api.clubsmembers_api import ClubsmembersApi
 from pybrawl.api.players_api import PlayersApi

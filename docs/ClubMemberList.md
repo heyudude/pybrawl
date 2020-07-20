@@ -1,13 +1,10 @@
-# ClubMember
+# ClubMemberList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
-**name_color** | **str** |  | [optional] 
-**role** | **str** |  | [optional] 
-**trophies** | **int** |  | [optional] 
+**items** | [**list[ClubMember]**](ClubMember.md) |  | [optional] 
+**paging** | [**SearchPaging**](SearchPaging.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
