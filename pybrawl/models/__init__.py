@@ -15,20 +15,18 @@ from __future__ import absolute_import
 
 # import models into model package
 from pybrawl.models.battle import Battle
-from pybrawl.models.battle_brawlers import BattleBrawlers
-from pybrawl.models.battle_players import BattlePlayers
-from pybrawl.models.battles import Battles
+from pybrawl.models.battle_list import BattleList
+from pybrawl.models.battle_log_brawler import BattleLogBrawler
+from pybrawl.models.battle_log_team import BattleLogTeam
 from pybrawl.models.brawler import Brawler
 from pybrawl.models.brawler_list import BrawlerList
 from pybrawl.models.club import Club
 from pybrawl.models.club_member import ClubMember
 from pybrawl.models.club_member_list import ClubMemberList
 from pybrawl.models.error import Error
-from pybrawl.models.events import Events
+from pybrawl.models.event import Event
 from pybrawl.models.gadgets import Gadgets
 from pybrawl.models.member_of_club import MemberOfClub
 from pybrawl.models.player import Player
 from pybrawl.models.player_battle_log import PlayerBattleLog
-from pybrawl.models.search_paging import SearchPaging
-from pybrawl.models.search_paging_cursors import SearchPagingCursors
 from pybrawl.models.star_powers import StarPowers

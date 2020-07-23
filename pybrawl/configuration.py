@@ -383,13 +383,13 @@ conf = pybrawl.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if 'JWT' in self.api_key:
-            auth['JWT'] = {
+        if 'bearerAuth' in self.api_key:
+            auth['bearerAuth'] = {
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'authorization',
                 'value': self.get_api_key_with_prefix(
-                    'JWT',
+                    'bearerAuth',
                 ),
             }
         return auth

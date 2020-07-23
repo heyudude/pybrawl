@@ -63,15 +63,15 @@ configuration = pybrawl.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: JWT
+# Configure API key authorization: bearerAuth
 configuration = pybrawl.Configuration(
     host = "https://api.brawlstars.com/v1",
     api_key = {
-        'JWT': 'YOUR_API_KEY'
+        'bearerAuth': 'YOUR_API_KEY'
     }
 )
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['JWT'] = 'Bearer'
+# configuration.api_key_prefix['bearerAuth'] = 'Bearer'
 
 
 # Enter a context with an instance of the API client
@@ -104,29 +104,27 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Battle](docs/Battle.md)
- - [BattleBrawlers](docs/BattleBrawlers.md)
- - [BattlePlayers](docs/BattlePlayers.md)
- - [Battles](docs/Battles.md)
+ - [BattleList](docs/BattleList.md)
+ - [BattleLogBrawler](docs/BattleLogBrawler.md)
+ - [BattleLogTeam](docs/BattleLogTeam.md)
  - [Brawler](docs/Brawler.md)
  - [BrawlerList](docs/BrawlerList.md)
  - [Club](docs/Club.md)
  - [ClubMember](docs/ClubMember.md)
  - [ClubMemberList](docs/ClubMemberList.md)
  - [Error](docs/Error.md)
- - [Events](docs/Events.md)
+ - [Event](docs/Event.md)
  - [Gadgets](docs/Gadgets.md)
  - [MemberOfClub](docs/MemberOfClub.md)
  - [Player](docs/Player.md)
  - [PlayerBattleLog](docs/PlayerBattleLog.md)
- - [SearchPaging](docs/SearchPaging.md)
- - [SearchPagingCursors](docs/SearchPagingCursors.md)
  - [StarPowers](docs/StarPowers.md)
 
 
 ## Documentation For Authorization
 
 
-## JWT
+## bearerAuth
 
 - **Type**: API key
 - **API key parameter name**: authorization

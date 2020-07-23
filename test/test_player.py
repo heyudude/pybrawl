@@ -53,7 +53,9 @@ class TestPlayer(unittest.TestCase):
                 duo_victories = 56, 
                 best_robo_rumble_time = 56, 
                 best_time_as_big_brawler = 56, 
-                club = None, 
+                club = pybrawl.models.member_of_club.MemberOfClub(
+                    tag = '0', 
+                    name = '0', ), 
                 brawlers = [
                     pybrawl.models.brawler.Brawler(
                         id = 56, 

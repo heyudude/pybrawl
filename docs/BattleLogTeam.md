@@ -1,12 +1,11 @@
-# BattleBrawlers
+# BattleLogTeam
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**tag** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**power** | **int** |  | [optional] 
-**trophies** | **int** |  | [optional] 
+**brawler** | [**list[BattleLogBrawler]**](BattleLogBrawler.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

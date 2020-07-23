@@ -36,30 +36,20 @@ class TestBattle(unittest.TestCase):
         # model = pybrawl.models.battle.Battle()  # noqa: E501
         if include_optional :
             return Battle(
-                battle_time = '0', 
-                event = [
-                    pybrawl.models.events.Events(
-                        id = 56, 
-                        mode = '0', 
-                        map = '0', )
-                    ], 
-                battle = [
-                    pybrawl.models.battles.Battles(
-                        mode = '0', 
-                        type = '0', 
-                        rank = 56, 
-                        trophy_change = 56, 
-                        players = [
-                            pybrawl.models.battle_players.battlePlayers(
-                                tag = '0', 
+                mode = '0', 
+                type = '0', 
+                rank = 56, 
+                trophy_change = 56, 
+                players = [
+                    pybrawl.models.battle_log_team.BattleLogTeam(
+                        tag = '0', 
+                        name = '0', 
+                        brawler = [
+                            pybrawl.models.battle_log_brawler.BattleLogBrawler(
+                                id = 56, 
                                 name = '0', 
-                                brawler = [
-                                    pybrawl.models.battle_brawlers.battleBrawlers(
-                                        id = 56, 
-                                        name = '0', 
-                                        power = 56, 
-                                        trophies = 56, )
-                                    ], )
+                                power = 56, 
+                                trophies = 56, )
                             ], )
                     ]
             )
