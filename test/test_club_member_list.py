@@ -43,11 +43,7 @@ class TestClubMemberList(unittest.TestCase):
                         name_color = '0', 
                         role = '0', 
                         trophies = 56, )
-                    ], 
-                paging = pybrawl.models.search_paging.SearchPaging(
-                    cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
-                        after = '0', 
-                        before = '0', ), )
+                    ]
             )
         else :
             return ClubMemberList(

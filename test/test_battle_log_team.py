@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.search_paging_cursors import SearchPagingCursors  # noqa: E501
+from pybrawl.models.battle_log_team import BattleLogTeam  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestSearchPagingCursors(unittest.TestCase):
-    """SearchPagingCursors unit test stubs"""
+class TestBattleLogTeam(unittest.TestCase):
+    """BattleLogTeam unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,22 +29,29 @@ class TestSearchPagingCursors(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test SearchPagingCursors
+        """Test BattleLogTeam
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.search_paging_cursors.SearchPagingCursors()  # noqa: E501
+        # model = pybrawl.models.battle_log_team.BattleLogTeam()  # noqa: E501
         if include_optional :
-            return SearchPagingCursors(
-                after = '0', 
-                before = '0'
+            return BattleLogTeam(
+                tag = '0', 
+                name = '0', 
+                brawler = [
+                    pybrawl.models.battle_log_brawler.BattleLogBrawler(
+                        id = 56, 
+                        name = '0', 
+                        power = 56, 
+                        trophies = 56, )
+                    ]
             )
         else :
-            return SearchPagingCursors(
+            return BattleLogTeam(
         )
 
-    def testSearchPagingCursors(self):
-        """Test SearchPagingCursors"""
+    def testBattleLogTeam(self):
+        """Test BattleLogTeam"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

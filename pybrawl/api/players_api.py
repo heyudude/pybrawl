@@ -46,7 +46,7 @@ class PlayersApi(object):
         >>> thread = api.get_player(player_tag, async_req=True)
         >>> result = thread.get()
 
-        :param player_tag: Tag of the player to retrieve.  (required)
+        :param player_tag: Tag of the player to retrieve. (required)
         :type player_tag: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -76,7 +76,7 @@ class PlayersApi(object):
         >>> thread = api.get_player_with_http_info(player_tag, async_req=True)
         >>> result = thread.get()
 
-        :param player_tag: Tag of the player to retrieve.  (required)
+        :param player_tag: Tag of the player to retrieve. (required)
         :type player_tag: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -148,7 +148,7 @@ class PlayersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['JWT']  # noqa: E501
+        auth_settings = ['bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/players/{playerTag}', 'GET',

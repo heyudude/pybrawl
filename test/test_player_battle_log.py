@@ -37,26 +37,26 @@ class TestPlayerBattleLog(unittest.TestCase):
         if include_optional :
             return PlayerBattleLog(
                 items = [
-                    pybrawl.models.battle.Battle(
+                    pybrawl.models.battle_list.BattleList(
                         battle_time = '0', 
                         event = [
-                            pybrawl.models.events.Events(
+                            pybrawl.models.event.Event(
                                 id = 56, 
                                 mode = '0', 
                                 map = '0', )
                             ], 
                         battle = [
-                            pybrawl.models.battles.Battles(
+                            pybrawl.models.battle.Battle(
                                 mode = '0', 
                                 type = '0', 
                                 rank = 56, 
                                 trophy_change = 56, 
                                 players = [
-                                    pybrawl.models.battle_players.battlePlayers(
+                                    pybrawl.models.battle_log_team.BattleLogTeam(
                                         tag = '0', 
                                         name = '0', 
                                         brawler = [
-                                            pybrawl.models.battle_brawlers.battleBrawlers(
+                                            pybrawl.models.battle_log_brawler.BattleLogBrawler(
                                                 id = 56, 
                                                 name = '0', 
                                                 power = 56, 
