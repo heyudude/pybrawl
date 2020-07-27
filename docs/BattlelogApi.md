@@ -16,7 +16,7 @@ Get information about a single player's battlelog
 
 ### Example
 
-* Api Key Authentication (JWTAuth):
+* Api Key Authentication (bearerAuth):
 ```python
 from __future__ import print_function
 import time
@@ -34,15 +34,15 @@ configuration = pybrawl.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: JWTAuth
+# Configure API key authorization: bearerAuth
 configuration = pybrawl.Configuration(
     host = "https://api.brawlstars.com/v1",
     api_key = {
-        'JWTAuth': 'YOUR_API_KEY'
+        'bearerAuth': 'YOUR_API_KEY'
     }
 )
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['JWTAuth'] = 'Bearer'
+# configuration.api_key_prefix['bearerAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with pybrawl.ApiClient(configuration) as api_client:
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWTAuth](../README.md#JWTAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
