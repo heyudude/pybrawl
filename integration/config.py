@@ -1,5 +1,5 @@
 import time
-from configparser import ConfigParser
+import configparser
 import os
 
 import pybrawl
@@ -15,7 +15,7 @@ def getConfiguration():
 		print('ERROR: ~/.bstools not found.')
 		exit(0)
 
-	parser = ConfigParser()
+	parser = configparser.ConfigParser()
 	parser.read(config_file_name)
 
 	# Map the contents of the ini file with the structure for the config object found above.
@@ -31,6 +31,10 @@ def getConfiguration():
 
 	if 'api_key' not in config['api']:
 		print('ERROR: ~/.bstools does not contain property "api_key" in section "[api]".')
+		exit(0)
+
+	if 'api_key_prefix' not in config['api']:
+		print('ERROR: ~/.bstools does not contain property "api_key_prefix" in section "[api]".')
 		exit(0)
 
 	configuration = pybrawl.Configuration()

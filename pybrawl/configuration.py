@@ -45,7 +45,7 @@ class Configuration(object):
       The dict value is an API key prefix when generating the auth data.
     :param username: Username for HTTP basic authentication
     :param password: Password for HTTP basic authentication
-    :param discard_unknown_keys: Boolean value indicating whether to discard
+    :param disbrawler_unknown_keys: Boolean value indicating whether to disbrawler
       unknown properties. A server may send a response that includes additional
       properties that are not known by the client in the following scenarios:
       1. The OpenAPI document is incomplete, i.e. it does not match the server
@@ -55,7 +55,7 @@ class Configuration(object):
       If a schema in the OpenAPI document defines the additionalProperties attribute,
       then all undeclared properties received by the server are injected into the
       additional properties map. In that case, there are undeclared properties, and
-      nothing to discard.
+      nothing to disbrawler.
     :param disabled_client_side_validations (string): Comma-separated list of
       JSON schema validation keywords to disable JSON schema structural validation
       rules. The following keywords may be specified: multipleOf, maximum,
@@ -106,7 +106,7 @@ conf = pybrawl.Configuration(
     def __init__(self, host=None,
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
-                 discard_unknown_keys=False,
+                 disbrawler_unknown_keys=False,
                  disabled_client_side_validations="",
                  server_index=None, server_variables=None,
                  server_operation_index=None, server_operation_variables=None,
@@ -147,7 +147,7 @@ conf = pybrawl.Configuration(
         self.password = password
         """Password for HTTP basic authentication
         """
-        self.discard_unknown_keys = discard_unknown_keys
+        self.disbrawler_unknown_keys = disbrawler_unknown_keys
         self.disabled_client_side_validations = disabled_client_side_validations
         self.logger = {}
         """Logging Settings
@@ -383,13 +383,13 @@ conf = pybrawl.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if 'bearerAuth' in self.api_key:
-            auth['bearerAuth'] = {
+        if 'JWTAuth' in self.api_key:
+            auth['JWTAuth'] = {
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'authorization',
                 'value': self.get_api_key_with_prefix(
-                    'bearerAuth',
+                    'JWTAuth',
                 ),
             }
         return auth

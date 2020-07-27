@@ -3,33 +3,34 @@ from __future__ import absolute_import
 import unittest
 
 import config
-
 import pybrawl
-from pybrawl.api.players_api import PlayersApi  # noqa: E501
+import logging
+from pybrawl.api.players_api import PlayersApi
 from pybrawl.rest import ApiException
+logger = logging.getLogger(__name__)
 
-configuration = config.getConfiguration()
+#configuration = config.getConfiguration()
 
 class TestPlayersApi(unittest.TestCase):
 
     def setUp(self):
         # create an instance of the API class
-        self.api = pybrawl.api.players_api.PlayersApi()  # noqa: E501
-        pass
-        
+        self.api = pybrawl.PlayersApi(pybrawl.ApiClient(config.getConfiguration()))
+
     def tearDown(self):
         pass
 
     def test_player_Dude(self):
         try:
-            player = self.api.get_player('#200JUQP')
+            #print(self.api.api_client.configuration.api_key['authorization'])
+       	    player = self.api.get_player('#200JUQP')
             assert player.tag == '#200JUQP'
             assert player.name == 'Dude'
             assert player.explevel >= 13
             assert player.trophies >= 4000
             assert player.best_trophies >= 4000
             assert player.battle_count >= 20000
-            assert player.role.lower() in ['President', 'Vice president', 'Senior', 'Member']
+            assert player.role.lower() in ['President', 'Vice President', 'Senior', 'Member']
             assert player.donations >= 0
             assert player.donations_received >= 0
             assert player.Club.tag == '#RLUP2C'
