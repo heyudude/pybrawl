@@ -8,6 +8,7 @@ $ pip install nose (optional)
 $ cd OpenAPIetstore-python
 $ nosetests -v
 """
+import config
 import configparser
 from datetime import datetime
 import gettext
@@ -109,73 +110,9 @@ config_defaults = {
 
 class ApiClientTests(unittest.TestCase):
 
-    def SetUp(self):
-        #self.api = pybrawl.PlayersApi(pybrawl.ApiClient(config.getConfiguration())) 
-        config = load_config_file('../../.bstools')
-        print("setup")
-
-    def __parse_value(self, new_value, template_value):
-        value = new_value
-        if isinstance(template_value, list):
-            value = value.split(',')
-            value = [x.strip() for x in value]
-        else:
-            # if the value represents an integer, convert from string to int
-            try:
-             value = int(value)
-            except ValueError:
-                pass
-
-        # if set to "true" or "false" or similar, convert to boolean
-        if isinstance(value, str):
-            if value.lower() in ['true', 'yes', 'on']:
-                value = True
-            elif value.lower() in ['false', 'no', 'off']:
-                value = False
-        return value
-
-    def load_config_file(self, config_file_name=None, check_for_update=False, locale=None):
-        """ Look for config file. If config file exists, load it, and try to
-        extract config from config file"""
-
-        config = copy.deepcopy(config_defaults)
-
-        if config_file_name and os.path.isfile(config_file_name):
-            parser = configparser.ConfigParser()
-            parser.read(config_file_name)
-            sections = parser.sections()
-            a = self.__parse_value('a', 'b')
-            # Map the contents of the ini file with the structure for the config object found above.
-            for section in sections:
-                section_key = section.lower()
-                
-                if section_key in config:
-                    for (key, value) in parser.items(section):
-                        if key in config[section_key]:
-                            config[section_key][key] = self.__parse_value(value, config[section_key][key])
-                            
-        #config = __validate_paths(config)
-        #config = __validate_bstools_settings(config)
-        #config = __process_special_status(config)
-
-        # Augment from Google Sheet
-        #config = gdoc.get_member_data_from_sheets(config)
-
-        if check_for_update:
-            config = __get_version_info(config)
-
-        if locale:
-            config['bstools']['locale'] = locale
-
-        #config['strings'] = __localize_strings(config['bstools']['locale'])
-
-        return config
-
     def test_configuration(self):
-        config = self.load_config_file('../../.bstools')      
-        
-        api = ApiWrapper(config)
-        player = api.get_data_from_api()
-
+        self.api = pybrawl.PlayersApi(pybrawl.ApiClient(config.getConfiguration()))
+    pass
+    
 if __name__ == '__main__':
     unittest.main()

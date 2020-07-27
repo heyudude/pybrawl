@@ -27,7 +27,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="Brawl Stars API",
-    author="OpenAPI Generator community",
+    author="HeyUDude",
     author_email="team@openapitools.org",
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "Brawl Stars API"],
