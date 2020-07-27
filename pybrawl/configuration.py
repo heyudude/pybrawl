@@ -383,13 +383,13 @@ conf = pybrawl.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if 'bearerAuth' in self.api_key:
-            auth['bearerAuth'] = {
+        if 'JWT' in self.api_key:
+            auth['JWT'] = {
                 'type': 'api_key',
                 'in': 'header',
-                'key': 'authorisation',
+                'key': 'authorization',
                 'value': self.get_api_key_with_prefix(
-                    'bearerAuth',
+                    'JWT',
                 ),
             }
         return auth
@@ -413,8 +413,14 @@ conf = pybrawl.Configuration(
         """
         return [
             {
-                'url': "https://api.brawlstars.com/v1",
-                'description': "No description provided",
+                'url': "https://api.brawlstars.com/{basePath}",
+                'description': "Supercell API server",
+                'variables': {
+                    'basePath': {
+                        'description': "No description provided",
+                        'default_value': "v1",
+                        }
+                    }
             }
         ]
 
