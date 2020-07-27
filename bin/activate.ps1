@@ -51,7 +51,7 @@ if (!$env:VIRTUAL_ENV_DISABLE_PROMPT) {
     }
     else {
         function global:prompt {
-            # Add a prefix to the current prompt, but don't discard it.
+            # Add a prefix to the current prompt, but don't disbrawler it.
             $previous_prompt_value = & $function:_old_virtual_prompt
             $new_prompt_value = "($( Split-Path $env:VIRTUAL_ENV -Leaf )) "
             ($new_prompt_value + $previous_prompt_value)

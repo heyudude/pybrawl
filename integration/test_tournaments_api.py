@@ -29,7 +29,7 @@ class TestTournamentsApi(unittest.TestCase):
         assert tournament.type in ['open', 'passwordProtected']
         assert tournament.status in ['inProgress']
         assert isinstance(tournament.level_cap, int)
-        assert isinstance(tournament.first_place_card_prize, int)
+        assert isinstance(tournament.first_place_brawler_prize, int)
         assert isinstance(tournament.capacity, int)
         assert isinstance(tournament.max_capacity, int)
         assert tournament.capacity <= tournament.max_capacity

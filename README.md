@@ -63,15 +63,15 @@ configuration = pybrawl.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure API key authorization: bearerAuth
+# Configure API key authorization: JWTAuth
 configuration = pybrawl.Configuration(
     host = "https://api.brawlstars.com/v1",
     api_key = {
-        'bearerAuth': 'YOUR_API_KEY'
+        'JWTAuth': 'YOUR_API_KEY'
     }
 )
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['bearerAuth'] = 'Bearer'
+# configuration.api_key_prefix['JWTAuth'] = 'Bearer'
 
 
 # Enter a context with an instance of the API client
@@ -124,7 +124,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## bearerAuth
+## JWTAuth
 
 - **Type**: API key
 - **API key parameter name**: authorization
