@@ -19,9 +19,9 @@ class TestClubsApi(unittest.TestCase):
 
     def test_club_test(self):
         try:
-            Club = self.api.get_club('#RLUP2C')
-            assert Club.club_war_trophies > 0
-            for member in Club.member_list:
+            club = self.api.get_club('#RLUP2C')
+            assert club.club_war_trophies > 0
+            for member in club.member_list:
                 if member.tag == '#9ULGLRCL':
                     assert member.name == 'Dude'
                     assert member.explevel >= 13
