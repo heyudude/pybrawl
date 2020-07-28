@@ -38,7 +38,7 @@ class Club(object):
         'description': 'str',
         'trophies': 'int',
         'required_trophies': 'int',
-        'members': 'list[ClubMember]'
+        'member_list': 'list[ClubMember]'
     }
 
     attribute_map = {
@@ -47,10 +47,10 @@ class Club(object):
         'description': 'description',
         'trophies': 'trophies',
         'required_trophies': 'requiredTrophies',
-        'members': 'members'
+        'member_list': 'memberList'
     }
 
-    def __init__(self, tag=None, name=None, description=None, trophies=None, required_trophies=None, members=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, description=None, trophies=None, required_trophies=None, member_list=None, local_vars_configuration=None):  # noqa: E501
         """Club - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,7 +61,7 @@ class Club(object):
         self._description = None
         self._trophies = None
         self._required_trophies = None
-        self._members = None
+        self._member_list = None
         self.discriminator = None
 
         if tag is not None:
@@ -74,8 +74,8 @@ class Club(object):
             self.trophies = trophies
         if required_trophies is not None:
             self.required_trophies = required_trophies
-        if members is not None:
-            self.members = members
+        if member_list is not None:
+            self.member_list = member_list
 
     @property
     def tag(self):
@@ -183,25 +183,25 @@ class Club(object):
         self._required_trophies = required_trophies
 
     @property
-    def members(self):
-        """Gets the members of this Club.  # noqa: E501
+    def member_list(self):
+        """Gets the member_list of this Club.  # noqa: E501
 
 
-        :return: The members of this Club.  # noqa: E501
+        :return: The member_list of this Club.  # noqa: E501
         :rtype: list[ClubMember]
         """
-        return self._members
+        return self._member_list
 
-    @members.setter
-    def members(self, members):
-        """Sets the members of this Club.
+    @member_list.setter
+    def member_list(self, member_list):
+        """Sets the member_list of this Club.
 
 
-        :param members: The members of this Club.  # noqa: E501
-        :type members: list[ClubMember]
+        :param member_list: The member_list of this Club.  # noqa: E501
+        :type member_list: list[ClubMember]
         """
 
-        self._members = members
+        self._member_list = member_list
 
     def to_dict(self):
         """Returns the model properties as a dict"""

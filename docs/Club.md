@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **trophies** | **int** |  | [optional] 
 **required_trophies** | **int** |  | [optional] 
-**members** | [**list[ClubMember]**](ClubMember.md) |  | [optional] 
+**member_list** | [**list[ClubMember]**](ClubMember.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

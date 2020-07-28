@@ -41,7 +41,7 @@ class TestClub(unittest.TestCase):
                 description = '0', 
                 trophies = 56, 
                 required_trophies = 56, 
-                members = [
+                member_list = [
                     pybrawl.models.club_member.ClubMember(
                         tag = '0', 
                         name = '0', 

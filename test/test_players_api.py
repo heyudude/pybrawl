@@ -16,7 +16,6 @@ import unittest
 
 import pybrawl
 from pybrawl.api.players_api import PlayersApi  # noqa: E501
-from pybrawl import Configuration
 from pybrawl.rest import ApiException
 
 
@@ -24,10 +23,7 @@ class TestPlayersApi(unittest.TestCase):
     """PlayersApi unit test stubs"""
 
     def setUp(self):
-        self.config = Configuration()
-        self.config.access_token = self.config.api_key
-        #self.api = pybrawl.api.players_api.PlayersApi()  # noqa: E501
-        self.players = pybrawl.PlayersApi(pybrawl.ApiClient(self.config))
+        self.api = pybrawl.api.players_api.PlayersApi()  # noqa: E501
 
     def tearDown(self):
         pass
