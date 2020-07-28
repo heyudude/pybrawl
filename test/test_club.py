@@ -45,9 +45,9 @@ class TestClub(unittest.TestCase):
                     pybrawl.models.club_member.ClubMember(
                         tag = '0', 
                         name = '0', 
-                        name_color = '0', 
+                        trophies = 56, 
                         role = '0', 
-                        trophies = 56, )
+                        name_color = '0', )
                     ]
             )
         else :

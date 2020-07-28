@@ -22,7 +22,6 @@ import six
 from six.moves import http_client as httplib
 from pybrawl.exceptions import ApiValueError
 
-
 JSON_SCHEMA_VALIDATION_KEYWORDS = {
     'multipleOf', 'maximum', 'exclusiveMaximum',
     'minimum', 'exclusiveMinimum', 'maxLength',
@@ -324,7 +323,9 @@ class Configuration(object):
         :type: str
         """
         self.__logger_format = value
-        self.logger_formatter = logging.Formatter(self.__logger_format)
+        #self.logger_formatter = logging.Formatter(self.__logger_format)
+        self.logger_formatter = logging.Formatter(
+            '[%(asctime)s] p%(process)s {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s', '%m-%d %H:%M:%S')
 
     def get_api_key_with_prefix(self, identifier, alias=None):
         """Gets API key (with prefix if set).
