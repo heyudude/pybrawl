@@ -80,25 +80,6 @@ class Configuration(object):
       The validation of enums is performed for variables with defined enum values before.
 
     :Example:
-
-    API Key Authentication Example.
-    Given the following security scheme in the OpenAPI specification:
-      components:
-        securitySchemes:
-          cookieAuth:         # name for the security scheme
-            type: apiKey
-            in: cookie
-            name: JSESSIONID  # cookie name
-
-    You can programmatically set the cookie:
-
-conf = pybrawl.Configuration(
-    api_key={'cookieAuth': 'abc123'}
-    api_key_prefix={'cookieAuth': 'JSESSIONID'}
-)
-
-    The following cookie will be added to the HTTP request:
-       Cookie: JSESSIONID abc123
     """
 
     _default = None
@@ -383,14 +364,13 @@ conf = pybrawl.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if 'JWT' in self.api_key:
+        if self.access_token is not None:
             auth['JWT'] = {
-                'type': 'api_key',
+                'type': 'bearer',
                 'in': 'header',
-                'key': 'authorization',
-                'value': self.get_api_key_with_prefix(
-                    'JWT',
-                ),
+                'format': 'JWT',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
             }
         return auth
 

@@ -33,11 +33,12 @@ def getConfiguration():
 		print('ERROR: ~/.bstools does not contain property "api_key" in section "[api]".')
 		exit(0)
 
-	if 'api_key_prefix' not in config['api']:
-		print('ERROR: ~/.bstools does not contain property "api_key_prefix" in section "[api]".')
-		exit(0)
+	# if 'api_key_prefix' not in config['api']:
+	# 	print('ERROR: ~/.bstools does not contain property "api_key_prefix" in section "[api]".')
+	# 	exit(0)
 
 	configuration = pybrawl.Configuration()
 	configuration.api_key['authorization'] = config['api']['api_key']
+	configuration.access_token = config['api']['api_key']
 
 	return configuration
