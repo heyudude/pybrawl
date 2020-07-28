@@ -48,4 +48,3 @@ from pybrawl.models.member_of_club import MemberOfClub
 from pybrawl.models.player import Player
 from pybrawl.models.player_battle_log import PlayerBattleLog
 from pybrawl.models.star_powers import StarPowers
-

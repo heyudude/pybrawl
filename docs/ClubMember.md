@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**name_color** | **str** |  | [optional] 
-**role** | **str** |  | [optional] 
 **trophies** | **int** |  | [optional] 
+**role** | **str** |  | [optional] 
+**name_color** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
