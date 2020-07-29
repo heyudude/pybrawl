@@ -36,21 +36,23 @@ class Club(object):
         'tag': 'str',
         'name': 'str',
         'description': 'str',
+        'type': 'str',
         'trophies': 'int',
         'required_trophies': 'int',
-        'member_list': 'list[ClubMember]'
+        'members': 'list[ClubMember]'
     }
 
     attribute_map = {
         'tag': 'tag',
         'name': 'name',
         'description': 'description',
+        'type': 'type',
         'trophies': 'trophies',
         'required_trophies': 'requiredTrophies',
-        'member_list': 'memberList'
+        'members': 'members'
     }
 
-    def __init__(self, tag=None, name=None, description=None, trophies=None, required_trophies=None, member_list=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, description=None, type=None, trophies=None, required_trophies=None, members=None, local_vars_configuration=None):  # noqa: E501
         """Club - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,9 +61,10 @@ class Club(object):
         self._tag = None
         self._name = None
         self._description = None
+        self._type = None
         self._trophies = None
         self._required_trophies = None
-        self._member_list = None
+        self._members = None
         self.discriminator = None
 
         if tag is not None:
@@ -70,12 +73,14 @@ class Club(object):
             self.name = name
         if description is not None:
             self.description = description
+        if type is not None:
+            self.type = type
         if trophies is not None:
             self.trophies = trophies
         if required_trophies is not None:
             self.required_trophies = required_trophies
-        if member_list is not None:
-            self.member_list = member_list
+        if members is not None:
+            self.members = members
 
     @property
     def tag(self):
@@ -141,6 +146,27 @@ class Club(object):
         self._description = description
 
     @property
+    def type(self):
+        """Gets the type of this Club.  # noqa: E501
+
+
+        :return: The type of this Club.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Club.
+
+
+        :param type: The type of this Club.  # noqa: E501
+        :type type: str
+        """
+
+        self._type = type
+
+    @property
     def trophies(self):
         """Gets the trophies of this Club.  # noqa: E501
 
@@ -183,25 +209,25 @@ class Club(object):
         self._required_trophies = required_trophies
 
     @property
-    def member_list(self):
-        """Gets the member_list of this Club.  # noqa: E501
+    def members(self):
+        """Gets the members of this Club.  # noqa: E501
 
 
-        :return: The member_list of this Club.  # noqa: E501
+        :return: The members of this Club.  # noqa: E501
         :rtype: list[ClubMember]
         """
-        return self._member_list
+        return self._members
 
-    @member_list.setter
-    def member_list(self, member_list):
-        """Sets the member_list of this Club.
+    @members.setter
+    def members(self, members):
+        """Sets the members of this Club.
 
 
-        :param member_list: The member_list of this Club.  # noqa: E501
-        :type member_list: list[ClubMember]
+        :param members: The members of this Club.  # noqa: E501
+        :type members: list[ClubMember]
         """
 
-        self._member_list = member_list
+        self._members = members
 
     def to_dict(self):
         """Returns the model properties as a dict"""

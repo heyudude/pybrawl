@@ -35,6 +35,13 @@ class TestClubsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_club_members(self):
+        """Test case for get_club_members
+
+        Get members of a club  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
