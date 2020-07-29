@@ -93,7 +93,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BattlelogApi* | [**get_battlelog**](docs/BattlelogApi.md#get_battlelog) | **GET** /players/{playerTag}/battlelog | Get player&#39;s battlelog
 *ClubsApi* | [**get_club**](docs/ClubsApi.md#get_club) | **GET** /clubs/{clubTag} | Get club information
-*ClubsmembersApi* | [**get_club_members**](docs/ClubsmembersApi.md#get_club_members) | **GET** /clubs/{clubTag}/members | Get members of a club
+*ClubsApi* | [**get_club_members**](docs/ClubsApi.md#get_club_members) | **GET** /clubs/{clubTag}/members | Get members of a club
 *PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
 
 
@@ -114,6 +114,8 @@ Class | Method | HTTP request | Description
  - [MemberOfClub](docs/MemberOfClub.md)
  - [Player](docs/Player.md)
  - [PlayerBattleLog](docs/PlayerBattleLog.md)
+ - [SearchPaging](docs/SearchPaging.md)
+ - [SearchPagingCursors](docs/SearchPagingCursors.md)
  - [StarPowers](docs/StarPowers.md)
 
 

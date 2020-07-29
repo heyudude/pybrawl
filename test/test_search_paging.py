@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.club import Club  # noqa: E501
+from pybrawl.models.search_paging import SearchPaging  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestClub(unittest.TestCase):
-    """Club unit test stubs"""
+class TestSearchPaging(unittest.TestCase):
+    """SearchPaging unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,34 +29,23 @@ class TestClub(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Club
+        """Test SearchPaging
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.club.Club()  # noqa: E501
+        # model = pybrawl.models.search_paging.SearchPaging()  # noqa: E501
         if include_optional :
-            return Club(
-                tag = '0', 
-                name = '0', 
-                description = '0', 
-                type = '0', 
-                trophies = 56, 
-                required_trophies = 56, 
-                members = [
-                    pybrawl.models.club_member.ClubMember(
-                        tag = '0', 
-                        name = '0', 
-                        trophies = 56, 
-                        role = '0', 
-                        name_color = '0', )
-                    ]
+            return SearchPaging(
+                cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
+                    after = '0', 
+                    before = '0', )
             )
         else :
-            return Club(
+            return SearchPaging(
         )
 
-    def testClub(self):
-        """Test Club"""
+    def testSearchPaging(self):
+        """Test SearchPaging"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 
