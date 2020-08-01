@@ -42,6 +42,27 @@ class TestClubsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_ranking_brawlers(self):
+        """Test case for get_ranking_brawlers
+
+        Get brawler ranking for a country  # noqa: E501
+        """
+        pass
+
+    def test_get_ranking_clubs(self):
+        """Test case for get_ranking_clubs
+
+        Get club ranking for a country  # noqa: E501
+        """
+        pass
+
+    def test_get_ranking_players(self):
+        """Test case for get_ranking_players
+
+        Get player ranking for a country  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

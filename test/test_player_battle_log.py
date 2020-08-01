@@ -60,11 +60,19 @@ class TestPlayerBattleLog(unittest.TestCase):
                                                 id = 56, 
                                                 name = '0', 
                                                 power = 56, 
-                                                trophies = 56, )
+                                                trophies = 56, 
+                                                paging = pybrawl.models.search_paging.SearchPaging(
+                                                    cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
+                                                        after = '0', 
+                                                        before = '0', ), ), )
                                             ], )
                                     ], )
                             ], )
-                    ]
+                    ], 
+                paging = pybrawl.models.search_paging.SearchPaging(
+                    cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
+                        after = '0', 
+                        before = '0', ), )
             )
         else :
             return PlayerBattleLog(

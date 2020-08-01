@@ -33,24 +33,29 @@ class PlayerBattleLog(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[BattleList]'
+        'items': 'list[BattleList]',
+        'paging': 'SearchPaging'
     }
 
     attribute_map = {
-        'items': 'items'
+        'items': 'items',
+        'paging': 'paging'
     }
 
-    def __init__(self, items=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, items=None, paging=None, local_vars_configuration=None):  # noqa: E501
         """PlayerBattleLog - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._items = None
+        self._paging = None
         self.discriminator = None
 
         if items is not None:
             self.items = items
+        if paging is not None:
+            self.paging = paging
 
     @property
     def items(self):
@@ -72,6 +77,27 @@ class PlayerBattleLog(object):
         """
 
         self._items = items
+
+    @property
+    def paging(self):
+        """Gets the paging of this PlayerBattleLog.  # noqa: E501
+
+
+        :return: The paging of this PlayerBattleLog.  # noqa: E501
+        :rtype: SearchPaging
+        """
+        return self._paging
+
+    @paging.setter
+    def paging(self, paging):
+        """Sets the paging of this PlayerBattleLog.
+
+
+        :param paging: The paging of this PlayerBattleLog.  # noqa: E501
+        :type paging: SearchPaging
+        """
+
+        self._paging = paging
 
     def to_dict(self):
         """Returns the model properties as a dict"""

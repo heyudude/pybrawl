@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import pybrawl
-from pybrawl.models.battle_log_brawler import BattleLogBrawler  # noqa: E501
+from pybrawl.models.ranking_brawler_list import RankingBrawlerList  # noqa: E501
 from pybrawl.rest import ApiException
 
-class TestBattleLogBrawler(unittest.TestCase):
-    """BattleLogBrawler unit test stubs"""
+class TestRankingBrawlerList(unittest.TestCase):
+    """RankingBrawlerList unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,28 +29,31 @@ class TestBattleLogBrawler(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test BattleLogBrawler
+        """Test RankingBrawlerList
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = pybrawl.models.battle_log_brawler.BattleLogBrawler()  # noqa: E501
+        # model = pybrawl.models.ranking_brawler_list.RankingBrawlerList()  # noqa: E501
         if include_optional :
-            return BattleLogBrawler(
-                id = 56, 
+            return RankingBrawlerList(
+                tag = '0', 
                 name = '0', 
-                power = 56, 
+                name_color = '0', 
                 trophies = 56, 
+                club = pybrawl.models.member_of_club.MemberOfClub(
+                    tag = '0', 
+                    name = '0', ), 
                 paging = pybrawl.models.search_paging.SearchPaging(
                     cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
                         after = '0', 
                         before = '0', ), )
             )
         else :
-            return BattleLogBrawler(
+            return RankingBrawlerList(
         )
 
-    def testBattleLogBrawler(self):
-        """Test BattleLogBrawler"""
+    def testRankingBrawlerList(self):
+        """Test RankingBrawlerList"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

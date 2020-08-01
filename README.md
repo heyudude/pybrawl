@@ -75,10 +75,13 @@ with pybrawl.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pybrawl.BattlelogApi(api_client)
     player_tag = 'player_tag_example' # str | Tag of the player's battle log to retrieve. 
+limit = 56 # int | Limit the number of items returned in the response. (optional)
+after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
+before = 56 # int | Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
 
     try:
         # Get player's battlelog
-        api_response = api_instance.get_battlelog(player_tag)
+        api_response = api_instance.get_battlelog(player_tag, limit=limit, after=after, before=before)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BattlelogApi->get_battlelog: %s\n" % e)
@@ -94,6 +97,9 @@ Class | Method | HTTP request | Description
 *BattlelogApi* | [**get_battlelog**](docs/BattlelogApi.md#get_battlelog) | **GET** /players/{playerTag}/battlelog | Get player&#39;s battlelog
 *ClubsApi* | [**get_club**](docs/ClubsApi.md#get_club) | **GET** /clubs/{clubTag} | Get club information
 *ClubsApi* | [**get_club_members**](docs/ClubsApi.md#get_club_members) | **GET** /clubs/{clubTag}/members | Get members of a club
+*ClubsApi* | [**get_ranking_brawlers**](docs/ClubsApi.md#get_ranking_brawlers) | **GET** /clubs/{countryCode}/brawlers/{brawlerId} | Get brawler ranking for a country
+*ClubsApi* | [**get_ranking_clubs**](docs/ClubsApi.md#get_ranking_clubs) | **GET** /clubs/{countryCode}/clubs | Get club ranking for a country
+*ClubsApi* | [**get_ranking_players**](docs/ClubsApi.md#get_ranking_players) | **GET** /clubs/{countryCode}/players | Get player ranking for a country
 *PlayersApi* | [**get_player**](docs/PlayersApi.md#get_player) | **GET** /players/{playerTag} | Get player information
 
 
@@ -114,6 +120,9 @@ Class | Method | HTTP request | Description
  - [MemberOfClub](docs/MemberOfClub.md)
  - [Player](docs/Player.md)
  - [PlayerBattleLog](docs/PlayerBattleLog.md)
+ - [RankingBrawlerList](docs/RankingBrawlerList.md)
+ - [RankingClubList](docs/RankingClubList.md)
+ - [RankingPlayerList](docs/RankingPlayerList.md)
  - [SearchPaging](docs/SearchPaging.md)
  - [SearchPagingCursors](docs/SearchPagingCursors.md)
  - [StarPowers](docs/StarPowers.md)

@@ -48,6 +48,12 @@ class BattlelogApi(object):
 
         :param player_tag: Tag of the player's battle log to retrieve.  (required)
         :type player_tag: str
+        :param limit: Limit the number of items returned in the response.
+        :type limit: int
+        :param after: Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
+        :type after: int
+        :param before: Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
+        :type before: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -78,6 +84,12 @@ class BattlelogApi(object):
 
         :param player_tag: Tag of the player's battle log to retrieve.  (required)
         :type player_tag: str
+        :param limit: Limit the number of items returned in the response.
+        :type limit: int
+        :param after: Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
+        :type after: int
+        :param before: Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both. 
+        :type before: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -104,7 +116,10 @@ class BattlelogApi(object):
         local_var_params = locals()
 
         all_params = [
-            'player_tag'
+            'player_tag',
+            'limit',
+            'after',
+            'before'
         ]
         all_params.extend(
             [
@@ -136,6 +151,12 @@ class BattlelogApi(object):
             path_params['playerTag'] = local_var_params['player_tag']  # noqa: E501
 
         query_params = []
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
+        if 'after' in local_var_params and local_var_params['after'] is not None:  # noqa: E501
+            query_params.append(('after', local_var_params['after']))  # noqa: E501
+        if 'before' in local_var_params and local_var_params['before'] is not None:  # noqa: E501
+            query_params.append(('before', local_var_params['before']))  # noqa: E501
 
         header_params = {}
 
