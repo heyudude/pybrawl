@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_battlelog**
-> PlayerBattleLog get_battlelog(player_tag)
+> PlayerBattleLog get_battlelog(player_tag, limit=limit, after=after, before=before)
 
 Get player's battlelog
 
@@ -44,10 +44,13 @@ with pybrawl.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pybrawl.BattlelogApi(api_client)
     player_tag = 'player_tag_example' # str | Tag of the player's battle log to retrieve. 
+limit = 56 # int | Limit the number of items returned in the response. (optional)
+after = 56 # int | Return only items that occur after this marker. After marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
+before = 56 # int | Return only items that occur before this marker. Before marker can be found from the response, inside the 'paging' property. Note that only after or before can be specified for a request, not both.  (optional)
 
     try:
         # Get player's battlelog
-        api_response = api_instance.get_battlelog(player_tag)
+        api_response = api_instance.get_battlelog(player_tag, limit=limit, after=after, before=before)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BattlelogApi->get_battlelog: %s\n" % e)
@@ -58,6 +61,9 @@ with pybrawl.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **player_tag** | **str**| Tag of the player&#39;s battle log to retrieve.  | 
+ **limit** | **int**| Limit the number of items returned in the response. | [optional] 
+ **after** | **int**| Return only items that occur after this marker. After marker can be found from the response, inside the &#39;paging&#39; property. Note that only after or before can be specified for a request, not both.  | [optional] 
+ **before** | **int**| Return only items that occur before this marker. Before marker can be found from the response, inside the &#39;paging&#39; property. Note that only after or before can be specified for a request, not both.  | [optional] 
 
 ### Return type
 

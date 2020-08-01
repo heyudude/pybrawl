@@ -29,6 +29,9 @@ from pybrawl.models.gadgets import Gadgets
 from pybrawl.models.member_of_club import MemberOfClub
 from pybrawl.models.player import Player
 from pybrawl.models.player_battle_log import PlayerBattleLog
+from pybrawl.models.ranking_brawler_list import RankingBrawlerList
+from pybrawl.models.ranking_club_list import RankingClubList
+from pybrawl.models.ranking_player_list import RankingPlayerList
 from pybrawl.models.search_paging import SearchPaging
 from pybrawl.models.search_paging_cursors import SearchPagingCursors
 from pybrawl.models.star_powers import StarPowers
