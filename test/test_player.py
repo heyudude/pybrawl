@@ -48,7 +48,7 @@ class TestPlayer(unittest.TestCase):
                 exp_level = 56, 
                 exp_points = 56, 
                 is_qualified_from_championship_challenge = True, 
-                _3vs3_victories = 56, 
+                v3vs3_victories = 56, 
                 solo_victories = 56, 
                 duo_victories = 56, 
                 best_robo_rumble_time = 56, 

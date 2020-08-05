@@ -43,7 +43,7 @@ class Player(object):
         'exp_level': 'int',
         'exp_points': 'int',
         'is_qualified_from_championship_challenge': 'bool',
-        '_3vs3_victories': 'int',
+        'v3vs3_victories': 'int',
         'solo_victories': 'int',
         'duo_victories': 'int',
         'best_robo_rumble_time': 'int',
@@ -63,7 +63,7 @@ class Player(object):
         'exp_level': 'expLevel',
         'exp_points': 'expPoints',
         'is_qualified_from_championship_challenge': 'isQualifiedFromChampionshipChallenge',
-        '_3vs3_victories': '3vs3Victories',
+        'v3vs3_victories': 'v3vs3Victories',
         'solo_victories': 'soloVictories',
         'duo_victories': 'duoVictories',
         'best_robo_rumble_time': 'bestRoboRumbleTime',
@@ -72,7 +72,7 @@ class Player(object):
         'brawlers': 'brawlers'
     }
 
-    def __init__(self, tag=None, name=None, name_color=None, icon=None, trophies=None, highest_trophies=None, highest_power_play_points=None, exp_level=None, exp_points=None, is_qualified_from_championship_challenge=None, _3vs3_victories=None, solo_victories=None, duo_victories=None, best_robo_rumble_time=None, best_time_as_big_brawler=None, club=None, brawlers=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, name=None, name_color=None, icon=None, trophies=None, highest_trophies=None, highest_power_play_points=None, exp_level=None, exp_points=None, is_qualified_from_championship_challenge=None, v3vs3_victories=None, solo_victories=None, duo_victories=None, best_robo_rumble_time=None, best_time_as_big_brawler=None, club=None, brawlers=None, local_vars_configuration=None):  # noqa: E501
         """Player - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -88,7 +88,7 @@ class Player(object):
         self._exp_level = None
         self._exp_points = None
         self._is_qualified_from_championship_challenge = None
-        self.__3vs3_victories = None
+        self._v3vs3_victories = None
         self._solo_victories = None
         self._duo_victories = None
         self._best_robo_rumble_time = None
@@ -117,8 +117,8 @@ class Player(object):
             self.exp_points = exp_points
         if is_qualified_from_championship_challenge is not None:
             self.is_qualified_from_championship_challenge = is_qualified_from_championship_challenge
-        if _3vs3_victories is not None:
-            self._3vs3_victories = _3vs3_victories
+        if v3vs3_victories is not None:
+            self.v3vs3_victories = v3vs3_victories
         if solo_victories is not None:
             self.solo_victories = solo_victories
         if duo_victories is not None:
@@ -343,25 +343,25 @@ class Player(object):
         self._is_qualified_from_championship_challenge = is_qualified_from_championship_challenge
 
     @property
-    def _3vs3_victories(self):
-        """Gets the _3vs3_victories of this Player.  # noqa: E501
+    def v3vs3_victories(self):
+        """Gets the v3vs3_victories of this Player.  # noqa: E501
 
 
-        :return: The _3vs3_victories of this Player.  # noqa: E501
+        :return: The v3vs3_victories of this Player.  # noqa: E501
         :rtype: int
         """
-        return self.__3vs3_victories
+        return self._v3vs3_victories
 
-    @_3vs3_victories.setter
-    def _3vs3_victories(self, _3vs3_victories):
-        """Sets the _3vs3_victories of this Player.
+    @v3vs3_victories.setter
+    def v3vs3_victories(self, v3vs3_victories):
+        """Sets the v3vs3_victories of this Player.
 
 
-        :param _3vs3_victories: The _3vs3_victories of this Player.  # noqa: E501
-        :type _3vs3_victories: int
+        :param v3vs3_victories: The v3vs3_victories of this Player.  # noqa: E501
+        :type v3vs3_victories: int
         """
 
-        self.__3vs3_victories = _3vs3_victories
+        self._v3vs3_victories = v3vs3_victories
 
     @property
     def solo_victories(self):
