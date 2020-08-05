@@ -51,7 +51,7 @@ class TestBattle(unittest.TestCase):
                                 power = 56, 
                                 trophies = 56, 
                                 paging = pybrawl.models.search_paging.SearchPaging(
-                                    cursors = pybrawl.models.search_paging_cursors.SearchPagingCursors(
+                                    cursors = pybrawl.models.search_paging_cursors.SearchPaging_cursors(
                                         after = '0', 
                                         before = '0', ), ), )
                             ], )

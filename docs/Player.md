@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **exp_level** | **int** |  | [optional] 
 **exp_points** | **int** |  | [optional] 
 **is_qualified_from_championship_challenge** | **bool** |  | [optional] 
-**_3vs3_victories** | **int** |  | [optional] 
+**v3vs3_victories** | **int** |  | [optional] 
 **solo_victories** | **int** |  | [optional] 
 **duo_victories** | **int** |  | [optional] 
 **best_robo_rumble_time** | **int** |  | [optional] 
