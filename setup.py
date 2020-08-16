@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Brawl Stars API
+    Brawl_Stars_API
 
     Unofficial Swagger definition for the official Brawl Stars API  # noqa: E501
 
@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "pybrawl"
-VERSION = "1.0.0"
+VERSION = "0.0.3"
 # To install the library, run the following
 #
 # python setup.py install
@@ -26,11 +26,11 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Brawl Stars API",
+    description="Brawl_Stars_API",
     author="HeyUDude",
     author_email="team@openapitools.org",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Brawl Stars API"],
+    keywords=["OpenAPI", "OpenAPI-Generator", "Brawl_Stars_API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,

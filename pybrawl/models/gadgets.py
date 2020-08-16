@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Brawl Stars API
+    Brawl_Stars_API
 
     Unofficial Swagger definition for the official Brawl Stars API  # noqa: E501
 

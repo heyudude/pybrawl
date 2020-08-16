@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Brawl Stars API
+    Brawl_Stars_API
 
     Unofficial Swagger definition for the official Brawl Stars API  # noqa: E501
 
@@ -130,9 +130,6 @@ class Configuration(object):
         """
         self.disbrawler_unknown_keys = disbrawler_unknown_keys
         self.disabled_client_side_validations = disabled_client_side_validations
-        self.access_token = None
-        """access token for OAuth/Bearer
-        """
         self.logger = {}
         """Logging Settings
         """
@@ -385,7 +382,7 @@ class Configuration(object):
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 1.0.0\n"\
+               "Version of the API: 0.0.3\n"\
                "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
 

@@ -20,6 +20,9 @@ docs/MemberOfClub.md
 docs/Player.md
 docs/PlayerBattleLog.md
 docs/PlayersApi.md
+docs/RankingBrawlerList.md
+docs/RankingClubList.md
+docs/RankingPlayerList.md
 docs/SearchPaging.md
 docs/SearchPagingCursors.md
 docs/StarPowers.md
@@ -48,6 +51,9 @@ pybrawl/models/gadgets.py
 pybrawl/models/member_of_club.py
 pybrawl/models/player.py
 pybrawl/models/player_battle_log.py
+pybrawl/models/ranking_brawler_list.py
+pybrawl/models/ranking_club_list.py
+pybrawl/models/ranking_player_list.py
 pybrawl/models/search_paging.py
 pybrawl/models/search_paging_cursors.py
 pybrawl/models/star_powers.py
@@ -75,6 +81,9 @@ test/test_member_of_club.py
 test/test_player.py
 test/test_player_battle_log.py
 test/test_players_api.py
+test/test_ranking_brawler_list.py
+test/test_ranking_club_list.py
+test/test_ranking_player_list.py
 test/test_search_paging.py
 test/test_search_paging_cursors.py
 test/test_star_powers.py
