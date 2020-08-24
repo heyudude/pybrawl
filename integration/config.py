@@ -7,12 +7,12 @@ import pybrawl
 def getConfiguration():
 	""" Get configuration in order to test the API"""
 
-	config_file_name = os.path.expanduser('~/.bstools')
+	config_file_name = os.path.expanduser('~/myclub/bstools.ini')
 
 	config = {}
 
 	if not os.path.isfile(config_file_name):
-		print('ERROR: ~/.bstools not found.')
+		print('ERROR: ~/myclub/bstools.ini not found.')
 		exit(0)
 
 	parser = configparser.ConfigParser()
@@ -26,15 +26,15 @@ def getConfiguration():
 	        config[section_key][key] = value
 
 	if 'api' not in config:
-		print('ERROR: ~/.bstools does not contain section "[api]".')
+		print('ERROR: bstools.ini does not contain section "[api]".')
 		exit(0)
 
 	if 'api_key' not in config['api']:
-		print('ERROR: ~/.bstools does not contain property "api_key" in section "[api]".')
+		print('ERROR: bstools.ini does not contain property "api_key" in section "[api]".')
 		exit(0)
 
 	# if 'api_key_prefix' not in config['api']:
-	# 	print('ERROR: ~/.bstools does not contain property "api_key_prefix" in section "[api]".')
+	# 	print('ERROR: bstools d.inioes not contain property "api_key_prefix" in section "[api]".')
 	# 	exit(0)
 
 	configuration = pybrawl.Configuration()
